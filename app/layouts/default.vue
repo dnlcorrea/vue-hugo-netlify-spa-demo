@@ -71,13 +71,23 @@
     <v-main class="pa-0">
       <NuxtChild keep-alive :isup="isup" :onFooter="onFooter" />
     </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="true" temporary fixed>
+    <v-navigation-drawer
+      v-model="rightDrawer"
+      :right="true"
+      temporary
+      fixed
+      class="c-primary"
+    >
       <v-list>
-        <v-list-item>
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
+        <v-list-item
+          :class="pathname.includes(item.path) ? 'is-selected' : ''"
+          :to="item.path"
+          v-for="(item, i) in items"
+          :key="i"
+        >
+          <v-list-item-title class="black--text">{{
+            item.name
+          }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
