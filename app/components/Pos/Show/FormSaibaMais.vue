@@ -94,7 +94,7 @@
         <v-card>
           <v-card-text class="spy-10">
             <p class="text-center mb-4 uppercase c-info-darken-2--text">
-              Você será redirecionado ao chat
+              Prontinho! Em breve nossa equipe entrará em contato
             </p>
             <div
               class="
@@ -109,12 +109,11 @@
               "
               style="width: 50px; height: 50px; border-radius: 100px"
             >
-              <span v-if="count != 0" class="text-center">{{ count }}</span>
-              <span v-else class="text-center enter-check"
+              <span class="text-center enter-check"
                 ><v-icon class="white--text">fas fa-check</v-icon></span
               >
             </div>
-            <p class="p3 mt-2" v-if="count != 0">&nbsp;</p>
+            <!-- <p class="p3 mt-2" v-if="count != 0">&nbsp;</p>
             <p v-else class="p3 c-info-darken-2--text text-center mt-2">
               Caso você não seja redirecionado
               <a
@@ -123,7 +122,7 @@
                 target="_blank"
                 >clique aqui.</a
               >
-            </p>
+            </p> -->
           </v-card-text>
         </v-card>
       </div>
@@ -176,15 +175,6 @@ export default {
         if (this.$refs.form.validate()) {
           event.target.submit()
           this.submited = true
-
-          let interval = setInterval(() => {
-            if (this.count != 0) {
-              this.decrementCounter()
-            } else {
-              clearInterval(interval)
-              open('https://wa.me/554521059009')
-            }
-          }, 1000)
         }
         this.loading = false
         this.disabled = false

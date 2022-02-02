@@ -3,7 +3,7 @@
     class="black fill-width banner-principal d-flex align-center"
     :style="computedStyle"
   >
-    <v-flex offset-lg3>
+    <v-flex offset-lg3 offset-md2 offset-xs1>
       <div
         class="white--text font-100 mt-10 txt-banner"
         style="text-shadow: 0 0 10px black"

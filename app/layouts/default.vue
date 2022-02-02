@@ -7,7 +7,7 @@
       class=""
       :class="isup ? 'transparent elevation-0' : 'black elevation-2'"
     >
-      <v-flex xs12 md4 lg3 class="fill-height">
+      <v-flex xs10 sm11 lg3 class="fill-height">
         <router-link to="/">
           <v-img
             @load="contentLoaded"
@@ -19,7 +19,28 @@
         </router-link>
         <v-spacer></v-spacer>
       </v-flex>
-      <v-flex xs12 md8 lg9 class="fill-height">
+      <v-flex
+        xs2
+        sm1
+        lg9
+        class="
+          fill-height
+          hidden-lg-and-up
+          c-primary
+          align-center
+          justify-center
+        "
+        style="display: flex"
+      >
+        <v-btn
+          class="hidden-lg-and-up"
+          icon
+          @click.stop="rightDrawer = !rightDrawer"
+        >
+          <v-icon class="fas fa-bars"></v-icon>
+        </v-btn>
+      </v-flex>
+      <v-flex xs4 md8 lg9 class="fill-height hidden-md-and-down">
         <div
           class="
             c-primary
@@ -29,6 +50,7 @@
             d-flex
             justify-end
             fill-height
+            text-right
           "
         >
           <v-btn
@@ -42,14 +64,6 @@
           >
             {{ item.name }}
           </v-btn>
-
-          <v-btn
-            class="hidden-md-and-up"
-            icon
-            @click.stop="rightDrawer = !rightDrawer"
-          >
-            <v-icon>mdi-menu</v-icon>
-          </v-btn>
         </div>
       </v-flex>
     </v-app-bar>
@@ -57,9 +71,9 @@
     <v-main class="pa-0">
       <NuxtChild keep-alive :isup="isup" :onFooter="onFooter" />
     </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
+    <v-navigation-drawer v-model="rightDrawer" :right="true" temporary fixed>
       <v-list>
-        <v-list-item @click.native="right = !right">
+        <v-list-item>
           <v-list-item-action>
             <v-icon light> mdi-repeat </v-icon>
           </v-list-item-action>
@@ -67,10 +81,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <!-- <v-layout class="relative" style="z-index: 6; height: 10px">
-			<v-flex xs12 md6 lg3 class="spl-24 grey darken-4"> &nbsp;</v-flex>
-			<v-flex xs12 md8 lg9 class="c-primary"> &nbsp;</v-flex>
-		</v-layout> -->
+
     <br />
     <br />
     <br />
@@ -299,7 +310,6 @@
 export default {
   data() {
     return {
-      drawer: false,
       isup: true,
       pathname: '',
       items: [
@@ -329,7 +339,6 @@ export default {
         },
       ],
 
-      right: true,
       rightDrawer: false,
       onFooter: false,
     }
