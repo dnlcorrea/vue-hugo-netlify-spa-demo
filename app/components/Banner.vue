@@ -61,6 +61,9 @@ export default {
 </script>
 
 <style lang="scss">
+	.banner-principal {
+		min-height: 500px;
+	}
 .banner-principal .txt-banner {
   font-size: calc(80px + 0.8vw);
 }
