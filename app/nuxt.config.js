@@ -26,6 +26,7 @@ export default {
       { rel: 'preconnect', href: 'https://cdn.jsdelivr.net'},
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,400;0,600;0,900&display=swap'},
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.min.css'},
          {
         rel: "preload",
         as: "style",
@@ -36,6 +37,7 @@ export default {
     script: [
       { hid: 'stripe', src: 'https://unpkg.com/aos@2.3.1/dist/aos.js', defer: true },
       {src:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js'},
+      {src:'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.pkgd.min.js'},
       
     ]
   },

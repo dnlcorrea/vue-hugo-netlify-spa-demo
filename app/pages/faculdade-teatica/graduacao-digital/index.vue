@@ -5,6 +5,7 @@
         :isup="isup"
         :onFooter="onFooter"
         :banner="banner"
+        class="hidden-md-and-down"
       ></FaculdadeSubmenu>
     </div>
     <Banner

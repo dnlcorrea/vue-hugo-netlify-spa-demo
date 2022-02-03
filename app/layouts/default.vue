@@ -40,7 +40,7 @@
           <v-icon class="fas fa-bars"></v-icon>
         </v-btn>
       </v-flex>
-      <v-flex xs4 md8 lg9 class="fill-height hidden-md-and-down">
+      <v-flex xs4 sm1 lg9 class="fill-height hidden-md-and-down">
         <div
           class="
             c-primary
@@ -67,7 +67,7 @@
         </div>
       </v-flex>
     </v-app-bar>
-    <slot name="submenu"></slot>
+
     <v-main class="pa-0">
       <NuxtChild keep-alive :isup="isup" :onFooter="onFooter" />
     </v-main>
@@ -79,16 +79,39 @@
       class="c-primary"
     >
       <v-list>
-        <v-list-item
-          :class="pathname.includes(item.path) ? 'is-selected' : ''"
-          :to="item.path"
-          v-for="(item, i) in items"
-          :key="i"
-        >
-          <v-list-item-title class="black--text">{{
-            item.name
-          }}</v-list-item-title>
-        </v-list-item>
+        <div v-for="(item, i) in items" :key="i">
+          <v-list-item
+            :class="pathname.includes(item.path) ? 'is-selected' : ''"
+            :to="item.path"
+            v-if="item.name !== 'FACULDADE TEÁTICA'"
+          >
+            <v-list-item-title class="black--text">{{
+              item.name
+            }}</v-list-item-title>
+          </v-list-item>
+
+          <v-list-group
+            no-action
+            :value="true"
+            :class="pathname.includes(item.path) ? 'is-selected' : ''"
+            class="black--text"
+            v-else
+          >
+            <template v-slot:activator>
+              <v-list-item-content class="black--text">
+                <v-list-item-title>{{ item.name }}</v-list-item-title>
+              </v-list-item-content>
+            </template>
+
+            <v-list-item
+              v-for="({ name, path }, i) in submenus"
+              :key="i"
+              :to="path"
+            >
+              <v-list-item-title v-text="name"></v-list-item-title>
+            </v-list-item>
+          </v-list-group>
+        </div>
       </v-list>
     </v-navigation-drawer>
 
@@ -348,6 +371,23 @@ export default {
           path: '/#contato',
         },
       ],
+      submenus: [
+        { name: 'Faculdade Teática', path: '/faculdade-teatica' },
+        {
+          name: 'Graduação Presencial',
+          path: '/faculdade-teatica/graduacao-presencial',
+        },
+        {
+          name: 'Graduação Digital',
+          path: '/faculdade-teatica/graduacao-digital',
+        },
+        { name: 'Pós-Graduação', path: '/faculdade-teatica/pos-graduacao' },
+        {
+          name: 'Extensão Digital',
+          path: '/faculdade-teatica/extensao-digital',
+        },
+        { name: 'Metodologia', path: '#metodologia' },
+      ],
 
       rightDrawer: false,
       onFooter: false,
@@ -408,6 +448,12 @@ export default {
 .v-toolbar__content,
 .v-toolbar__extension {
   padding: 0;
+}
+.v-application--is-ltr
+  .v-list-group--no-action
+  > .v-list-group__items
+  > .v-list-item {
+  padding-left: 38px;
 }
 .menu-btns {
   .v-btn {
