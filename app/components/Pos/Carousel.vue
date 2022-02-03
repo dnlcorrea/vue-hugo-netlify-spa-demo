@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<h1 class="font-500 smt-20 main-title">Pós-Graduação</h1>
-
 		<v-layout
 			class="flex-wrap"
 			style="
