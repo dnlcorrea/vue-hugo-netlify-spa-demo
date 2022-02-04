@@ -5,17 +5,23 @@ const flick = {
       id: 0
     }
   },
-  mounted() {
-    this.id = this._uid;
-    
-    setTimeout(() => {
-      this.flicker = new Flickity('.flickity-mobile-' + this._uid, {
+  methods: {
+    makeFlickity() {
+       this.flicker = new Flickity('.flickity-mobile-' + this._uid, {
         wrapAround: true,
         cellAlign: 'left',
-        groupCells: window.innerWidth > 959 ? 3 : 1,
       })
-    }, 500);
-
+    }
+  },
+  mounted() {
+    this.id = this._uid;
+    if (innerWidth < 769) {
+      setTimeout(() => {
+        this.makeFlickity();
+      }, 500);
+    }
+     
+    addEventListener('resize', this.makeFlickity)
   },
 }
 export default flick;
