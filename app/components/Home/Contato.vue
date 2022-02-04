@@ -31,7 +31,7 @@
 				</svg>
 			</div>
 		</v-flex>
-		<v-flex xs12 md8 lg7 class="spx-24">
+		<v-flex xs12 md8 lg7 class="spx-sm-24 spx-xs-15">
 			<h1 class="titulo">ENTRE EM CONTATO</h1>
 
 			<v-form>

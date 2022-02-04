@@ -65,7 +65,7 @@
 		min-height: 500px;
 	}
 	.banner-principal .txt-banner {
-		font-size: calc(50px + 1.2vw);
+		font-size: calc(40px + 2vw);
 	}
 	.txt2 {
 		animation: estasubindo 0.9s;

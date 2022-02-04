@@ -1,5 +1,5 @@
 <template>
-	<v-layout class="spx-24 white spt-10 flex-wrap">
+	<v-layout class="spx-sm-24 spx-xs-15 white spt-10 flex-wrap">
 		<v-flex xs12 lg6 class="spr-lg-13">
 			<BlogCarouselAcontece :noticias="noticias"></BlogCarouselAcontece>
 		</v-flex>
