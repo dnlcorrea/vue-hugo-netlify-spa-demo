@@ -12,7 +12,7 @@
 		>
 			<v-flex
 				xs12
-				md4
+				md6
 				lg3
 				class="spx-4"
 				v-for="({ name, slug, icon }, i) in cursos"
@@ -85,5 +85,3 @@
 	}
 </script>
 
-<style>
-</style>

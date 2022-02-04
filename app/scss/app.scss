@@ -26,6 +26,23 @@ $scroll-color: #a5a5a5;
     opacity: 0;
 }
 
+.flickity-viewport {
+    width: 100%;
+    .flickity-slider{
+        display: flex;
+    }
+
+    .flex {
+        width: inherit;
+    }
+}
+.flickity-prev-next-button.previous {
+    left: -35px;
+}
+
+.flickity-prev-next-button.next {
+    right: -35px;
+}
 .flex-0{
     flex: 0 !important;
 }
