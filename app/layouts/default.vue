@@ -12,7 +12,7 @@
 					<v-img
 						@load="contentLoaded"
 						contain
-						class="fill-height flex-0 sml-22"
+						class="fill-height flex-0 sml-22 sml-xs-12"
 						style="width: 170px"
 						:src="`/teatica-logo${isup ? '-n' : '-n'}.png`"
 					></v-img>
