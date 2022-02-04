@@ -5,6 +5,7 @@
 		<v-layout
 			style="margin: 0 calc(-8px - 0.4vw) !important"
 			:class="`flickity-mobile-${id}`"
+			class="flex-wrap"
 		>
 			<v-flex xs12 md6 class="spx-4" v-for="(noticia, i) in noticias" :key="i">
 				<BlogCard :blog="noticia"></BlogCard>

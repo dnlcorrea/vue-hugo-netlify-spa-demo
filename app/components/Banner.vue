@@ -63,6 +63,9 @@
 <style lang="scss">
 	.banner-principal {
 		min-height: 500px;
+		@media (max-width: 1024px) {
+			max-height: 50vh;
+		}
 	}
 	.banner-principal .txt-banner {
 		font-size: calc(40px + 2vw);
