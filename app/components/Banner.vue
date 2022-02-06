@@ -62,6 +62,7 @@
 
 <style lang="scss">
 	.banner-principal {
+		overflow-x: hidden;
 		min-height: 500px;
 		@media (max-width: 1024px) {
 			max-height: 50vh;

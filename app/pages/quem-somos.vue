@@ -1,8 +1,8 @@
 <template>
 	<div class="white">
 		<Banner txt1="QUEM" txt2="SOMOS"></Banner>
-		<div class="spa-24">
-			<p class="spx-sm-24 spx-xs-15 text-center">
+		<div class="spa-24 spt-xs-24 spx-xs-10 spb-xs-10">
+			<p class="spx-sm-24 spx-xs-0 text-center">
 				<big
 					>A Associação Teática Internacional é uma associação comunitária, sem
 					fins lucrativos e filantrópica, fundada em setembro de 2013 por um
@@ -20,8 +20,8 @@
 			<HomeProdutosItems></HomeProdutosItems>
 		</div>
 
-		<v-layout class="spy-24 grey lighten-3">
-			<v-flex xs12 md4 lg3 class="spl-24">
+		<v-layout class="spy-24 grey lighten-3 flex-wrap">
+			<v-flex xs12 md4 lg3 class="spl-24 spx-xs-15">
 				<p>
 					A Associação Teática Internacional é composta por um
 					<span class="font-600"> Conselho Deliberativo </span>, um
@@ -36,7 +36,7 @@
 						<p class="d-inline font-800">CONSELHO DELIBERATIVO</p>
 					</span>
 					<v-layout class="flex-wrap mt-10">
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
@@ -48,11 +48,11 @@
 								<p class="font-600">Ryon Braga</p>
 							</v-flex>
 						</v-flex>
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
-									class="smr-5 c-info c-info"
+									class="smr-5 c-info"
 									src="/staff/cristina.png"
 								></v-img>
 							</v-flex>
@@ -60,7 +60,7 @@
 								<p class="font-600">Cristina Dalvi Davel</p>
 							</v-flex>
 						</v-flex>
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
@@ -72,7 +72,7 @@
 								<p class="font-600">Lúcia Helena Makhlouf</p>
 							</v-flex>
 						</v-flex>
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
@@ -84,7 +84,7 @@
 								<p class="font-600">José Djalma Cajado da Fonseca</p>
 							</v-flex>
 						</v-flex>
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
@@ -106,7 +106,7 @@
 					</span>
 
 					<v-layout class="flex-wrap mt-10">
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
@@ -118,7 +118,7 @@
 								<p class="font-600">Graça Souza</p>
 							</v-flex>
 						</v-flex>
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
@@ -130,7 +130,7 @@
 								<p class="font-600">Otávio Augusto Araújo</p>
 							</v-flex>
 						</v-flex>
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
@@ -151,7 +151,7 @@
 						<p class="d-inline font-800">DIRETORIA EXECUTIVA</p>
 					</span>
 					<v-layout class="flex-wrap mt-10">
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"
@@ -163,7 +163,7 @@
 								<p class="font-600">Ryon Braga</p>
 							</v-flex>
 						</v-flex>
-						<v-flex xs12 md6 lg4 class="d-flex align-center smb-8">
+						<v-flex xs6 lg4 class="d-flex align-center flex-wrap smb-8">
 							<v-flex xs12 md5>
 								<v-img
 									style="border-radius: 300px"

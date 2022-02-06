@@ -15,6 +15,7 @@ $scroll-color: #a5a5a5;
     // ...
 );
 
+
 .theme--light.v-application {
     background: #212121 !important;
 }
@@ -36,12 +37,17 @@ $scroll-color: #a5a5a5;
         width: inherit;
     }
 }
+
+.flickity-prev-next-button {
+    width: 31px;
+    height: 31px;
+}
 .flickity-prev-next-button.previous {
-    left: -35px;
+    left: -26px;
 }
 
 .flickity-prev-next-button.next {
-    right: -35px;
+    right: -26px;
 }
 .flex-0{
     flex: 0 !important;
