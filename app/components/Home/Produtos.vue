@@ -1,13 +1,13 @@
 <template>
 	<v-layout>
-		<v-flex xs12 md4 lg3 class="c-primary">
+		<v-flex xs12 lg3 class="c-primary hidden-md-and-down">
 			<v-img
 				class="mx-auto fill-height pattern-produtos"
 				cover
 				src="/pattern.jpg"
 			></v-img>
 		</v-flex>
-		<v-flex xs12 md8 lg9 class="white elevation-4 produtos" style="z-index: 2">
+		<v-flex xs12 lg9 class="white elevation-4 produtos" style="z-index: 2">
 			<HomeProdutosItems></HomeProdutosItems>
 		</v-flex>
 	</v-layout>

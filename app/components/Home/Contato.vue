@@ -1,14 +1,31 @@
 <template>
 	<v-layout
-		class="grey lighten-3 relative align-center align-center spb-24 spt-15"
-		style="z-index: 1; min-height: 100vh"
+		class="grey lighten-3 relative align-center align-center spy-24 flex-wrap"
+		style="z-index: 1"
 		id="contato"
 	>
-		<v-flex xs12 md4 lg3 offset-lg1 class="spx-10 titulo c-secondary--text">
+		<v-flex
+			xs12
+			md4
+			lg3
+			offset-lg1
+			offset-xl2
+			class="spx-10 titulo c-secondary--text spb-24"
+		>
 			<div
 				data-aos="flip-right"
 				data-aos-delay="300"
-				class="spx-12 spt-15 spb-10 radius align-center d-flex justify-center"
+				class="
+					spx-12
+					spt-15
+					spb-10
+					radius
+					align-center
+					d-flex
+					justify-center
+					contato-svg-wrap
+					mx-auto
+				"
 				style="background: linear-gradient(143deg, #ffdf42 50%, #efc912 50%)"
 			>
 				<svg
@@ -18,20 +35,33 @@
 					data-icon="comment-alt-lines"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 512 512"
+					viewBox="0 0 576 512"
 				>
-					<path
-						fill="#000000"
-						d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288zm-96-216H144c-8.8 0-16 7.2-16"
-					></path>
-					<path
-						fill="#80701c"
-						d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 16 16v288zm-96-216H144c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16v-16c0-8.8-7.2-16-16-16zm-96 96H144c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16h128c8.8 0 16-7.2 16-16v-16c0-8.8-7.2-16-16-16z"
-					></path>
+					<g class="fa-group">
+						<path
+							style="opacity: 0.4"
+							fill="currentColor"
+							d="M352 287.9H162.3L79.5 350a9.7 9.7 0 0 1-15.5-7.8V288a64.06 64.06 0 0 1-64-64V64A64.06 64.06 0 0 1 64 0h288a64.06 64.06 0 0 1 64 64v160a63.91 63.91 0 0 1-64 63.9z"
+							class="fa-secondary"
+						></path>
+						<path
+							fill="currentColor"
+							d="M576 224v160a64.06 64.06 0 0 1-64 64h-32v54.3a9.7 9.7 0 0 1-15.5 7.8L381.7 448H256a64.06 64.06 0 0 1-64-64v-64h160a96.15 96.15 0 0 0 96-96v-64h64a64.06 64.06 0 0 1 64 64z"
+							class="fa-primary"
+						></path>
+					</g>
 				</svg>
 			</div>
 		</v-flex>
-		<v-flex xs12 md8 lg7 class="spx-24">
+		<v-flex
+			xs12
+			md7
+			offset-md1
+			lg6
+			offset-lg1
+			xl5
+			class="spx-sm-24 spx-xs-15 spb-24"
+		>
 			<h1 class="titulo">ENTRE EM CONTATO</h1>
 
 			<v-form>
@@ -59,4 +89,8 @@
 </script>
 
 <style>
+	.contato-svg-wrap {
+		width: calc(300px + 6vw);
+		height: calc(300px + 6vw);
+	}
 </style>
