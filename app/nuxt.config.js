@@ -50,7 +50,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/after-each.js', mode: 'client' },
-    { src: '~/plugins/truncate.js', mode: 'client' },
+    { src: '~/plugins/truncate.js' },
     { src: '~/plugins/vue-check-view.js', mode: 'client' }
     
   ],
