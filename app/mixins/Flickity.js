@@ -5,17 +5,32 @@ const flick = {
       id: 0
     }
   },
+  methods: {
+    makeFlickity() {
+       this.flicker = new Flickity('.flickity-mobile-' + this.id, {
+        wrapAround: true,
+         cellAlign: 'left',
+         groupCells: true
+        
+      })
+    }
+  },
   mounted() {
     this.id = this._uid;
     
-    setTimeout(() => {
-      this.flicker = new Flickity('.flickity-mobile-' + this._uid, {
-        wrapAround: true,
-        cellAlign: 'left',
-        groupCells: window.innerWidth > 959 ? 3 : 1,
-      })
-    }, 500);
+    if (innerWidth <= 1024) {
+      setTimeout(() => {
+        this.makeFlickity();
+      }, 500);
 
+      setTimeout(() => {
+        document.querySelectorAll('.flickity-slider .flex').forEach(element => {
+          element.style.height = '100%'
+        })
+      }, 800);
+    }
+     
+    addEventListener('resize', this.makeFlickity)
   },
 }
 export default flick;

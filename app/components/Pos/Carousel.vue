@@ -4,12 +4,13 @@
 
 		<v-layout
 			class="flex-wrap"
+			:class="`flickity-mobile-${id}`"
 			style="
 				margin-left: calc(-8px - 0.4vw) !important;
 				margin-right: calc(-8px - 0.4vw) !important;
 			"
 		>
-			<v-flex xs12 md4 lg3 class="spx-4" v-for="(p, i) in pos" :key="i">
+			<v-flex xs12 md6 lg3 class="spx-4" v-for="(p, i) in pos" :key="i">
 				<router-link
 					:to="`/faculdade-teatica/pos-graduacao/${p.slug}`"
 					class="no-underline fill-height"
@@ -91,8 +92,10 @@
 
 <script>
 	import pos from '@/data/pos.js'
+	import flick from '@/mixins/Flickity.js'
 
 	export default {
+		mixins: [flick],
 		data() {
 			return {
 				pos,

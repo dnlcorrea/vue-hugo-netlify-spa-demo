@@ -21,10 +21,10 @@
 			<h2 class="mb-2 font-600">
 				<small :inner-html.prop="blog.titulo | truncate(60)"></small>
 			</h2>
-			<p
+			<div
 				class="line-height-1-2"
 				:inner-html.prop="blog.texto | truncate(100)"
-			></p>
+			></div>
 			<v-layout
 				class="align-center"
 				v-for="(autor, i) in blog.autores"
