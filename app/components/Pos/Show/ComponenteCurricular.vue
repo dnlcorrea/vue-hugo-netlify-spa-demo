@@ -6,8 +6,8 @@
       {{ curso.carga_horaria }} horas/aulas
     </p>
 
-    <v-layout class="justify-space-between">
-      <v-flex xs12 md6 class="spr-8">
+    <v-layout class="justify-space-between flex-wrap">
+      <v-flex xs12 md6 class="spr-md-8">
         <v-expansion-panels v-model="panel" class="smt-4 expansion-panel-ead">
           <v-expansion-panel
             class="smb-3"
@@ -29,7 +29,7 @@
               v-if="matrizes.itens && matrizes.itens.length"
             >
               <div v-for="(matriz, j) in matrizes.itens" :key="j">
-                <v-card flat class="spl-12">
+                <v-card flat class="spl-12 spx-xs-2">
                   <p class="regular titulo-card secondary--text spr-6">
                     <span class="primary--text">
                       <i

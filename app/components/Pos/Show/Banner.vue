@@ -3,7 +3,7 @@
     <v-flex xs12>
       <div
         class="topo d-flex align-center justify-center"
-        :style="`background: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.6)), url(${curso.img}) left top / 75% fixed `"
+        :style="`background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.6)), url(${curso.img})`"
       >
         <div class="text-center fixed spx-15" style="z-index: 0">
           <!-- <v-divider class="c-primary smy-3"></v-divider> -->
@@ -33,6 +33,18 @@ export default {
 <style lang='scss'>
 .topo {
   height: 80vh;
-  background-size: cover;
+  background-size: 110%;
+  background-attachment: fixed;
+  background-position: center;
+
+  @media (max-width: 1024px) {
+    background-size: 120%;
+    background-attachment: fixed;
+    height: 50vh;
+  }
+  @media (max-width: 600px) {
+    background-size: 230%;
+    height: 60vh;
+  }
 }
 </style>

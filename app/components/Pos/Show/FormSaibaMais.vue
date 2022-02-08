@@ -1,11 +1,20 @@
 <template>
   <div>
     <v-layout
-      class="wrap grey lighten-4 full-width align-center justify-center"
+      class="
+        wrap
+        grey
+        lighten-4
+        full-width
+        align-center
+        justify-center
+        spy-lg-5 spy-sm-10 spy-xs-12
+      "
     >
       <v-flex
-        xs8
-        md3
+        xs10
+        sm6
+        lg3
         class="d-flex align-center justify-center spt-xs-15 spb-xs-5"
       >
         <div class="text-center">
@@ -22,7 +31,7 @@
           >
         </div>
       </v-flex>
-      <v-flex xs10 md3 offset-lg1 class="spb-xs-15 spy-10">
+      <v-flex xs10 sm6 md4 lg3 offset-lg1 class="spb-xs-15 spy-10">
         <v-img src="/contato.png"></v-img>
       </v-flex>
     </v-layout>
@@ -92,7 +101,7 @@
       </v-form>
       <div v-else>
         <v-card>
-          <v-card-text class="spy-10">
+          <v-card-text class="spy-10 text-center">
             <p class="text-center mb-4 uppercase c-info-darken-2--text">
               Prontinho! Em breve nossa equipe entrará em contato
             </p>
@@ -113,6 +122,12 @@
                 ><v-icon class="white--text">fas fa-check</v-icon></span
               >
             </div>
+            <v-btn
+              depressed
+              class="mt-5 c-info-lighten-1 c-secondary--text mx-auto"
+              @click="dialog = false"
+              >fechar</v-btn
+            >
             <!-- <p class="p3 mt-2" v-if="count != 0">&nbsp;</p>
             <p v-else class="p3 c-info-darken-2--text text-center mt-2">
               Caso você não seja redirecionado
