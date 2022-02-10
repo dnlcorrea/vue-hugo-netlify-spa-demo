@@ -49,7 +49,11 @@
 				<v-chip
 					small
 					class="no-underline grey lighten-4 px-3 mr-2"
-					:href="'/blog/' + cat.slug"
+					:href="
+						(isNoticia(blog.categoria)
+							? '/acontece-na-teatica/categoria/'
+							: '/blog/categoria/') + cat.slug
+					"
 					v-for="(cat, i) in blog.categoria"
 					:key="i"
 					>{{ cat.nome }}</v-chip
@@ -68,16 +72,10 @@
 			}
 		},
 
-		computed: {
-			parsedDate() {
-				// console.log('lol')
-				// if (luxon) {
-				// return luxon.DateTime.fromISO(this.blog.published_at)
-				// }
+		methods: {
+			isNoticia(cats) {
+				return cats.find((element) => element.slug === 'noticia')
 			},
-		},
-		mounted() {
-			console.log(DateTime)
 		},
 	}
 </script>

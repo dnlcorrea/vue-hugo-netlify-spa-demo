@@ -22,10 +22,12 @@
 						blogs.push(element)
 					}
 				})
-				return blogs
+				return blogs.slice(0, 2)
 			},
 			noticias() {
-				return blog.filter((a) => a.categoria.find((c) => c.slug === 'noticia'))
+				return blog
+					.filter((a) => a.categoria.find((c) => c.slug === 'noticia'))
+					.slice(0, 2)
 			},
 		},
 	}

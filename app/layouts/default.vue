@@ -4,8 +4,8 @@
 			fixed
 			:style="{ marginTop: onFooter ? '-64px' : '0', transition: 'all 0.2s' }"
 			app
-			class=""
-			:class="isup ? 'transparent elevation-0' : 'black elevation-2'"
+			class="black"
+			:class="isup ? 'elevation-0' : 'elevation-2'"
 		>
 			<v-flex xs10 sm11 lg3 class="fill-height">
 				<router-link to="/">
@@ -14,7 +14,7 @@
 						contain
 						class="fill-height flex-0 sml-22 sml-xs-12"
 						style="width: 170px"
-						:src="`/teatica-logo${isup ? '-n' : '-n'}.png`"
+						src="/teatica-logo-n.png"
 					></v-img>
 				</router-link>
 				<v-spacer></v-spacer>

@@ -1,7 +1,15 @@
 <template>
 	<div>
-		<h1 class="font-500 smt-20 main-title">Acontece na Teática</h1>
-
+		<v-layout class="flex-wrap align-center justify-space-between smb-9 smt-15">
+			<h1 class="font-500 smy-0 main-title">Acontece na Teática</h1>
+			<v-btn
+				to="/acontece-na-teatica"
+				small
+				outlined
+				class="my-0 c-primary--text"
+				><span class="black--text">VER TUDO</span></v-btn
+			>
+		</v-layout>
 		<v-layout
 			style="margin: 0 calc(-8px - 0.4vw) !important"
 			:class="`flickity-mobile-${id}`"
