@@ -28,11 +28,11 @@
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias
           contexto="blog-teatica"
-          :categorias="categoriasNoticias"
+          :categorias="categoriasBlog"
         ></BlogCategorias>
       </v-flex>
       <v-flex xs12 md9 lg10>
-        <v-layout class="flex-wrap spx-20 spt-20 spb-24">
+        <v-layout class="flex-wrap spx-20 spb-24">
           <v-flex
             xs12
             md4
@@ -41,7 +41,7 @@
             v-for="(blog, i) in blogs"
             :key="i"
           >
-            <BlogCard :blog="blog"></BlogCard>
+            <BlogCard :blog="blog" contexto="blog-teatica"></BlogCard>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -56,22 +56,39 @@ import blog from '@/data/blog.js'
 export default {
   beforeRouteEnter(to, from, next) {
     next((vm) => {
-      vm.categoria = to.params.slug
+      vm.inicializarPorCategoria(to)
     })
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.inicializarPorCategoria(to)
+    next()
   },
 
   data() {
     return {
       categoria: '',
       imageLoaded: false,
+      blogs: [],
     }
   },
-  computed: {
-    categoriasNoticias() {
-      let noticias = blog.filter((a) =>
-        a.categoria.find((c) => c.slug === 'noticia')
+  methods: {
+    inicializarPorCategoria(to) {
+      this.categoria = to.params.slug
+      this.blogs = []
+      this.blogs = blog.filter(
+        (a) =>
+          !a.categoria.find((c) => c.slug === 'noticia') &&
+          a.categoria.find((c) => c.slug === this.categoria)
       )
-      let categorias = noticias.map((n) => n.categoria).flat()
+    },
+  },
+
+  computed: {
+    categoriasBlog() {
+      let blogs = blog.filter(
+        (a) => !a.categoria.find((c) => c.slug === 'noticia')
+      )
+      let categorias = blogs.map((n) => n.categoria).flat()
       let flated = [...new Set(categorias.map((c) => c.nome))]
       let final = []
       flated.forEach((element) => {
@@ -85,16 +102,6 @@ export default {
         })
       })
       return final
-    },
-    blogs() {
-      let blogs = []
-
-      blog.forEach((element) => {
-        if (!element.categoria.find((c) => c.slug === 'noticia')) {
-          blogs.push(element)
-        }
-      })
-      return blogs
     },
   },
 }

@@ -1,6 +1,6 @@
 <template>
   <v-layout class="justify-center mt-5">
-    <h2 class="text-center bold" v-if="categoriaName">
+    <h2 class="text-center bold" v-show="categoriaName">
       <span class="c-primary spx-5"
         ><i
           class="fas fa-bookmark mr-1"
@@ -10,8 +10,9 @@
       </span>
     </h2>
     <v-btn
+      v-show="categoriaName"
       :ripple="false"
-      :href="`/${contexto}`"
+      :to="`/${contexto}`"
       icon
       style="border-radius: 0 !important; height: 35px !important"
       class="ma-0 c-primary"

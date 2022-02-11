@@ -42,7 +42,7 @@
             v-for="(noticia, i) in noticias"
             :key="i"
           >
-            <BlogCard :blog="noticia"></BlogCard>
+            <BlogCard :blog="noticia" contexto="acontece-na-teatica"></BlogCard>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -57,24 +57,37 @@ import blog from '@/data/blog.js'
 export default {
   beforeRouteEnter(to, from, next) {
     next((vm) => {
-      vm.categoria = to.params.slug
+      vm.inicializarPorCategoria(to)
     })
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.inicializarPorCategoria(to)
+    next()
   },
 
   data() {
     return {
       categoria: '',
       imageLoaded: false,
+      noticias: [],
     }
   },
-  computed: {
-    noticias() {
-      return blog.filter(
-        (a) =>
+  methods: {
+    inicializarPorCategoria(to) {
+      this.categoria = to.params.slug
+
+      this.noticias = []
+      blog.filter((a) => {
+        if (
           a.categoria.find((c) => c.slug === 'noticia') &&
           a.categoria.find((c) => c.slug === this.categoria)
-      )
+        ) {
+          this.noticias.push(a)
+        }
+      })
     },
+  },
+  computed: {
     categoriasNoticias() {
       let noticias = blog.filter((a) =>
         a.categoria.find((c) => c.slug === 'noticia')

@@ -82,6 +82,11 @@ let blog = [
                 id:2,
                 nome: 'Educação',
                 slug: 'educacao'
+            },
+            {
+                id:2,
+                nome: 'Empregabilidade',
+                slug: 'empregabilidade'
             }
         ]
     },
