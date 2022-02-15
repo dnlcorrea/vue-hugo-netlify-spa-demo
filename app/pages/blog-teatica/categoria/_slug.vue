@@ -20,11 +20,11 @@
         ></v-img>
       </div>
     </v-layout>
-    <BlogCategoriaNome
+    <!-- <BlogCategoriaNome
       :blog="blogs"
       contexto="blog-teatica"
-    ></BlogCategoriaNome>
-    <v-layout class="spt-20 spl-24 spr-20">
+    ></BlogCategoriaNome> -->
+    <v-layout class="spt-20 spl-24 spl-xs-20 spr-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias
           contexto="blog-teatica"
@@ -37,6 +37,7 @@
             xs12
             md4
             xl3
+            sm6
             class="spx-4 spy-4"
             v-for="(blog, i) in blogs"
             :key="i"

@@ -21,7 +21,7 @@
         ></v-img>
       </div>
     </div>
-    <v-layout class="spt-20 spl-24 spr-20 flex-wrap">
+    <v-layout class="spt-20 spl-24 spl-xs-20 spr-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias
           contexto="acontece-na-teatica"
@@ -34,6 +34,7 @@
             xs12
             md4
             xl3
+            sm6
             class="spx-4 spy-4"
             v-for="(noticia, i) in noticias"
             :key="i"
@@ -51,6 +52,11 @@
 import blog from '@/data/blog.js'
 
 export default {
+  data() {
+    return {
+      categoria: '',
+    }
+  },
   computed: {
     noticias() {
       return blog.filter((a) => a.categoria.find((c) => c.slug === 'noticia'))

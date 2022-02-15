@@ -43,26 +43,33 @@ export default {
       let estasubindo = this.oldScroll > scrollY
       this.estasubindo = estasubindo
       this.oldScroll = scrollY
-      let classList1 = document.querySelector('.txt1').classList
-      let classList2 = document.querySelector('.txt2').classList
-      if (this.estasubindo) {
-        Array.from(classList1).includes('estadescendo')
-          ? classList1.remove('estadescendo')
-          : ''
-        Array.from(classList2).includes('estadescendo')
-          ? classList2.remove('estadescendo')
-          : ''
-        classList1.add('estasubindo')
-        classList2.add('estasubindo')
-      } else {
-        Array.from(classList1).includes('estasubindo')
-          ? classList1.remove('estasubindo')
-          : ''
-        Array.from(classList2).includes('estasubindo')
-          ? classList2.remove('estasubindo')
-          : ''
-        classList1.add('estadescendo')
-        classList2.add('estadescendo')
+
+      let text1 = document.querySelector('.txt1')
+      let text2 = document.querySelector('.txt2')
+
+      if (text1 && text2) {
+        let classList1 = text1.classList
+        let classList2 = text2.classList
+
+        if (this.estasubindo) {
+          Array.from(classList1).includes('estadescendo')
+            ? classList1.remove('estadescendo')
+            : ''
+          Array.from(classList2).includes('estadescendo')
+            ? classList2.remove('estadescendo')
+            : ''
+          classList1.add('estasubindo')
+          classList2.add('estasubindo')
+        } else {
+          Array.from(classList1).includes('estasubindo')
+            ? classList1.remove('estasubindo')
+            : ''
+          Array.from(classList2).includes('estasubindo')
+            ? classList2.remove('estasubindo')
+            : ''
+          classList1.add('estadescendo')
+          classList2.add('estadescendo')
+        }
       }
     })
   },

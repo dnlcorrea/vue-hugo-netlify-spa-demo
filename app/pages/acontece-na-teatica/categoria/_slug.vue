@@ -1,7 +1,8 @@
 <template>
   <div class="white pt-3">
-    <v-layout
+    <div
       class="
+        d-sm-flex d-xs-block
         align-center
         fill-height
         justify-center
@@ -10,22 +11,22 @@
         spb-8
       "
     >
-      <h1 class="my-0" v-if="imageLoaded"><big>ACONTECE NA&nbsp;</big></h1>
+      <h1 class="my-0 mx-auto text-center"><big>ACONTECE NA&nbsp;</big></h1>
       <div>
         <v-img
-          @load="imageLoaded = true"
           contain
+          class="mx-auto"
           style="width: 170px"
           src="/teatica-logo.png"
         ></v-img>
       </div>
-    </v-layout>
-    <BlogCategoriaNome
+    </div>
+    <!-- <BlogCategoriaNome
       contexto="acontece-na-teatica"
       :blog="noticias"
-    ></BlogCategoriaNome>
+    ></BlogCategoriaNome> -->
 
-    <v-layout class="spt-20 spl-24 spr-20">
+    <v-layout class="spt-20 spl-24 spr-20 spl-xs-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias
           contexto="acontece-na-teatica"
@@ -38,6 +39,7 @@
             xs12
             md4
             xl3
+            sm6
             class="spx-4 spy-4"
             v-for="(noticia, i) in noticias"
             :key="i"

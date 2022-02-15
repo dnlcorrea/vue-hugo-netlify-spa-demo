@@ -15,7 +15,7 @@
         <v-img contain style="width: 170px" src="/teatica-logo.png"></v-img>
       </div>
     </v-layout>
-    <v-layout class="spt-20 spl-24 spr-20">
+    <v-layout class="spt-20 spl-24 spl-xs-20 spr-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias
           contexto="blog-teatica"
@@ -28,6 +28,7 @@
             xs12
             md4
             xl3
+            sm6
             class="spx-4 spy-4"
             v-for="(blog, i) in blogs"
             :key="i"
@@ -45,6 +46,11 @@
 import blog from '@/data/blog.js'
 
 export default {
+  data() {
+    return {
+      categoria: '',
+    }
+  },
   computed: {
     categoriasBlog() {
       let categorias = this.blogs.map((n) => n.categoria).flat()
