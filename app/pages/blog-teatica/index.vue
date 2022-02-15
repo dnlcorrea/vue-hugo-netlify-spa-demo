@@ -23,7 +23,7 @@
         ></BlogCategorias>
       </v-flex>
       <v-flex xs12 md9 lg10>
-        <v-layout class="flex-wrap spx-20 spb-24">
+        <v-layout class="flex-wrap spb-24">
           <v-flex
             xs12
             md4

@@ -1,7 +1,8 @@
 <template>
   <div class="white pt-3">
-    <v-layout
+    <div
       class="
+        d-sm-flex d-xs-block
         align-center
         fill-height
         justify-center
@@ -10,12 +11,17 @@
         spb-8
       "
     >
-      <h1 class="my-0"><big>ACONTECE NA&nbsp;</big></h1>
+      <h1 class="my-0 mx-auto text-center"><big>ACONTECE NA&nbsp;</big></h1>
       <div>
-        <v-img contain style="width: 170px" src="/teatica-logo.png"></v-img>
+        <v-img
+          contain
+          class="mx-auto"
+          style="width: 170px"
+          src="/teatica-logo.png"
+        ></v-img>
       </div>
-    </v-layout>
-    <v-layout class="spt-20 spl-24 spr-20">
+    </div>
+    <v-layout class="spt-20 spl-24 spr-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias
           contexto="acontece-na-teatica"
@@ -23,7 +29,7 @@
         ></BlogCategorias>
       </v-flex>
       <v-flex xs12 md9 lg10>
-        <v-layout class="flex-wrap spx-20 spb-24">
+        <v-layout class="flex-wrap spb-24">
           <v-flex
             xs12
             md4

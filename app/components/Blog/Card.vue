@@ -2,8 +2,9 @@
   <router-link class="no-underline" :to="`/${contexto}/${blog.slug}`">
     <v-card class="fill-height">
       <v-img
+        v-if="!semFoto"
         lazy-src="/placeholder-2.jpg"
-        aspect-ratio="1.5"
+        aspect-ratio="1.7"
         :src="blog.imagem"
         class="
           c-info-lighten-2
@@ -65,7 +66,11 @@
 <script>
 const { DateTime } = require('luxon')
 export default {
-  props: ['blog', 'contexto'],
+  props: {
+    blog: Object,
+    contexto: String,
+    semFoto: { type: Boolean, default: false },
+  },
   data() {
     return {
       DateTime,
