@@ -20,10 +20,7 @@
         ></v-img>
       </div>
     </v-layout>
-    <!-- <BlogCategoriaNome
-      :blog="blogs"
-      contexto="blog-teatica"
-    ></BlogCategoriaNome> -->
+
     <v-layout class="spt-20 spl-24 spl-xs-20 spr-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias

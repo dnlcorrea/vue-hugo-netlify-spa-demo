@@ -21,10 +21,6 @@
         ></v-img>
       </div>
     </div>
-    <!-- <BlogCategoriaNome
-      contexto="acontece-na-teatica"
-      :blog="noticias"
-    ></BlogCategoriaNome> -->
 
     <v-layout class="spt-20 spl-24 spr-20 spl-xs-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
