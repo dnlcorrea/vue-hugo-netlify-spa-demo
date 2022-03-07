@@ -1,12 +1,12 @@
 <template>
   <div
-    class="black fill-width banner-principal d-flex align-center"
+    class="c-secondary fill-width banner-principal d-flex align-center"
     :style="computedStyle"
   >
     <v-flex offset-lg3 offset-md2 offset-xs1>
       <div
         class="white--text font-100 mt-10 txt-banner"
-        style="text-shadow: 0 0 10px black"
+        style="text-shadow: 0 0 10px c-secondary"
       >
         <div class="font-200 txt1">{{ txt1 }}</div>
         <div class="font-800 txt2">{{ txt2 }}</div>

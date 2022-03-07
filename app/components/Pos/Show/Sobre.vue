@@ -15,10 +15,10 @@
             style="z-index: 2; position: absolute; top: 0; width: 100px"
           >
             <div>
-              <p class="black--text mb-0 pt-3 text-center font-600">
+              <p class="c-secondary--text mb-0 pt-3 text-center font-600">
                 <i class="far fa-calendar mr-1"></i> INÍCIO
               </p>
-              <p class="black--text mb-0 line-height-1 text-center">
+              <p class="c-secondary--text mb-0 line-height-1 text-center">
                 <big
                   class="font-900 line-height-1"
                   style="font-size: 55px"
@@ -26,7 +26,7 @@
                   >{{ curso.data_inicio }}</big
                 >
               </p>
-              <p class="black--text mb-1 text-center text-uppercase">
+              <p class="c-secondary--text mb-1 text-center text-uppercase">
                 <big
                   class="font-400 line-height-1"
                   v-if="curso.mes_inicio"
@@ -45,7 +45,10 @@
               </p>
             </div>
           </div>
-          <div style="margin-left: calc(120px + 2vw)" class="py-8">
+          <div
+            style="margin-left: calc(120px + 2vw)"
+            class="py-8 c-secondary--text"
+          >
             <p
               class="text-uppercase text-xs-center subtitulo2"
               v-show="curso.duracao"

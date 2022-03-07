@@ -9,7 +9,7 @@
           class="font-500 smb-15 titulo-metodologia d-flex relative main-title"
           style="margin-top: -18px !important; position: absolute"
         >
-          <span class="c-primary spx-5 black--text">Metodologia Educacional</span>
+          <span class="c-primary spx-5 c-secondary--text">Metodologia Educacional</span>
         </h1> -->
         <h1 class="font-500 main-title">Metodologia Educacional</h1>
         <v-layout wrap class="spt-2">
@@ -48,7 +48,15 @@
                 </h1>
               </div>
               <div class="ml-3">
-                <p class="smb-1 titulo-fluxograma font-600 text-uppercase">
+                <p
+                  class="
+                    smb-1
+                    titulo-fluxograma
+                    c-secondary--text
+                    font-600
+                    text-uppercase
+                  "
+                >
                   <big>{{ title }}</big>
                 </p>
                 <p class="smb-0 c-info-darken-3--text">

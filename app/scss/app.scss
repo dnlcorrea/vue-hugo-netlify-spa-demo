@@ -86,8 +86,9 @@ $scroll-color: #a5a5a5;
     }
     
 .main-title{
-        border-left: 2px solid #ffde17;
+    border-left: 2px solid #F9D428;
     padding-left: 10px;
+    color: $c-secondary;
 }
 .titulo-banner {
     font-size: calc(40px + 1vw);

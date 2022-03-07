@@ -1,25 +1,29 @@
 <template>
   <div class="white pt-3">
-    <v-layout
-      class="
-        align-center
-        fill-height
-        justify-center
-        c-info-lighten-1
-        spt-24
-        spb-8
-      "
-    >
-      <h1 class="my-0" v-if="imageLoaded"><big>BLOG&nbsp;</big></h1>
-      <div>
-        <v-img
-          @load="imageLoaded = true"
-          contain
-          style="width: 170px"
-          src="/teatica-logo.png"
-        ></v-img>
-      </div>
-    </v-layout>
+    <a href="/blog-22" class="no-underline">
+      <v-layout
+        class="
+          align-center
+          fill-height
+          justify-center
+          c-info-lighten-1
+          spt-24
+          spb-8
+        "
+      >
+        <h1 class="my-0 c-secondary--text" v-if="imageLoaded">
+          <big>BLOG&nbsp;</big>
+        </h1>
+        <div>
+          <v-img
+            @load="imageLoaded = true"
+            contain
+            style="width: 170px"
+            src="/22-logo.png"
+          ></v-img>
+        </div>
+      </v-layout>
+    </a>
     <v-layout class="spa-24 spx-xs-10 flex-wrap">
       <v-flex xs12 md9 class="spx-24 spx-xs-0">
         <div v-if="texto.categoria">
@@ -27,7 +31,7 @@
           <v-chip
             small
             class="no-underline grey lighten-4 px-3 mr-2 my-1"
-            :to="`/blog-teatica/categoria/${cat.slug}`"
+            :to="`/blog-22/categoria/${cat.slug}`"
             v-for="(cat, i) in texto.categoria.filter(
               (c) => c.nome !== 'Notícia'
             )"
@@ -35,7 +39,7 @@
             >{{ cat.nome }}</v-chip
           >
         </div>
-        <h1 class="my-1">{{ texto.titulo }}</h1>
+        <h1 class="my-1 c-secondary--text">{{ texto.titulo }}</h1>
         <h3 class="font-500 my-1">
           <i>{{ texto.subtitulo }}</i>
         </h3>
@@ -67,9 +71,11 @@
         </div>
       </v-flex>
       <v-flex xs12 md3
-        ><h2 class="font-400 spt-18 spt-xs-0 spr-24 spr-xs-0">Mais Notícias</h2>
+        ><h2 class="font-400 spt-18 spt-xs-0 spr-24 spr-xs-0 c-secondary--text">
+          Mais Artigos
+        </h2>
         <div class="spy-4 spr-24 spr-xs-0" v-for="(blog, i) in blogs" :key="i">
-          <BlogCard :blog="blog" contexto="blog-teatica" sem-foto></BlogCard>
+          <BlogCard :blog="blog" contexto="blog-22" sem-foto></BlogCard>
         </div>
       </v-flex>
     </v-layout>

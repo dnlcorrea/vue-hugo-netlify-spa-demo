@@ -16,7 +16,7 @@
         "
       >
       </v-img>
-      <v-card-text class="black--text">
+      <v-card-text class="c-secondary--text">
         <p class="mb-2">
           {{ DateTime.fromISO(blog.published_at).toFormat('dd.MM.y') }}
         </p>

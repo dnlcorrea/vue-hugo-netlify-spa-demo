@@ -12,7 +12,7 @@
     >
       <v-flex xs12 md6 lg3 class="spx-4 pb-2" v-for="(p, i) in pos" :key="i">
         <router-link
-          :to="`/faculdade-teatica/pos-graduacao/${p.slug}`"
+          :to="`/faculdade-22/pos-graduacao/${p.slug}`"
           class="no-underline fill-height"
         >
           <v-card class="fill-height mb-2">
@@ -37,8 +37,8 @@
               class="c-primary spx-3 ml-3"
               style="z-index: 2; position: absolute; top: 0"
             >
-              <p class="black--text mb-0 mt-1 text-center">INÍCIO</p>
-              <p class="black--text mb-0 line-height-1 text-center">
+              <p class="c-secondary--text mb-0 mt-1 text-center">INÍCIO</p>
+              <p class="c-secondary--text mb-0 line-height-1 text-center">
                 <big
                   class="font-900 line-height-1"
                   style="font-size: 50px"
@@ -48,7 +48,7 @@
               </p>
               <p
                 class="
-                  black--text
+                  c-secondary--text
                   mb-1
                   line-height-1
                   text-center text-uppercase
@@ -77,7 +77,10 @@
                 a definir
               </div>
               <v-layout class="justify-end">
-                <v-btn depressed small class="smr-3 smt-3 c-primary black--text"
+                <v-btn
+                  depressed
+                  small
+                  class="smr-3 smt-3 c-primary c-secondary--text"
                   ><span class="font-600">SAIBA MAIS</span
                   ><i class="fas fa-arrow-right ml-2"></i
                 ></v-btn>

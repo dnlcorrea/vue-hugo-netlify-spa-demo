@@ -2,7 +2,7 @@
   <div
     class="spx-14 grey lighten-3 spy-20 smt-24"
     style="
-      background: linear-gradient(45deg, #3a3200 30%, black 30%);
+      background: linear-gradient(45deg, #3a3200 30%, #151b36 30%);
       background-attachment: fixed;
     "
   >
@@ -21,12 +21,20 @@
           :key="i"
         >
           <span
-            class="flecha c-primary d-flex align-center justify-center titulo"
+            class="
+              flecha
+              c-primary
+              c-secondary--text
+              d-flex
+              align-center
+              justify-center
+              titulo
+            "
           >
             <b>{{ i + 1 }}</b>
           </span>
           <div class="spr-10 ml-4">
-            <p class="smb-0 smt-0 font-600 sml-0">
+            <p class="smb-0 smt-0 font-600 sml-0 c-secondary--text">
               <big>
                 {{ item.title }}
               </big>
@@ -143,8 +151,8 @@ export default {
     content: '';
     width: 0;
     height: 0;
-    border-top: 30px solid #ffde17;
-    border-bottom: 30px solid #ffde17;
+    border-top: 30px solid #f9d428;
+    border-bottom: 30px solid #f9d428;
     border-left: 10px solid transparent;
     position: absolute;
     left: -10px;
@@ -155,7 +163,7 @@ export default {
     height: 0;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
-    border-left: 10px solid #ffde17;
+    border-left: 10px solid #f9d428;
     position: absolute;
     right: -10px;
   }

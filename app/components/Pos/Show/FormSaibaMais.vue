@@ -25,7 +25,10 @@
               SOBRE ESSE CURSO?
             </big>
           </h2>
-          <v-btn @click="dialog = true" class="c-primary mx-auto">
+          <v-btn
+            @click="dialog = true"
+            class="c-primary mx-auto c-secondary--text"
+          >
             <v-icon class="mr-2">fab fa-whatsapp</v-icon>
             <b>ENTRE EM CONTATO</b></v-btn
           >

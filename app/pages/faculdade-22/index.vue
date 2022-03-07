@@ -10,7 +10,7 @@
 		</div>
 		<Banner
 			txt1="FACULDADE"
-			txt2="TEÁTICA"
+			txt2="22"
 			img="/faculdade.jpg"
 			height="calc(60vh + 50px)"
 			ref="banner"

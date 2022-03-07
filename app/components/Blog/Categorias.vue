@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex align-center mb-4">
+    <div class="d-flex align-center mb-4 c-primary-darken-1--text">
       <i class="fas fa-bookmark mr-2" style="font-size: 16px"></i>
       <h3>CATEGORIAS</h3>
     </div>
@@ -12,7 +12,7 @@
     >
       <router-link
         :to="`/${contexto}/categoria/${cat.slug}`"
-        class="no-underline c-primary-darken-3--text"
+        class="no-underline c-secondary--text"
       >
         <i class="fas fa-arrow-right mr-1" style="font-size: 16px"></i>
 

@@ -1,30 +1,35 @@
 <template>
   <div class="white pt-3">
-    <div
-      class="
-        d-sm-flex d-xs-block
-        align-center
-        fill-height
-        justify-center
-        c-info-lighten-1
-        spt-24
-        spb-8
-      "
-    >
-      <h1 class="my-0 mx-auto text-center"><big>ACONTECE NA&nbsp;</big></h1>
-      <div>
-        <v-img
-          contain
-          class="mx-auto"
-          style="width: 170px"
-          src="/teatica-logo.png"
-        ></v-img>
-      </div>
-    </div>
+    <a href="/acontece-na-22" class="no-underline">
+      <v-layout
+        class="
+          align-center
+          fill-height
+          justify-center
+          c-info-lighten-1
+          spt-24
+          spb-8
+          d-xs-block d-sm-flex
+          flex-wrap
+        "
+      >
+        <h1 class="my-0 c-secondary--text" v-if="imageLoaded">
+          <big>Acontece na&nbsp;</big>
+        </h1>
+        <div>
+          <v-img
+            @load="imageLoaded = true"
+            contain
+            style="width: 170px"
+            src="/22-logo.png"
+          ></v-img>
+        </div>
+      </v-layout>
+    </a>
     <v-layout class="spt-20 spl-24 spl-xs-20 spr-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias
-          contexto="acontece-na-teatica"
+          contexto="acontece-na-22"
           :categorias="categoriasNoticias"
         ></BlogCategorias>
       </v-flex>
@@ -39,7 +44,7 @@
             v-for="(noticia, i) in noticias"
             :key="i"
           >
-            <BlogCard :blog="noticia" contexto="acontece-na-teatica"></BlogCard>
+            <BlogCard :blog="noticia" contexto="acontece-na-22"></BlogCard>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -55,6 +60,7 @@ export default {
   data() {
     return {
       categoria: '',
+      imageLoaded: false,
     }
   },
   computed: {

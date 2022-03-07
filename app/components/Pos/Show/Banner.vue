@@ -11,7 +11,7 @@
             {{ curso.name }}
           </h1>
           <!-- <v-divider class="c-primary smy-8"></v-divider> -->
-          <v-btn class="c-primary mt-8" large
+          <v-btn class="c-primary mt-8 c-secondary--text" large
             ><big class="font-800">INSCREVA-SE</big></v-btn
           >
           <v-layout class="justify-center mt-5">

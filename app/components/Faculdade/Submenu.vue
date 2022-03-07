@@ -26,7 +26,7 @@
         :class="{
           'is-active': item.path === pathname,
           'white--text': !passoudobanner,
-          'black--text': passoudobanner,
+          'c-secondary--text': passoudobanner,
         }"
         >{{ item.name }}</v-btn
       >
@@ -42,19 +42,19 @@ export default {
       passoudobanner: false,
       pathname: '',
       items: [
-        { name: 'Início', path: '/faculdade-teatica' },
+        { name: 'Início', path: '/faculdade-22' },
         {
           name: 'Graduação Presencial',
-          path: '/faculdade-teatica/graduacao-presencial',
+          path: '/faculdade-22/graduacao-presencial',
         },
         {
           name: 'Graduação Digital',
-          path: '/faculdade-teatica/graduacao-digital',
+          path: '/faculdade-22/graduacao-digital',
         },
-        { name: 'Pós-Graduação', path: '/faculdade-teatica/pos-graduacao' },
+        { name: 'Pós-Graduação', path: '/faculdade-22/pos-graduacao' },
         {
           name: 'Extensão Digital',
-          path: '/faculdade-teatica/extensao-digital',
+          path: '/faculdade-22/extensao-digital',
         },
         { name: 'Metodologia', path: '#metodologia' },
       ],
@@ -69,9 +69,9 @@ export default {
     this.$nextTick(() => {
       // let item = this.items.find((i) => i.name === 'Metodologia')
       // let path =
-      //   location.pathname === '/faculdade-teatica'
+      //   location.pathname === '/faculdade-22'
       //     ? '#metodologia'
-      //     : '/faculdade-teatica#metodologia'
+      //     : '/faculdade-22#metodologia'
       // item.path = path
       setTimeout(() => {
         let bh = this.banner.$el.offsetHeight - 76
