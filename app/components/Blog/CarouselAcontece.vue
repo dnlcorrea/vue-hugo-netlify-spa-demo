@@ -2,7 +2,11 @@
   <div>
     <v-layout class="flex-wrap align-center justify-space-between smb-9 smt-15">
       <h1 class="font-500 smy-0 main-title">Acontece na Multiversa</h1>
-      <v-btn to="/acontece-na-22" small outlined class="my-0 c-primary--text"
+      <v-btn
+        to="/acontece-na-multiversa"
+        small
+        outlined
+        class="my-0 c-primary--text"
         ><span class="c-secondary--text">VER TUDO</span></v-btn
       >
     </v-layout>

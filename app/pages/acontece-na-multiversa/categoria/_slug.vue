@@ -1,6 +1,6 @@
 <template>
   <div class="white pt-3">
-    <a href="/acontece-na-22" class="no-underline">
+    <a href="/acontece-na-multiversa" class="no-underline">
       <v-layout
         class="
           align-center
@@ -20,8 +20,8 @@
           <v-img
             @load="imageLoaded = true"
             contain
-            style="width: 170px"
-            src="/logo.png"
+            style="width: 230px"
+            src="/logo-s.png"
           ></v-img>
         </div>
       </v-layout>
@@ -30,7 +30,7 @@
     <v-layout class="spt-20 spl-24 spr-20 spl-xs-20 flex-wrap">
       <v-flex xs12 md3 lg2 class="mt-2 font-800">
         <BlogCategorias
-          contexto="acontece-na-22"
+          contexto="acontece-na-multiversa"
           :categorias="categoriasNoticias"
         ></BlogCategorias>
       </v-flex>
@@ -45,7 +45,10 @@
             v-for="(noticia, i) in noticias"
             :key="i"
           >
-            <BlogCard :blog="noticia" contexto="acontece-na-22"></BlogCard>
+            <BlogCard
+              :blog="noticia"
+              contexto="acontece-na-multiversa"
+            ></BlogCard>
           </v-flex>
         </v-layout>
       </v-flex>

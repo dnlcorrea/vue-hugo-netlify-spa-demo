@@ -4,7 +4,7 @@
       contain
       style="width: 300px; margin-top: 64px"
       class="mx-auto spt-20"
-      src="/logo.png"
+      src="/logo-s.png"
     ></v-img>
     <h1 class="font-500">PÁGINA EM CONSTRUÇÃO</h1>
     <v-img

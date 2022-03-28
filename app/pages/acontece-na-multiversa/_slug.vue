@@ -1,6 +1,6 @@
 <template>
   <div class="white pt-3">
-    <a href="/blog-22" class="no-underline">
+    <a href="/acontece-na-multiversa" class="no-underline">
       <v-layout
         class="
           align-center
@@ -9,17 +9,19 @@
           c-info-lighten-1
           spt-24
           spb-8
+          d-xs-block d-sm-flex
+          flex-wrap
         "
       >
         <h1 class="my-0 c-secondary--text" v-if="imageLoaded">
-          <big>BLOG&nbsp;</big>
+          <big>Acontece na&nbsp;</big>
         </h1>
         <div>
           <v-img
             @load="imageLoaded = true"
             contain
-            style="width: 170px"
-            src="/logo.png"
+            style="width: 230px"
+            src="/logo-s.png"
           ></v-img>
         </div>
       </v-layout>
@@ -72,10 +74,14 @@
       </v-flex>
       <v-flex xs12 md3
         ><h2 class="font-400 spt-18 spt-xs-0 spr-24 spr-xs-0 c-secondary--text">
-          Mais Artigos
+          Mais Notícias
         </h2>
         <div class="spy-4 spr-24 spr-xs-0" v-for="(blog, i) in blogs" :key="i">
-          <BlogCard :blog="blog" contexto="blog-22" sem-foto></BlogCard>
+          <BlogCard
+            :blog="blog"
+            contexto="acontece-na-multiversa"
+            sem-foto
+          ></BlogCard>
         </div>
       </v-flex>
     </v-layout>

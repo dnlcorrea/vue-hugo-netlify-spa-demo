@@ -13,8 +13,8 @@
             @load="contentLoaded"
             contain
             class="fill-height flex-0 sml-22 sml-xs-12"
-            style="width: 230px"
-            src="/logo-n.png"
+            style="width: 180px"
+            src="/logo-s-n.png"
           ></v-img>
         </router-link>
         <v-spacer></v-spacer>
@@ -139,8 +139,8 @@
         <v-img
           contain
           class=""
-          style="width: 170px; height: 94px"
-          src="/logo-n.png"
+          style="width: 220px; height: 54px"
+          src="/logo-s-n.png"
         ></v-img>
         <br />
         <br />

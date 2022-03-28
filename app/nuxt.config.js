@@ -7,7 +7,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s',
-    title: 'Faculdade Multiversa',
+    title: 'Multiversa',
     htmlAttrs: {
       lang: 'en'
     },
