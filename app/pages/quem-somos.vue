@@ -4,8 +4,8 @@
     <div class="spa-24 spt-xs-24 spx-xs-10 spb-xs-10">
       <p class="spx-sm-24 spx-xs-0 text-center">
         <big
-          >A Associação 22 Internacional é uma associação comunitária, sem
-          fins lucrativos e filantrópica, fundada em setembro de 2013 por um
+          >A AssociaçãoMultiversa Internacional é uma associação comunitária,
+          sem fins lucrativos e filantrópica, fundada em setembro de 2013 por um
           grupo de educadores cuja missão é difundir a APRENDIZAGEM EVOLUTIVA no
           Brasil e no exterior.
         </big>
@@ -23,7 +23,7 @@
     <v-layout class="spy-24 grey lighten-3 flex-wrap">
       <v-flex xs12 md4 lg3 class="spl-24 spx-xs-15">
         <p>
-          A Associação 22 Internacional é composta por um
+          A AssociaçãoMultiversa Internacional é composta por um
           <span class="font-600"> Conselho Deliberativo </span>, um
           <span class="font-600">Conselho Fiscal</span> e uma
           <span class="font-600">Diretoria Executiva</span>, formada pelas

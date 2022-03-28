@@ -12,7 +12,7 @@
     >
       <v-flex xs12 md6 lg3 class="spx-4 pb-2" v-for="(p, i) in pos" :key="i">
         <router-link
-          :to="`/faculdade-22/pos-graduacao/${p.slug}`"
+          :to="`/faculdade-multiversa/pos-graduacao/${p.slug}`"
           class="no-underline fill-height"
         >
           <v-card class="fill-height mb-2">

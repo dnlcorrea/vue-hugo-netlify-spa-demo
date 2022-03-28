@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-layout class="flex-wrap align-center justify-space-between smb-9 smt-15">
-      <h1 class="font-500 smy-0 main-title">Blog 22</h1>
+      <h1 class="font-500 smy-0 main-title">Blog Multiversa</h1>
       <v-btn to="/blog-22" outlined small class="my-0 c-primary--text"
         ><span class="c-secondary--text">VER TUDO</span></v-btn
       >

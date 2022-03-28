@@ -44,14 +44,14 @@ export default {
     return {
       produtos: [
         {
-          nome: 'Faculdade 22',
+          nome: 'Faculdade Multiversa',
           img: '/produtos/t-04.png',
-          url: '/faculdade-22',
+          url: '/faculdade-multiversa',
         },
         {
-          nome: 'Colégio 22',
+          nome: 'Colégio Multiversa',
           img: '/produtos/t-03.png',
-          url: '/colegio-22',
+          url: '/colegio-multiversa',
         },
         {
           nome: 'Portal de Cursos Digitais',

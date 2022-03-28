@@ -42,19 +42,19 @@ export default {
       passoudobanner: false,
       pathname: '',
       items: [
-        { name: 'Início', path: '/faculdade-22' },
+        { name: 'Início', path: '/faculdade-multiversa' },
         {
           name: 'Graduação Presencial',
-          path: '/faculdade-22/graduacao-presencial',
+          path: '/faculdade-multiversa/graduacao-presencial',
         },
         {
           name: 'Graduação Digital',
-          path: '/faculdade-22/graduacao-digital',
+          path: '/faculdade-multiversa/graduacao-digital',
         },
-        { name: 'Pós-Graduação', path: '/faculdade-22/pos-graduacao' },
+        { name: 'Pós-Graduação', path: '/faculdade-multiversa/pos-graduacao' },
         {
           name: 'Extensão Digital',
-          path: '/faculdade-22/extensao-digital',
+          path: '/faculdade-multiversa/extensao-digital',
         },
         { name: 'Metodologia', path: '#metodologia' },
       ],
@@ -69,7 +69,7 @@ export default {
     this.$nextTick(() => {
       // let item = this.items.find((i) => i.name === 'Metodologia')
       // let path =
-      //   location.pathname === '/faculdade-22'
+      //   location.pathname === '/faculdade-multiversa'
       //     ? '#metodologia'
       //     : '/faculdade-22#metodologia'
       // item.path = path

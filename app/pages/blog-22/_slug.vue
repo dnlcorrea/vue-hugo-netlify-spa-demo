@@ -19,7 +19,7 @@
             @load="imageLoaded = true"
             contain
             style="width: 170px"
-            src="/22-logo.png"
+            src="/logo.png"
           ></v-img>
         </div>
       </v-layout>
@@ -31,7 +31,7 @@
           <v-chip
             small
             class="no-underline grey lighten-4 px-3 mr-2 my-1"
-            :to="`/blog-22/categoria/${cat.slug}`"
+            :to="`/blog-multiversa/categoria/${cat.slug}`"
             v-for="(cat, i) in texto.categoria.filter(
               (c) => c.nome !== 'Notícia'
             )"

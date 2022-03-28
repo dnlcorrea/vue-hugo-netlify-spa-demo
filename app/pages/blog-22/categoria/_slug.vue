@@ -19,7 +19,7 @@
             @load="imageLoaded = true"
             contain
             style="width: 170px"
-            src="/22-logo.png"
+            src="/logo.png"
           ></v-img>
         </div>
       </v-layout>

@@ -20,7 +20,7 @@
       >
         <router-link
           class="no-underline"
-          :to="`/faculdade-22/graduacao-presencial/${slug}`"
+          :to="`/faculdade-multiversa/graduacao-presencial/${slug}`"
         >
           <v-card>
             <v-img

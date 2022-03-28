@@ -14,7 +14,7 @@
             contain
             class="fill-height flex-0 sml-22 sml-xs-12"
             style="width: 230px"
-            src="/22-hor-n.png"
+            src="/logo-n.png"
           ></v-img>
         </router-link>
         <v-spacer></v-spacer>
@@ -90,7 +90,7 @@
           <v-list-item
             :class="pathname.includes(item.path) ? 'is-selected' : ''"
             :to="item.path"
-            v-if="item.name !== 'FACULDADE 22'"
+            v-if="item.name !== 'Faculdade Multiversa'"
           >
             <v-list-item-title class="c-secondary--text">{{
               item.name
@@ -140,18 +140,18 @@
           contain
           class=""
           style="width: 170px; height: 94px"
-          src="/22-logo-n.png"
+          src="/logo-n.png"
         ></v-img>
         <br />
         <br />
 
         <a
           class="white--text no-underline"
-          href="mailto:contato@faculdade22.com"
+          href="mailto:contato@multiversa.edu.br"
         >
           <p>
             <v-icon small class="c-primary--text mr-2">fas fa-envelope</v-icon>
-            contato@faculdade22.com
+            contato@multiversa.edu.br
           </p>
         </a>
         <p class="white--text">
@@ -195,7 +195,7 @@
                 style="float: left"
                 >fas fa-caret-right</v-icon
               >
-              <p>Acontece na 22</p>
+              <p>Acontece na Multiversa</p>
             </a>
             <a class="white--text no-underline" to="">
               <v-icon
@@ -204,7 +204,7 @@
                 style="float: left"
                 >fas fa-caret-right</v-icon
               >
-              <p>Blog 22</p>
+              <p>Blog Multiversa</p>
             </a>
             <a class="white--text no-underline" to="">
               <v-icon
@@ -224,7 +224,7 @@
                 style="float: left"
                 >fas fa-caret-right</v-icon
               >
-              <p>Faculdade 22</p>
+              <p>Faculdade Multiversa</p>
             </a>
             <a class="white--text no-underline" to="">
               <v-icon
@@ -280,7 +280,7 @@
                 style="float: left"
                 >fas fa-caret-right</v-icon
               >
-              <p>Colégio 22</p>
+              <p>Colégio Multiversa</p>
             </a>
             <a class="white--text no-underline" to="">
               <v-icon
@@ -364,20 +364,20 @@ export default {
           path: '/home',
         },
         {
-          name: 'FACULDADE 22',
-          path: '/faculdade-22',
+          name: 'Faculdade Multiversa',
+          path: '/faculdade-multiversa',
         },
         {
           name: 'QUEM SOMOS',
           path: '/quem-somos',
         },
         {
-          name: 'ACONTECE NA 22',
-          path: '/acontece-na-22',
+          name: 'ACONTECE NA Multiversa',
+          path: '/acontece-na-multiversa',
         },
         {
-          name: 'BLOG 22',
-          path: '/blog-22',
+          name: 'Blog Multiversa',
+          path: '/blog-multiversa',
         },
         {
           name: 'CONTATO',
@@ -385,19 +385,19 @@ export default {
         },
       ],
       submenus: [
-        { name: 'Início', path: '/faculdade-22' },
+        { name: 'Início', path: '/faculdade-multiversa' },
         {
           name: 'Graduação Presencial',
-          path: '/faculdade-22/graduacao-presencial',
+          path: '/faculdade-multiversa/graduacao-presencial',
         },
         {
           name: 'Graduação Digital',
-          path: '/faculdade-22/graduacao-digital',
+          path: '/faculdade-multiversa/graduacao-digital',
         },
-        { name: 'Pós-Graduação', path: '/faculdade-22/pos-graduacao' },
+        { name: 'Pós-Graduação', path: '/faculdade-multiversa/pos-graduacao' },
         {
           name: 'Extensão Digital',
-          path: '/faculdade-22/extensao-digital',
+          path: '/faculdade-multiversa/extensao-digital',
         },
         { name: 'Metodologia', path: '#metodologia' },
       ],
