@@ -1,5 +1,5 @@
 <template>
-  <div class="padding-padrao spy-15">
+  <div class="spy-15">
     <h1 class="font-500 smt-20 main-title">Componentes Curriculares</h1>
 
     <p class="secondary--text light mt-3" v-if="curso.carga_horaria">
@@ -19,7 +19,7 @@
           >
             <v-expansion-panel-header>
               <div>
-                <h2 class="semilight secondary--text mb-0">
+                <h2 class="semilightc-secondary--text mb-0">
                   <i class="fas fa-caret-right c-primary--text mr-2"></i>
                   {{ matrizes.titulo }}
                 </h2>
@@ -30,7 +30,7 @@
             >
               <div v-for="(matriz, j) in matrizes.itens" :key="j">
                 <v-card flat class="spl-12 spx-xs-2">
-                  <p class="regular titulo-card secondary--text spr-6">
+                  <p class="regular titulo-cardc-secondary--text spr-6">
                     <span class="primary--text">
                       <i
                         class="fas fa-arrow-right c-primary--text mr-2 mt-1"
@@ -56,7 +56,7 @@
           >
             <v-expansion-panel-header>
               <div>
-                <h2 class="semilight secondary--text mb-0">
+                <h2 class="semilightc-secondary--text mb-0">
                   <i class="fas fa-caret-right c-primary--text mr-2"></i>
                   {{ matrizes.titulo }}
                 </h2>
@@ -67,7 +67,7 @@
             >
               <div v-for="(matriz, j) in matrizes.itens" :key="j">
                 <v-card flat class="spl-12">
-                  <p class="regular titulo-card secondary--text spr-6">
+                  <p class="regular titulo-cardc-secondary--text spr-6">
                     <span class="primary--text">
                       <i
                         class="fas fa-arrow-right c-primary--text mr-2 mt-1"

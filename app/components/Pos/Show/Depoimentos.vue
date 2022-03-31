@@ -1,5 +1,5 @@
 <template>
-  <div class="padding-padrao margin-padrao">
+  <div class="">
     <h1 class="titulo ead spt-12 spl-0"><big>VEJA O QUE ESTÃO FALANDO</big></h1>
 
     <v-layout wrap>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss">

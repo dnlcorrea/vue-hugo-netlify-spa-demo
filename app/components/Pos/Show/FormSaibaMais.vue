@@ -5,7 +5,7 @@
         wrap
         grey
         lighten-4
-        full-width
+        fill-width
         align-center
         justify-center
         spy-lg-5 spy-sm-10 spy-xs-12

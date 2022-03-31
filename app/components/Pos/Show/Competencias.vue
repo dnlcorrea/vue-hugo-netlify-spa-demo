@@ -1,5 +1,5 @@
 <template>
-  <div class="padding-padrao margin-padrao smt-20">
+  <div class="smt-20">
     <h1 class="ead titulo spb-8 smb-8 spl-0">
       <big>Ao final deste curso você será capaz de </big>
     </h1>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { chunk } from "lodash";
+import { chunk } from 'lodash'
 
 export default {
   props: {
@@ -40,7 +40,7 @@ export default {
   methods: {
     chunk,
   },
-};
+}
 </script>
 
 <style lagn="scss">

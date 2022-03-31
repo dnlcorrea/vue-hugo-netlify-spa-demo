@@ -1,5 +1,5 @@
 <template>
-  <div class="white spt-20 spx-sm-24 spx-xs-15 margin-padrao" id="sobre">
+  <div class="white spt-20 spx-sm-24 spx-xs-15" id="sobre">
     <h1 class="font-500 smt-20 main-title">Sobre o Curso</h1>
     <v-layout class="spb-24 alig-center flex-wrap">
       <v-flex xs12 md6 lg7>
