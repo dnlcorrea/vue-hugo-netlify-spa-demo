@@ -33,10 +33,10 @@
           :to="cursoPath(curso.slug)"
           :class="
             curso.categoria === 'Curso de Atualização'
-              ? 'c-primary-darken-1--text'
+              ? 'c-primary-darken-1--text text-left'
               : curso.categoria === 'Pós-graduação'
-              ? 'white--text'
-              : 'c-secondary--text'
+              ? 'white--text text-center'
+              : 'c-secondary--text text-left'
           "
           style="position: relative"
         >
@@ -75,23 +75,23 @@
                   class="
                     line-height-1-5
                     my-1
-                    titulo-banner
+                    titulo
                     semibold
                     mb-2
                     white--text
                     uppercase
                   "
                 >
-                  {{ curso.titulo }}
+                  <big>{{ curso.titulo }}</big>
                 </h3>
-                <p class="white--text p2 mb-2">
+                <p class="white--text mb-2">
                   Início:
                   <span class="font-600">{{ setInicio(curso.inicio) }}</span> |
                   Duração:
                   <span class="font-600">{{ curso.duracao }}</span>
                 </p>
                 <v-btn
-                  class="c-primary ml-0"
+                  class="c-primary ml-0 c-secondary--text"
                   :to="
                     '/turismo-e-hotelaria/cursos?curso=' +
                     curso.slug +

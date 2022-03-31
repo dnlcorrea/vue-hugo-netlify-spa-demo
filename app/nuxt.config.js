@@ -55,7 +55,9 @@ export default {
     { src: '~/plugins/after-each.js', mode: 'client' },
     { src: '~/plugins/truncate.js' },
     { src: '~/plugins/vue-check-view.js', mode: 'client' },
-    { src: '~/plugins/imagine.js'}
+    { src: '~/plugins/imagine.js'},
+    { src: '~/plugins/event.js'},
+    { src: '~/plugins/mask.js'}
     
   ],
 

@@ -12,7 +12,7 @@
       class="flex-wrap"
     >
       <v-flex xs12 md6 class="spx-4" v-for="(blog, i) in blogs" :key="i">
-        <BlogCard :blog="blog"></BlogCard>
+        <BlogCard :blog="blog" contexto="blog-multiversa"></BlogCard>
       </v-flex>
     </v-layout>
   </div>

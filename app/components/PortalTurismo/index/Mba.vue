@@ -77,17 +77,16 @@
           </div>
           <v-btn
             class="mr-0 d-flex align-center justify-center btn-padrao"
-            :class="
-              curso.categoria
-                ? curso.categoria === 'Curso de Atualização'
-                  ? 'c-primary--text'
-                  : 'c-secondary--text'
-                : false
-            "
             style="height: 25px; width: 100px"
           >
             <small
-              class="text-center text-uppercase font-500 spr-2"
+              class="
+                text-center
+                c-secondary--text
+                text-uppercase
+                font-500
+                spr-2
+              "
               style="line-height: 1.2"
               >saiba mais</small
             >

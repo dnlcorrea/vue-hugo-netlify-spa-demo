@@ -31,9 +31,9 @@
           ></object>
         </div>
 
-        <h3 class="line-height-1 smt-xs-10 smb-xs-20">
+        <h5 class="line-height-1 font-300 smt-xs-10 smb-xs-20">
           <big>100%</big><br />ONLINE
-        </h3>
+        </h5>
       </v-flex>
       <v-flex
         data-aos="flip-left"
@@ -61,9 +61,9 @@
           ></object>
         </div>
 
-        <h3 class="line-height-1 smt-xs-10 smb-xs-20">
+        <h5 class="line-height-1 font-300 smt-xs-10 smb-xs-20">
           CURSOS FOCADOS<br />NA PRÁTICA
-        </h3>
+        </h5>
       </v-flex>
       <v-flex
         data-aos="flip-left"
@@ -90,9 +90,9 @@
             data="/portal-turismo/diferenciais/icones-02.svg"
           ></object>
         </div>
-        <h3 class="line-height-1 smt-xs-10 smb-xs-20">
+        <h5 class="line-height-1 font-300 smt-xs-10 smb-xs-20">
           EXPERIÊNCIA PROFISSIONAL<br />DE SUCESSO
-        </h3>
+        </h5>
       </v-flex>
     </v-layout>
   </div>

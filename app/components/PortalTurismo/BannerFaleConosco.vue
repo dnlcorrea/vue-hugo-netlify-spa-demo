@@ -14,19 +14,19 @@
   >
     <v-flex
       xs8
-      md3
-      xl2
+      md4
+      xl3
       class="d-flex align-center justify-center spt-xs-15 spb-xs-5"
     >
-      <div>
-        <h2 class="secondary--text titulo-banner special-font line-height-1">
+      <div class="spb-10">
+        <h1 class="c-secondary--text font-100 special-font mb-3">
           <big>
             <big>
               TIRE SUAS <br class="hidden-sm-and-down" />
               DÚVIDAS
             </big>
           </big>
-        </h2>
+        </h1>
 
         <fale-conosco-btn-vue
           titulo="FALE CONOSCO"
@@ -38,44 +38,7 @@
         ></fale-conosco-btn-vue>
       </div>
     </v-flex>
-    <v-flex
-      xs8
-      md3
-      xl2
-      class="d-flex align-center justify-center spt-xs-15 spb-xs-5"
-    >
-      <div>
-        <p>
-          <a
-            href="https://wa.me/554521059009"
-            target="_blank"
-            class="c-info-darken-2--text"
-          >
-            <v-icon class="mr-2">fab fa-whatsapp</v-icon> +55 45 2105.9009
-          </a>
-        </p>
-        <p>
-          <a
-            href="mailto:atendimento@uniamerica.br"
-            target="_blank"
-            class="c-info-darken-2--text"
-          >
-            <v-icon class="mr-2">fas fa-envelope</v-icon>
-            atendimento@uniamerica.br
-          </a>
-        </p>
-        <p>
-          <a
-            href="http://m.me/UniAmericaUA"
-            target="_blank"
-            class="c-info-darken-2--text"
-          >
-            <v-icon class="mr-2">fab fa-facebook-messenger</v-icon>
-            /UniAmericaUA
-          </a>
-        </p>
-      </div>
-    </v-flex>
+
     <v-flex xs10 md3 xl2 class="spb-xs-15">
       <v-img src="/portal-turismo/contato.png"></v-img>
     </v-flex>

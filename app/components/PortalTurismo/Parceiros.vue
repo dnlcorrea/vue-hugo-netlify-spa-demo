@@ -5,10 +5,10 @@
     </div>
 
     <v-layout class="align-center flex-wrap spx-24">
-      <v-flex xs6 sm4 md3 lg3 xl2 v-for="(parceiro, i) in parceiros" :key="i">
+      <v-flex xs6 sm4 md3 lg3 v-for="(parceiro, i) in parceiros" :key="i">
         <a :href="parceiro.url" target="_blank" style="display: block">
           <object
-            style="pointer-events: none"
+            style="pointer-events: none; max-width: 250px"
             :data="'/portal-turismo/parceiros/' + parceiro.img"
             type="image/svg+xml"
           ></object>

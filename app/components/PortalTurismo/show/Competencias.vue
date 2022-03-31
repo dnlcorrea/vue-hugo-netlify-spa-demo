@@ -82,8 +82,6 @@ export default {
 
   watch: {
     slug(newVal, oldVal) {
-      console.log('Watching slug', newVal, oldVal)
-
       axios
         .head(`/docs/turismo-e-hotelaria/${newVal}.pdf`)
         .then(() => {

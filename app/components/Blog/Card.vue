@@ -21,10 +21,16 @@
           {{ DateTime.fromISO(blog.published_at).toFormat('dd.MM.y') }}
         </p>
         <h2 class="mb-2 font-600">
-          <small :inner-html.prop="blog.titulo | truncate(60)"></small>
+          <small :inner-html.prop="blog.titulo | truncate(90)"></small>
         </h2>
         <div
           class="line-height-1-2"
+          v-if="blog.subtitulo"
+          :inner-html.prop="blog.subtitulo | truncate(100)"
+        ></div>
+        <div
+          class="line-height-1-2"
+          v-else
           :inner-html.prop="blog.texto | truncate(100)"
         ></div>
         <v-layout

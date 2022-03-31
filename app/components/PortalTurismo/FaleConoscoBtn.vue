@@ -1,5 +1,8 @@
 <template>
-  <v-btn @click="openDialog" class="c-primary mx-auto" :large="large"
+  <v-btn
+    @click="openDialog"
+    class="c-primary c-secondary--text mx-auto"
+    :large="large"
     ><div
       class="d-flex align-center"
       v-html="
@@ -33,7 +36,10 @@ export default {
         curso: this.curso ? this.curso : '',
         redirect: this.redirect ? this.redirect : 'https://wa.me/554521059009',
       }
-      Event.$emit(this.eventName ? this.eventName : 'openDialog', dialogInfo)
+      $nuxt.$bus.$emit(
+        this.eventName ? this.eventName : 'openDialog',
+        dialogInfo
+      )
     },
   },
 }

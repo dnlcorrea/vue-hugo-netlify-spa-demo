@@ -130,21 +130,12 @@
                   Conversas incríveis com <br class="hidden-xs-only" />
                   profissionais do Turismo e Hotelaria.
                 </h3>
-                <v-chip
-                  class="white c-primary--text hand smt-6 semibold"
-                  disabled
-                >
-                  <clr-icon
-                    shape="certificate"
-                    class="c-primary--text mr-2"
-                  ></clr-icon>
+                <v-chip class="c-primary c-secondary--text hand smt-6 semibold">
+                  <i class="fas fa-certificate mr-2"></i>
                   COM CERTIFICADO</v-chip
                 >
                 <br class="hidden-lg-and-down" />
-                <v-chip
-                  class="white c-primary--text hand smt-6 semibold"
-                  disabled
-                >
+                <v-chip class="c-primary c-secondary--text hand smt-6 semibold">
                   100% ONLINE E GRATUITO</v-chip
                 >
               </v-flex>

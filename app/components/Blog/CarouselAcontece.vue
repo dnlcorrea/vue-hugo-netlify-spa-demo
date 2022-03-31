@@ -16,7 +16,7 @@
       class="flex-wrap"
     >
       <v-flex xs12 md6 class="spx-4" v-for="(noticia, i) in noticias" :key="i">
-        <BlogCard :blog="noticia"></BlogCard>
+        <BlogCard :blog="noticia" contexto="acontece-na-multiversa"></BlogCard>
       </v-flex>
     </v-layout>
   </div>

@@ -87,26 +87,37 @@
       classe="cursos-online"
     ></cursos-online>
     <diferenciais></diferenciais>
-    <!-- 
-		<div class="spx-24 spy-5" id="novidades-e-inovacoes">
-			<ultimas-noticias
-				class="smt-24 smb-5"
-				titulo="NOVIDADES E INOVAÇÕES"
-				tag="turismo-e-hotelaria"
-			></ultimas-noticias>
-		</div> -->
 
-    <!-- <cursos-online
-      titulo="MBAS"
-      subtitulo="Cursos de Pós-graduação para profissionais que desejam aprofundar conhecimentos na área de administração em Turismo e Hotelaria."
-      :cursos="mbas"
-      classe="mbas"
-      v-show="mbas.length"
-    ></cursos-online> -->
+    <v-layout
+      class="flex-wrap align-center justify-space-between smb-9 smt-24 spx-24"
+    >
+      <h1 class="font-500 smy-0 main-title">NOVIDADES E INOVAÇÕES</h1>
+      <v-btn
+        to="/blog-multiversa/categoria/turismo-e-hotelaria"
+        outlined
+        small
+        class="my-0 c-primary--text"
+        ><span class="c-secondary--text">VER TUDO</span></v-btn
+      >
+    </v-layout>
+    <v-layout
+      style="margin: 0 calc(-8px - 0.4vw) !important"
+      class="flex-wrap spx-24 spb-10"
+    >
+      <v-flex
+        xs12
+        sm6
+        md3
+        class="spx-4 spb-10"
+        v-for="(blog, i) in blogs"
+        :key="i"
+      >
+        <BlogCard :blog="blog" contexto="blog-multiversa"></BlogCard>
+      </v-flex>
+    </v-layout>
 
     <banner-fale-conosco></banner-fale-conosco>
     <parceiros></parceiros>
-    <!-- <newsletter name="Newsletter Portal de Turismo e Hotelaria"></newsletter> -->
 
     <form-saiba-mais></form-saiba-mais>
   </div>
@@ -114,6 +125,7 @@
 
 <script>
 import mbas from '@/data/mbas.js'
+import blog from '@/data/blog.js'
 
 import cursos from '@/components/PortalTurismo/cursos-turismo'
 
@@ -148,13 +160,16 @@ export default {
     MbaBanner,
     Parceiros,
   },
+  computed: {
+    blogs() {
+      return blog
+        .filter((a) =>
+          a.categoria.find((c) => c.slug === 'turismo-e-hotelaria')
+        )
+        .slice(0, 4)
+    },
+  },
   mounted() {
-    axios
-      .get('http://uniamerica.br/api/portal-turismo/mba')
-      .then(({ data }) => {
-        this.mbas = data.data
-      })
-
     setTimeout(() => {
       if (location.hash) {
         let element = document.querySelector(location.hash)

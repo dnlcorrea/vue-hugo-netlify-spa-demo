@@ -48,21 +48,22 @@
             ></v-text-field>
             <v-layout class="align-center">
               <v-select
-                style="width: 40px; flex: 0 !important"
+                style="width: 90px; flex: 0 !important"
                 v-model="local"
                 :items="['BR', 'PY', 'AR']"
                 append-icon="fas fa-arrow-down"
-                @change="mostrarlocal"
+                @input="mostrarlocal"
                 name="país"
-                class="select-pais"
+                class="select-pais mr-3"
                 label="País"
               >
               </v-select>
               <v-text-field
+                persistent-placeholder
                 label="Celular"
                 color="c-primary"
                 v-model="inscricao.celular"
-                :mask="localMasks[local]"
+                v-mask="localMasks[local]"
                 :rules="rules.celular"
                 required
                 name="celular"
@@ -85,20 +86,20 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
-              color="c-primary"
+              color="c-primary c-secondary--text"
               type="submit"
               :loading="loading"
               :disabled="disabled"
             >
-              <span class="white--text">CONTINUAR</span>
+              <span>CONTINUAR</span>
               <v-icon small class="ml-2">fas fa-arrow-right</v-icon>
             </v-btn>
           </v-card-actions>
         </v-form>
 
-        <v-card-text class="spy-10" v-else>
-          <p class="text-xs-center mb-4 uppercase c-info-darken-2--text">
-            Você será redirecionado
+        <v-card-text class="spy-10 text-center" v-else>
+          <p class="text-center mb-4 uppercase c-info-darken-2--text">
+            Prontinho! Em breve nossa equipe entrará em contato
           </p>
           <div
             class="
@@ -113,16 +114,16 @@
             "
             style="width: 50px; height: 50px; border-radius: 100px"
           >
-            <span v-if="count != 0" class="text-xs-center">{{ count }}</span>
-            <span v-else class="text-xs-center enter-check"
+            <span class="text-center enter-check"
               ><v-icon class="white--text">fas fa-check</v-icon></span
             >
           </div>
-          <p class="p3 mt-2" v-if="count != 0">&nbsp;</p>
-          <p v-else class="p3 c-info-darken-2--text text-xs-center mt-2">
-            Caso você não seja redirecionado
-            <a :href="dialogInfo.redirect" target="_blank">clique aqui.</a>
-          </p>
+          <v-btn
+            depressed
+            class="mt-5 c-info-lighten-1 c-secondary--text mx-auto"
+            @click="resetForm"
+            >fechar</v-btn
+          >
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -176,7 +177,7 @@ export default {
 
   methods: {
     mostrarlocal() {
-      console.log(this.localMasks[this.local])
+      return this.localMasks[this.local]
     },
     decrementCounter: function () {
       this.count -= 1
@@ -184,7 +185,7 @@ export default {
     resetForm() {
       this.dialog = false
       setTimeout(() => {
-        this.count = 2
+        this.preenchido = false
         this.submited = false
       }, 500)
     },
@@ -195,15 +196,6 @@ export default {
         if (this.$refs.form.validate()) {
           event.target.submit()
           this.submited = true
-
-          let interval = setInterval(() => {
-            if (this.count != 0) {
-              this.decrementCounter()
-            } else {
-              clearInterval(interval)
-              open(this.dialogInfo.redirect)
-            }
-          }, 1000)
           this.preenchido = true
         }
         this.loading = false
@@ -212,7 +204,7 @@ export default {
     },
   },
   mounted() {
-    Event.$on('openDialog', (dados) => {
+    $nuxt.$bus.$on('openDialog', (dados) => {
       this.dialog = true
       this.dialogInfo = dados
     })
