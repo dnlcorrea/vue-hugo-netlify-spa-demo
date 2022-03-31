@@ -34,7 +34,6 @@ export default {
       let dialogInfo = {
         titulo: this.titulo ? this.titulo : 'Fale Conosco',
         curso: this.curso ? this.curso : '',
-        redirect: this.redirect ? this.redirect : 'https://wa.me/554521059009',
       }
       $nuxt.$bus.$emit(
         this.eventName ? this.eventName : 'openDialog',

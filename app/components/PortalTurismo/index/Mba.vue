@@ -23,7 +23,7 @@
         :key="i"
       >
         <router-link
-          :to="'/turismo-e-hotelaria/cursos?curso=' + curso.slug"
+          :to="'/portal-de-turismo-e-hotelaria/cursos?curso=' + curso.slug"
           :class="
             curso.categoria === 'Curso de Atualização'
               ? 'c-primary--text'

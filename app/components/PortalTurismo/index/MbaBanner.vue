@@ -29,7 +29,11 @@
           class="fill-height d-flex align-center spr-sm-3 spx-md-0"
         >
           <router-link
-            :to="'/turismo-e-hotelaria/cursos?curso=' + mba.slug + '&type=mba'"
+            :to="
+              '/portal-de-turismo-e-hotelaria/cursos?curso=' +
+              mba.slug +
+              '&type=mba'
+            "
             style="position: relative"
           >
             <!-- <clr-icon :shape="mba.icon" class="white--text"></clr-icon> -->
@@ -60,7 +64,9 @@
             <v-btn
               class="c-primary"
               :to="
-                '/turismo-e-hotelaria/cursos?curso=' + mba.slug + '&type=mba'
+                '/portal-de-turismo-e-hotelaria/cursos?curso=' +
+                mba.slug +
+                '&type=mba'
               "
               >SAIBA MAIS
               <v-icon class="ml-2" small>fas fa-arrow-right</v-icon></v-btn
@@ -92,7 +98,7 @@
                 :texto="`<clr-icon shape='file' class='is-solid mr-2' style='margin-bottom:2px'></clr-icon> BAIXE AQUI`"
                 titulo="BAIXAR MATRIZ CURRICULAR"
                 :curso="mba.titulo"
-                :redirect="`/turismo-e-hotelaria/${mba.slug}/matriz`"
+                :redirect="`/portal-de-turismo-e-hotelaria/${mba.slug}/matriz`"
               ></fale-conosco-btn-vue>
             </div></div
         ></v-flex>

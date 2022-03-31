@@ -70,7 +70,6 @@
             </p>
             <fale-conosco-btn-vue
               titulo="FALE CONOSCO"
-              :redirect="`/turismo-e-hotelaria/${slug}/whatsapp`"
               :curso="titulo"
             ></fale-conosco-btn-vue>
           </v-flex>

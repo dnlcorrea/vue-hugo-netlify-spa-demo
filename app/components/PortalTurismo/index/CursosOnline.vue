@@ -93,7 +93,7 @@
                 <v-btn
                   class="c-primary ml-0 c-secondary--text"
                   :to="
-                    '/turismo-e-hotelaria/cursos?curso=' +
+                    '/portal-de-turismo-e-hotelaria/cursos?curso=' +
                     curso.slug +
                     '&type=mba'
                   "
@@ -195,7 +195,7 @@ export default {
   methods: {
     cursoPath(slug) {
       let type = this.classe === 'mbas' ? '&type=mba' : ''
-      return '/turismo-e-hotelaria/cursos?curso=' + slug + type
+      return '/portal-de-turismo-e-hotelaria/cursos?curso=' + slug + type
     },
     strip: (text) => striptags(text),
     setInicio(inicio) {

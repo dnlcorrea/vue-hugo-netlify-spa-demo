@@ -55,7 +55,6 @@
               :texto="`<clr-icon shape='file' class='is-solid mr-2' style='margin-bottom:2px'></clr-icon> BAIXE AQUI`"
               titulo="BAIXAR MATRIZ CURRICULAR"
               :curso="titulo"
-              :redirect="`/turismo-e-hotelaria/${slug}/matriz`"
             ></fale-conosco-btn-vue>
           </div>
         </v-img>

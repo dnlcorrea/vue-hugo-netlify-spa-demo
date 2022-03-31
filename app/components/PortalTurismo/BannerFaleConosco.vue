@@ -28,14 +28,7 @@
           </big>
         </h1>
 
-        <fale-conosco-btn-vue
-          titulo="FALE CONOSCO"
-          :redirect="
-            curso
-              ? `/turismo-e-hotelaria/${curso}/whatsapp`
-              : '/turismo-e-hotelaria/home/whatsapp'
-          "
-        ></fale-conosco-btn-vue>
+        <fale-conosco-btn-vue titulo="FALE CONOSCO"></fale-conosco-btn-vue>
       </div>
     </v-flex>
 

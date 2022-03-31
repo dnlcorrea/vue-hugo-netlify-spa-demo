@@ -81,7 +81,6 @@
           <fale-conosco-btn-vue
             large
             titulo="FALE CONOSCO HOME"
-            redirect="/turismo-e-hotelaria/home/whatsapp"
           ></fale-conosco-btn-vue>
         </div>
       </v-flex>
