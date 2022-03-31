@@ -1,5 +1,5 @@
 <template>
-  <v-btn @click="openDialog" class="primary mx-auto" :large="large"
+  <v-btn @click="openDialog" class="c-primary mx-auto" :large="large"
     ><div
       class="d-flex align-center"
       v-html="
@@ -22,21 +22,21 @@ export default {
   },
   computed: {
     interesse() {
-      let curso = this.curso ? "-" + this.curso : "";
-      return this.titulo + curso;
+      let curso = this.curso ? '-' + this.curso : ''
+      return this.titulo + curso
     },
   },
   methods: {
     openDialog() {
       let dialogInfo = {
-        titulo: this.titulo ? this.titulo : "Fale Conosco",
-        curso: this.curso ? this.curso : "",
-        redirect: this.redirect ? this.redirect : "https://wa.me/554521059009",
-      };
-      Event.$emit(this.eventName ? this.eventName : "openDialog", dialogInfo);
+        titulo: this.titulo ? this.titulo : 'Fale Conosco',
+        curso: this.curso ? this.curso : '',
+        redirect: this.redirect ? this.redirect : 'https://wa.me/554521059009',
+      }
+      Event.$emit(this.eventName ? this.eventName : 'openDialog', dialogInfo)
     },
   },
-};
+}
 </script>
 <style lang='scss'>
 </style>

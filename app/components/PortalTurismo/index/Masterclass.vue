@@ -131,18 +131,18 @@
                   profissionais do Turismo e Hotelaria.
                 </h3>
                 <v-chip
-                  class="white primary--text hand smt-6 semibold"
+                  class="white c-primary--text hand smt-6 semibold"
                   disabled
                 >
                   <clr-icon
                     shape="certificate"
-                    class="primary--text mr-2"
+                    class="c-primary--text mr-2"
                   ></clr-icon>
                   COM CERTIFICADO</v-chip
                 >
                 <br class="hidden-lg-and-down" />
                 <v-chip
-                  class="white primary--text hand smt-6 semibold"
+                  class="white c-primary--text hand smt-6 semibold"
                   disabled
                 >
                   100% ONLINE E GRATUITO</v-chip

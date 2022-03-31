@@ -16,7 +16,7 @@
         <div style="flex: 0 !important">
           <v-avatar
             size="calc(62px + 3vw)"
-            class="border-padrao-2 primary--text"
+            class="border-padrao-2 c-primary--text"
           >
             <div>
               <v-img class="spa-15" :src="image" :alt="nome" />

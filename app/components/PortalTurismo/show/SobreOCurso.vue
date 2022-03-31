@@ -11,7 +11,7 @@
       <div
         class="
           border-padrao
-          primary--text
+          c-primary--text
           spa-1
           elevation-5
           sml-md-5
@@ -27,19 +27,19 @@
             <p class="c-info-darken-2--text">Curso Online</p>
             <v-divider></v-divider>
             <p class="c-info-darken-2--text mb-0 mt-3">
-              <clr-icon shape="hourglass" class="primary--text"></clr-icon>
+              <clr-icon shape="hourglass" class="c-primary--text"></clr-icon>
               Duração:
               <span class="c-info-darken-2--text font-500">{{ duracao }}</span>
             </p>
             <p class="c-info-darken-2--text mb-0">
-              <clr-icon shape="clock" class="primary--text"></clr-icon> Carga
+              <clr-icon shape="clock" class="c-primary--text"></clr-icon> Carga
               Horária:
               <span class="c-info-darken-2--text font-500">{{
                 carga_horaria
               }}</span>
             </p>
             <p class="c-info-darken-2--text mb-3">
-              <clr-icon shape="calendar" class="primary--text"></clr-icon>
+              <clr-icon shape="calendar" class="c-primary--text"></clr-icon>
               <span v-if="inicio">Início:</span>
               <span v-if="inicio" class="c-info-darken-2--text font-500">{{
                 inicio

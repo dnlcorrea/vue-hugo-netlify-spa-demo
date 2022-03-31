@@ -1,1 +1,50 @@
-<svg id="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.2 93.28"><defs><style>.cls-1,.cls-8,.cls-9{fill:none;}.cls-1,.cls-10,.cls-2,.cls-3,.cls-4,.cls-8,.cls-9{stroke:#0e3c54;}.cls-1,.cls-10,.cls-3,.cls-5,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-1,.cls-10,.cls-2,.cls-3,.cls-4,.cls-5,.cls-8,.cls-9{stroke-width:2px;}.cls-1{stroke-dasharray:2;}.cls-10,.cls-2,.cls-3,.cls-4,.cls-7{fill:#fff;}.cls-2,.cls-4{stroke-linecap:round;stroke-linejoin:round;}.cls-3,.cls-4{fill-rule:evenodd;}.cls-5{fill:#6ed0f5;stroke:#000;}.cls-6{fill:#f87400;}.cls-9{stroke-dasharray:1.96 1.96;}</style></defs><title>icones</title><line class="cls-1" x1="57.01" y1="82.45" x2="79.87" y2="82.45"/><line class="cls-2" x1="64.17" y1="73.61" x2="87.03" y2="73.61"/><path class="cls-3" d="M23.67,64.37V29.57a3.22,3.22,0,0,1,3.22-3.22H77.16a3.23,3.23,0,0,1,3.23,3.22v34.8a3.23,3.23,0,0,1-3.23,3.23H26.89A3.23,3.23,0,0,1,23.67,64.37Z"/><path class="cls-4" d="M29.47,64.75V29.2H74.59V64.75Z"/><line class="cls-5" x1="77.21" y1="49.94" x2="77.21" y2="44.01"/><line class="cls-5" x1="25.83" y1="51.37" x2="25.83" y2="42.58"/><rect class="cls-2" x="34.49" y="48.86" width="11.82" height="11.82"/><rect class="cls-6" x="35.06" y="49.43" width="10.68" height="10.68"/><line class="cls-2" x1="34.49" y1="44.01" x2="34.49" y2="33.87"/><line class="cls-2" x1="40.4" y1="44.01" x2="40.4" y2="33.87"/><line class="cls-2" x1="46.31" y1="44.01" x2="46.31" y2="33.87"/><rect class="cls-7" x="52.03" y="48.86" width="11.82" height="11.82"/><polyline class="cls-8" points="62.85 48.86 63.85 48.86 63.85 49.86"/><line class="cls-9" x1="63.85" y1="51.83" x2="63.85" y2="58.7"/><polyline class="cls-8" points="63.85 59.69 63.85 60.69 62.85 60.69"/><line class="cls-9" x1="60.89" y1="60.68" x2="54.01" y2="60.68"/><polyline class="cls-8" points="53.03 60.69 52.03 60.69 52.03 59.69"/><line class="cls-9" x1="52.03" y1="57.72" x2="52.03" y2="50.84"/><polyline class="cls-8" points="52.03 49.86 52.03 48.86 53.03 48.86"/><line class="cls-9" x1="54.99" y1="48.86" x2="61.87" y2="48.86"/><line class="cls-2" x1="52.03" y1="44.01" x2="52.03" y2="33.87"/><line class="cls-2" x1="57.94" y1="44.01" x2="57.94" y2="33.87"/><line class="cls-2" x1="63.85" y1="44.01" x2="63.85" y2="33.87"/><line class="cls-2" x1="69.76" y1="60.69" x2="69.76" y2="33.87"/><path class="cls-6" d="M18.77,27.17a3,3,0,1,1-3-3A3,3,0,0,1,18.77,27.17Z"/><line class="cls-10" x1="28.35" y1="8.87" x2="28.35" y2="12.19"/><line class="cls-10" x1="23.41" y1="13.51" x2="26.73" y2="13.51"/><line class="cls-10" x1="28.35" y1="18.32" x2="28.35" y2="15"/><line class="cls-10" x1="33.28" y1="13.67" x2="29.96" y2="13.67"/><path class="cls-8" d="M15.73,30.21a3,3,0,1,1-3-3A3,3,0,0,1,15.73,30.21Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 101.2 93.3" style="enable-background:new 0 0 101.2 93.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#0E3C54;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:2;}
+	.st1{fill:none;stroke:#0E3C54;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#0E3C54;stroke-width:2;stroke-miterlimit:10;}
+	
+		.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#0E3C54;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;stroke:#0E3C54;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st6{fill:#F9D428;}
+	.st7{fill:#FFFFFF;}
+	.st8{fill:none;stroke:#0E3C54;stroke-width:2;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#0E3C54;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:1.96,1.96;}
+</style>
+<title>icones</title>
+<line class="st0" x1="57" y1="82.4" x2="79.9" y2="82.4"/>
+<line class="st1" x1="64.2" y1="73.6" x2="87" y2="73.6"/>
+<path class="st2" d="M23.7,64.4V29.6c0-1.8,1.4-3.2,3.2-3.2h50.3c1.8,0,3.2,1.4,3.2,3.2v34.8c0,1.8-1.4,3.2-3.2,3.2h0H26.9
+	C25.1,67.6,23.7,66.1,23.7,64.4z"/>
+<path class="st3" d="M29.5,64.8V29.2h45.1v35.5H29.5z"/>
+<line class="st4" x1="77.2" y1="49.9" x2="77.2" y2="44"/>
+<line class="st4" x1="25.8" y1="51.4" x2="25.8" y2="42.6"/>
+<rect x="34.5" y="48.9" class="st5" width="11.8" height="11.8"/>
+<rect x="35.1" y="49.4" class="st6" width="10.7" height="10.7"/>
+<line class="st1" x1="34.5" y1="44" x2="34.5" y2="33.9"/>
+<line class="st1" x1="40.4" y1="44" x2="40.4" y2="33.9"/>
+<line class="st1" x1="46.3" y1="44" x2="46.3" y2="33.9"/>
+<rect x="52" y="48.9" class="st7" width="11.8" height="11.8"/>
+<polyline class="st8" points="62.8,48.9 63.8,48.9 63.8,49.9 "/>
+<line class="st9" x1="63.8" y1="51.8" x2="63.8" y2="58.7"/>
+<polyline class="st8" points="63.8,59.7 63.8,60.7 62.8,60.7 "/>
+<line class="st9" x1="60.9" y1="60.7" x2="54" y2="60.7"/>
+<polyline class="st8" points="53,60.7 52,60.7 52,59.7 "/>
+<line class="st9" x1="52" y1="57.7" x2="52" y2="50.8"/>
+<polyline class="st8" points="52,49.9 52,48.9 53,48.9 "/>
+<line class="st9" x1="55" y1="48.9" x2="61.9" y2="48.9"/>
+<line class="st1" x1="52" y1="44" x2="52" y2="33.9"/>
+<line class="st1" x1="57.9" y1="44" x2="57.9" y2="33.9"/>
+<line class="st1" x1="63.8" y1="44" x2="63.8" y2="33.9"/>
+<line class="st1" x1="69.8" y1="60.7" x2="69.8" y2="33.9"/>
+<path class="st6" d="M18.8,27.2c0,1.7-1.3,3-3,3s-3-1.3-3-3s1.3-3,3-3S18.8,25.5,18.8,27.2z"/>
+<line class="st8" x1="28.4" y1="8.9" x2="28.4" y2="12.2"/>
+<line class="st8" x1="23.4" y1="13.5" x2="26.7" y2="13.5"/>
+<line class="st8" x1="28.4" y1="18.3" x2="28.4" y2="15"/>
+<line class="st8" x1="33.3" y1="13.7" x2="30" y2="13.7"/>
+<path class="st8" d="M15.7,30.2c0,1.7-1.3,3-3,3s-3-1.3-3-3s1.3-3,3-3S15.7,28.6,15.7,30.2z"/>
+</svg>

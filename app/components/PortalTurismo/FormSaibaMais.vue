@@ -39,7 +39,7 @@
             </p>
             <v-text-field
               label="Nome Completo"
-              color="primary"
+              color="c-primary"
               v-model="inscricao.nome"
               :rules="rules.nome"
               required
@@ -60,7 +60,7 @@
               </v-select>
               <v-text-field
                 label="Celular"
-                color="primary"
+                color="c-primary"
                 v-model="inscricao.celular"
                 :mask="localMasks[local]"
                 :rules="rules.celular"
@@ -70,7 +70,7 @@
             </v-layout>
             <v-text-field
               label="E-Mail"
-              color="primary"
+              color="c-primary"
               v-model="inscricao.email"
               :rules="rules.email"
               required
@@ -85,7 +85,7 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
-              color="primary"
+              color="c-primary"
               type="submit"
               :loading="loading"
               :disabled="disabled"
@@ -102,7 +102,7 @@
           </p>
           <div
             class="
-              primary
+              c-primary
               d-flex
               align-center
               justify-center
