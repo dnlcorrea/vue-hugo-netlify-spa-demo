@@ -46,7 +46,7 @@
             </div>
           </div>
           <div
-            style="margin-left: calc(120px + 2vw)"
+            style="margin-left: calc(120px + 2vw); min-height: 155px"
             class="py-8 c-secondary--text"
           >
             <p

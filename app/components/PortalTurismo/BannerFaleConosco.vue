@@ -28,7 +28,9 @@
           </big>
         </h1>
 
-        <fale-conosco-btn-vue titulo="FALE CONOSCO"></fale-conosco-btn-vue>
+        <PortalTurismoFaleConoscoBtn
+          titulo="FALE CONOSCO"
+        ></PortalTurismoFaleConoscoBtn>
       </div>
     </v-flex>
 
@@ -39,12 +41,9 @@
 </template>
 
 <script>
-import FaleConoscoBtnVue from './FaleConoscoBtn.vue'
 export default {
   props: ['curso'],
-  components: {
-    FaleConoscoBtnVue,
-  },
+  components: {},
 }
 </script>
 

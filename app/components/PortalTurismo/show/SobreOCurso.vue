@@ -56,15 +56,21 @@
           <v-flex xs12 sm6 md12 class="spl-sm-20 spl-md-0">
             <v-divider
               class="hidden-sm-only"
-              :class="{ 'mb-4': !precos.length }"
+              :class="{ 'mb-4': !investimento.length }"
             ></v-divider>
-            <p class="c-info-darken-2--text mb-0 mt-4" v-if="precos.length">
+            <p
+              class="c-info-darken-2--text mb-0 mt-4"
+              v-if="investimento.length"
+            >
               {{ menorPrecoLabel }}
             </p>
-            <p class="titulo-banner c-secondary--text" v-if="precos.length">
+            <p
+              class="titulo-banner c-secondary--text"
+              v-if="investimento.length"
+            >
               <small>R$</small><big class="bold">{{ menorPrecoValor }}</big
               ><small>,00</small>
-              <v-btn icon class="mx-0" @click="dialogPrecos = true">
+              <v-btn icon class="mx-0" @click="dialoginvestimento = true">
                 <clr-icon shape="info-standard" size="22"></clr-icon>
               </v-btn>
             </p>
@@ -85,33 +91,35 @@
       <!-- </v-flex> -->
     </div>
 
-    <v-dialog v-model="dialogPrecos" width="90vw" max-width="600px">
+    <v-dialog v-model="dialoginvestimento" width="90vw" max-width="600px">
       <v-card>
         <v-card-title class="grey lighten-3 justify-space-between"
           ><h3 class="secondary--text font-600">FORMAS DE PAGAMENTO</h3>
-          <v-btn icon class="mx-0" @click="dialogPrecos = false">
+          <v-btn icon class="mx-0" @click="dialoginvestimento = false">
             <v-icon small class="c-info-darken-2--text"
               >fas fa-times</v-icon
             ></v-btn
           ></v-card-title
         >
         <v-card-text class="spy-10 spx-10">
-          <v-layout
-            class="align-center"
-            v-for="({ label, valor }, i) in precos"
-            :key="i"
-          >
-            <p class="mb-0 c-info-darken-2--text">{{ label }}</p>
-            <div class="dots smx-5"></div>
-            <p class="mb-0 c-secondary--text font-500">
-              <big>
-                <small>
-                  R$<big class="font-700">{{ fazerPonto(valor) }}</big
-                  ><span>,00</span>
-                </small>
-              </big>
-            </p>
-          </v-layout>
+          <div v-if="investimento">
+            <v-layout
+              class="align-center"
+              v-for="({ label, valor }, i) in investimento"
+              :key="i"
+            >
+              <p class="mb-0 c-info-darken-2--text">{{ label }}</p>
+              <div class="dots smx-5"></div>
+              <p class="mb-0 c-secondary--text font-500">
+                <big>
+                  <small>
+                    R$<big class="font-700">{{ fazerPonto(valor) }}</big
+                    ><span>,00</span>
+                  </small>
+                </big>
+              </p>
+            </v-layout>
+          </div>
           <v-layout class="spt-10 spb-3 justify-center">
             <fale-conosco-btn-vue
               large
@@ -132,7 +140,7 @@ import FaleConoscoBtnVue from '../FaleConoscoBtn.vue'
 export default {
   data() {
     return {
-      dialogPrecos: false,
+      dialoginvestimento: false,
     }
   },
   components: {
@@ -143,7 +151,7 @@ export default {
     'duracao',
     'inicio',
     'carga_horaria',
-    'precos',
+    'investimento',
     'inscricao',
     'titulo',
     'slug',
@@ -164,9 +172,9 @@ export default {
   },
   computed: {
     menorPreco(v) {
-      if (v.precos) {
-        let min = Math.min(...v.precos.map((item) => item.valor))
-        let result = v.precos.filter((item) => item.valor === min)
+      if (v.investimento) {
+        let min = Math.min(...v.investimento.map((item) => item.valor))
+        let result = v.investimento.filter((item) => item.valor === min)
         return result[0]
       }
     },

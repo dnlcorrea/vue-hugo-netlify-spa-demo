@@ -73,9 +73,9 @@
       id="mbas"
       titulo="MBAS"
       subtitulo="Cursos de Pós-graduação para profissionais que desejam aprofundar conhecimentos na área de administração em Turismo e Hotelaria."
-      :cursos="mbas"
+      :cursos="posTurismo"
       classe="mbas"
-      v-show="mbas.length"
+      v-show="posTurismo.length"
       class="spt-20"
     ></cursos-online>
     <masterclass class="spb-20"></masterclass>
@@ -124,20 +124,17 @@
 </template>
 
 <script>
-import mbas from '@/data/mbas.js'
+import pos from '@/data/pos.js'
 import blog from '@/data/blog.js'
-
-import cursos from '@/components/PortalTurismo/cursos-turismo'
+import cursos from '@/data/cursos-turismo.js'
 
 import Banner from '@/components/PortalTurismo/index/Banner.vue'
-// import ultimasNoticias from '@/components/home/UltimasNoticias.vue'
 import Diferenciais from '@/components/PortalTurismo/index/Diferenciais.vue'
 import CursosOnline from '@/components/PortalTurismo/index/CursosOnline.vue'
 import Masterclass from '@/components/PortalTurismo/index/Masterclass.vue'
 import FormSaibaMais from '@/components/PortalTurismo/FormSaibaMais.vue'
 import BannerFaleConosco from '@/components/PortalTurismo/BannerFaleConosco.vue'
 import Parceiros from '@/components/PortalTurismo/Parceiros.vue'
-// import Newsletter from '@/components/portal-professor/index/Newsletter.vue'
 import MbaBanner from '@/components/PortalTurismo/index/MbaBanner.vue'
 
 export default {
@@ -145,7 +142,6 @@ export default {
     return {
       menuMobile: false,
       cursos,
-      mbas,
     }
   },
   components: {
@@ -167,6 +163,9 @@ export default {
           a.categoria.find((c) => c.slug === 'turismo-e-hotelaria')
         )
         .slice(0, 4)
+    },
+    posTurismo() {
+      return pos.filter((a) => a.area === 'Turismo e Hotelaria').slice(0, 2)
     },
   },
   mounted() {

@@ -1,36 +1,55 @@
 <template>
   <div class="white">
-    <div slot="submenu" class="fill-with">
-      <FaculdadeSubmenu
-        :isup="isup"
-        :onFooter="onFooter"
-        :banner="banner"
-        class="hidden-md-and-down"
-      ></FaculdadeSubmenu>
-    </div>
-    <PosShowBanner :curso="curso" ref="banner"></PosShowBanner>
-    <div class="white relative spx-xl-24" style="z-index: 1">
-      <PosShowSobre :curso="curso"></PosShowSobre>
-    </div>
-    <div class="white relative" style="z-index: 1">
-      <PosShowFormSaibaMais :curso="curso"></PosShowFormSaibaMais>
-      <div class="spx-sm-24 spx-xs-15">
-        <PosShowComponenteCurricular
-          v-if="curso.matriz && curso.matriz.length"
-          :curso="curso"
-        ></PosShowComponenteCurricular>
-        <PosCarousel></PosCarousel>
-      </div>
-      <PosFluxograma
-        style="margin-bottom: calc(-48px - 2.4vw); z-index: 3"
-      ></PosFluxograma>
+    <PortalTurismoShowBanner
+      :titulo="curso.name"
+      :duracao="curso.duracao"
+      :inscricao="curso.inscricao"
+      :imagem="curso.img"
+      :categoria="curso.categoria ? curso.categoria : 'Pós-graduação'"
+    ></PortalTurismoShowBanner>
 
-      <FaculdadeMetodologia></FaculdadeMetodologia>
-    </div>
+    <PortalTurismoShowSobreOCurso
+      :inscricao="curso.inscricao"
+      :titulo="curso.name"
+      :descricao="curso.descricao"
+      :duracao="curso.duracao"
+      :slug="curso.slug"
+      :inicio="curso.data_inicio"
+      :carga_horaria="curso.carga_horaria"
+      :investimento="decodedPrecos"
+    ></PortalTurismoShowSobreOCurso>
+    <!-- <PortalTurismoShowDiferenciaisCurso
+      :diferenciais="curso.diferenciais"
+    ></PortalTurismoShowDiferenciaisCurso>
+    <PortalTurismoShowCompetencias
+      :competencias="curso.competencias"
+      :titulo="curso.name"
+      :slug="curso.slug"
+    ></PortalTurismoShowCompetencias>
+    <PortalTurismoShowEquipe
+      :equipe="curso.equipe"
+      v-show="curso.equipe && curso.equipe.length"
+      class="spb-20"
+    ></PortalTurismoShowEquipe>
+    <PortalTurismoShowCursosOnline
+      class="smb-24 smt-10"
+      titulo="OUTROS CURSOS"
+      :except="curso.slug"
+      :cursos="cursosArr"
+      :classe="checkClass"
+      v-if="cursosArr.length > 1"
+    ></PortalTurismoShowCursosOnline>
+    <PortalTurismoBannerFaleConosco
+      :curso="curso.slug"
+    ></PortalTurismoBannerFaleConosco>
+    <PortalTurismoShowParceiros></PortalTurismoShowParceiros>
+    <PortalTurismoShowSobreAUniamerica></PortalTurismoShowSobreAUniamerica>
+    <PortalTurismoShowFormSaibaMais></PortalTurismoShowFormSaibaMais> -->
   </div>
 </template>
 <script>
-import mba from '@/data/mbas.js'
+import pos from '@/data/pos.js'
+import cursos from '@/data/cursos-turismo.js'
 
 export default {
   data() {
@@ -39,37 +58,69 @@ export default {
       banner: {},
     }
   },
+
   beforeRouteEnter(to, from, next) {
     next((vm) => {
-      vm.setPos(to.params.slug)
+      console.log(to)
+      vm.setCurso(to.query.curso)
     })
   },
   beforeRouteUpdate(to, from, next) {
-    this.setPos(to.params.slug)
+    this.setCurso(to.query.curso)
     next()
   },
   methods: {
-    setPos(to) {
-      this.curso = mba.find((c) => c.slug === to)
-        ? mba.find((c) => c.slug === to)
-        : console.log(mba)
+    setCurso(to) {
+      let source = this.checkClass === 'mbas' ? pos : cursos
+      console.log(`setcursoto`, to)
+      this.curso = source.find((c) => c.slug === to)
+        ? source.find((c) => c.slug === to)
+        : console.log('deu erro', to)
     },
   },
   computed: {
+    loaded() {
+      return !!Object.values(this.curso).length
+    },
     isup() {
       return this.$attrs.isup
     },
     onFooter() {
       return this.$attrs.onFooter
     },
+    decodedPrecos() {
+      if (this.curso.investimento) {
+        if (typeof this.curso.investimento === 'string') {
+          return JSON.parse(this.curso.investimento)
+        } else {
+          return this.curso.investimento
+        }
+      } else {
+        return []
+      }
+    },
+    checkClass: (v) =>
+      v.$route.query.type === 'mba' ? 'mbas' : 'cursos-online',
   },
   mounted() {
     let path = location.pathname.split('/')[3]
 
     setTimeout(() => {
       this.banner = this.$refs.banner
-      this.setPos(path)
+      // this.setCurso(path)
     }, 500)
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.$el.style.opacity = 0
+
+    // this.setCurso(to)
+
+    next()
+  },
+  updated() {
+    setTimeout(() => {
+      this.$el.style.opacity = 1
+    }, 600)
   },
 }
 </script>

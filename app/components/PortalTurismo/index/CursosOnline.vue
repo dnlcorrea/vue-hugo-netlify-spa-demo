@@ -42,8 +42,8 @@
         >
           <v-img
             cover
-            v-if="curso.imagem"
-            :src="imagine(curso.imagem)"
+            v-if="curso.img"
+            :src="imagine(curso.img)"
             aspect-ratio="1.77"
             class="curso-img elevation-5"
             :class="
@@ -82,13 +82,17 @@
                     uppercase
                   "
                 >
-                  <big>{{ curso.titulo }}</big>
+                  <big>{{ curso.name }}</big>
                 </h3>
                 <p class="white--text mb-2">
                   Início:
-                  <span class="font-600">{{ setInicio(curso.inicio) }}</span> |
-                  Duração:
-                  <span class="font-600">{{ curso.duracao }}</span>
+                  <span class="font-600"
+                    >{{ curso.data_inicio
+                    }}<span v-if="curso.data_inicio && curso.mes_inicio">/</span
+                    >{{ curso.mes_inicio }}/{{ curso.ano_inicio }}</span
+                  >
+                  | Duração:
+                  <span class="font-600">{{ curso.duracao }} meses</span>
                 </p>
                 <v-btn
                   class="c-primary ml-0 c-secondary--text"
@@ -124,7 +128,7 @@
                 : 'c-secondary--text'
             "
           >
-            {{ curso.titulo }}
+            {{ curso.name }}
           </h3>
           <p class="c-info-darken-2--text p2 mb-2" v-if="classe !== 'mbas'">
             <span v-if="curso.inicio">Início:</span>
