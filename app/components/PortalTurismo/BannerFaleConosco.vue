@@ -30,6 +30,7 @@
 
         <PortalTurismoFaleConoscoBtn
           titulo="FALE CONOSCO"
+          :curso="curso ? curso : ''"
         ></PortalTurismoFaleConoscoBtn>
       </div>
     </v-flex>

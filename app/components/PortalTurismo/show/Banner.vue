@@ -3,21 +3,29 @@
     class="banner-portal-turismo-show align-center flex-wrap"
     :style="{ background: setImage() }"
   >
-    <v-flex xs12 sm10 md8 lg7 class="white--text spx-24" style="z-index: 0">
+    <v-flex
+      xs12
+      sm10
+      md8
+      lg6
+      class="white--text spx-24 smx-24 smx-xs-0"
+      style="z-index: 0"
+    >
       <div class="spx-24">
         <p class="mb-2">
           {{ categoria }}
         </p>
         <div class="special-font uppercase titulo-banner line-height-1 mb-2">
-          <big
-            ><big>{{ titulo }}</big></big
-          >
+          {{ titulo }}
         </div>
         <p class="white--text font-500">
-          <span class="border-padrao px-2 py-1">Duração: {{ duracao }}</span>
-          <span
-            class="border-padrao amber--text px-2 py-1"
-            v-if="titulo === 'MBA em Gestão e Inovação em Hotelaria'"
+          <span class="border-padrao px-2 py-1"
+            >Duração: {{ duracao }} meses</span
+          >
+          <span class="border-padrao c-primary--text px-2 py-1" v-if="inicio"
+            >Início: {{ inicio }}</span
+          >
+          <span class="border-padrao c-primary--text px-2 py-1" v-else
             >Em breve!</span
           >
         </p>
@@ -38,13 +46,13 @@ export default {
   components: {
     FaleConoscoBtnVue,
   },
-  props: ['inscricao', 'titulo', 'duracao', 'imagem', 'categoria'],
+  props: ['inscricao', 'titulo', 'duracao', 'imagem', 'categoria', 'inicio'],
   methods: {
     setImage() {
       let lg =
         this.categoria === 'Pós-graduação'
           ? ''
-          : 'linear-gradient(334deg, #00253ade, #00152296),'
+          : 'linear-gradient(334deg, #2d386deb, #010208cf),'
 
       let img = this.imagem ? this.imagem : '/portal-turismo/banner.jpg'
 
@@ -56,7 +64,7 @@ export default {
 <style lang="scss">
 .banner-portal-turismo-show {
   height: 60vh;
-  min-height: 400px;
+  min-height: 600px;
   position: relative;
   overflow: hidden;
   padding-top: 64px;
@@ -65,7 +73,7 @@ export default {
     content: '';
     width: 82vw;
     height: 82vw;
-    background: #0470aea1;
+    background: #2d386dbf;
     border-radius: 100%;
     position: absolute;
     z-index: 0;

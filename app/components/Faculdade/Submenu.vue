@@ -8,12 +8,12 @@
       transition: 'all 0.2s',
     }"
   >
-    <v-flex xs12 md4 lg3 :class="passoudobanner ? 'white' : 'transparent'">
+    <v-flex xs12 md4 lg2 :class="passoudobanner ? 'white' : 'transparent'">
     </v-flex>
     <v-flex
       xs12
       md8
-      lg9
+      lg10
       class="text-right spr-24 submenu"
       :class="passoudobanner ? 'white' : 'transparent'"
     >
@@ -53,6 +53,10 @@ export default {
         },
         { name: 'Pós-Graduação', path: '/faculdade-multiversa/pos-graduacao' },
         {
+          name: 'Turismo e Hotelaria',
+          path: '/faculdade-multiversa/portal-de-turismo-e-hotelaria',
+        },
+        {
           name: 'Extensão Digital',
           path: '/faculdade-multiversa/extensao-digital',
         },
@@ -91,5 +95,8 @@ export default {
 }
 .v-btn.is-active::before {
   opacity: 0.2 !important;
+}
+.submenu .v-btn.v-size--default {
+  font-size: calc(10px + 0.2vw);
 }
 </style>

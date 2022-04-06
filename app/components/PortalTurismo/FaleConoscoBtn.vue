@@ -32,7 +32,7 @@ export default {
   methods: {
     openDialog() {
       let dialogInfo = {
-        titulo: this.titulo ? this.titulo : 'Fale Conosco',
+        titulo: this.titulo ? this.titulo : 'FALE CONOSCO',
         curso: this.curso ? this.curso : '',
       }
       $nuxt.$bus.$emit(

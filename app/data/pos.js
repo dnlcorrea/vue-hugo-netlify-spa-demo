@@ -9,11 +9,95 @@ let pos = [
         data_inicio: "26",
         mes_inicio: "março",
         ano_inicio: "2022",
+        carga_horaria: 360,
         duracao: 8,
-        competencias:[],
-        investimento: [],
+        competencias:["Desenvolver mindset empreendedor para o turismo","Desenvolver Pesquisa de Mercado no segmento de turismo e hospedagem","Identificar tendências, inovações e oportunidades no mercado turístico","Desenvolver e validar um Produto Mínimamente Viável (MVP)","Desenvolver um Diagnóstico do ecossistema empreendedor do turismo e hotelaria.","Desenvolver inovação e business intelligence","Elaborar o Plano de Negócios e formalizar a empresa","Apresentar um Pitch de 7 minutos para investidores"],
+        investimento: [{"label": "12 Parcelas de","valor": 420},{"label": "18 Parcelas de","valor": 280}],
         matriz: [],
-        professores: []
+        professores:[
+            {
+                "curriculo": "Mestre pela UFRGS e doutorando em Administração (FGV EAESP). É diretor para o Brasil do Wakalua, fundador da Numerik (www.numerik.co), consultoria de inovação aberta e estratégia. Integra a Câmara do Turismo 4.0, e trabalha junto ao Ministério do Turismo e o Ministério da Ciência, Tecnologia e Inovaões para o avanço do ecossistema turistech no país.",
+                "image": "/staff/eduardo-lorea.jpg",
+                "nome": "Eduardo Lorea"
+            },
+            {
+                "curriculo": "Economista pela UNESP, especialista em Marketing Turístico pelo Senac, tem MBA em Marketing Estratégico e Mestre em Ciências da Comunicação e Turismo pela USP. Realiza diversas palestras, webinars, consultorias e cursos na área de Marketing Digital, Mídias Sociais, Tendências, Inovação e Transformação Digital no Turismo",
+                "image": "/staff/marta-poggi.jpg",
+                "nome": "Marta Poggi"
+            },
+            {
+                "curriculo": "Administrador, Diretor Executivo do Grupo Cataratas em Foz do Iguaçu, possui mais de 25 anos de experiência em gestão de hotelaria e atrativos turísticos, principalmente em unidade de conservação. Participou da implantação das operações da Cataratas do Iguaçu S.A no Parque Nacional do Iguaçu e no Marco das Três Fronteiras.",
+                "image": "/staff/adelio-demeterko.jpg",
+                "nome": "Adelio Demeterko"
+            },
+            {
+                "curriculo": "Idealizador e organizador do Festival das Cataratas e do Hackatour, presidente do IDESTUR e atual Secretário de Turismo, Projetos Estratégicos e Inovação de Foz do Iguaçu",
+                "image": "/staff/paulo-angeli.jpg",
+                "nome": "Paulo Angeli"
+            },
+            {
+                "curriculo": "Atuou como Secretário Nacional de Desenvolvimento e Competitividade do Turismo (SNDTur), do Ministério do Turismo. Bacharel em Comunicação Social – Jornalismo pelo UniCEUB e especialização em Gestão Estratégica pela FGV. Atuou como analista legislativo da Câmara do Deputados e Diretor da Secretaria de Comunicação Social da Câmara.",
+                "image": "/staff/william-franca.jpg",
+                "nome": "William França Cordeiro"
+            }
+        ],
+        diferenciais: [
+            {
+                "descricao": " A cada trilha o aluno aplica seu projeto à sua realidade profissional",
+                "titulo": "Máxima aplicabilidade",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "Momentos imersivos em Foz do Iguaçu para que você possa vivenciar no nível máximo a experiência",
+                "titulo": "Encontro Imersivo (opcional)",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": " Master Class ao vivo com pessoas que são autoridades em inovação em turismo",
+                "titulo": "Master Class com especialistas",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": " Acompanhamento e feedback personalizado com docentes experientes, garantindo o melhor aproveitamento por parte do aluno",
+                "titulo": "Preceptoria",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": " Assessoria de tutor para organização e suporte técnico nos processos do curso",
+                "titulo": "Assessoramento individual",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "Certificados de competências ao longo do curso, enriquecendo seu currículo antes mesmo de concluir todo o MBA",
+                "titulo": "Nano degree (Certificados Parciais)",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": " Todos os projetos aplicados durante o curso consideram as necessidades do contexto profissional do aluno",
+                "titulo": "Aprendizagem personalizada",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "Negócios criados pelos participantes do MBA receberão mentoria e serão incubados no Supernova, espaço de empreendedorismo e inovação da Uniamérica Descomplica.",
+                "titulo": "Parcerias com Incubadoras e Aceleradoras",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "Oportunidade de participar de workshops e visitas técnicas com foco nos modelos de negócios, nos âmbitos estratégicos e táticos, de estruturas como a Itaipu Binacional, Cataratas S/A e outras",
+                "titulo": "Visitas técnicas",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "Os alunos terão a oportunidade de participar do Festival de Turismo das Cataratas, segundo maior evento do turismo brasileiro",
+                "titulo": "Participação em Eventos",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "Os participantes terão a oportunidade de apresentar um PITCH de 7 minutos a um grupo seleto de investidores",
+                "titulo": "Captação de Investimentos",
+                "icon": "lightbulb"
+            }
+        ]
     },
     {
         slug: "mba-em-gestao-e-inovacao-em-hotelaria",
@@ -26,10 +110,48 @@ let pos = [
         mes_inicio: "abril",
         ano_inicio: "2022",
         duracao: 10,
-        competencias:[],
+        carga_horaria: 360,
+        competencias:["Identificar e descrever a estrutura organizacional de um hotel que atenda as expectativas do hóspede;", "Mapear as áreas demandas e sua interrelação;", "Elaborar uma proposição de integração entre as áreas interdependentes afins com uso de tecnologia.", "Identificar as necessidades do programa", "Analisar as possibilidades e alternativas para a multipropriedade / time-sharing", "Propor a otimização e associação de uso de tecnologias para apoiar o programa e o relacionamento com o cliente", "Elaborar uma proposta tarifária para horizonte de 6 meses (cenário futuro)", "Gerar cenários por meio da tecnologia de BI na plataforma Desbravador", "Realizar a previsão de ocupação, diária, média (BI e base de testes do Desbravador", "Realizar estudo considerando a expectativa dos clientes x A&B x áreas demandadas",  "Elaborar ficha técnica gerencial no Desbravador", "Análisar o rateio de custos, desperdícios e rentabilidade de A&B com uso de tecnologia", "Identificar indicadores de controles financeiros", "Mapear de processos financeiros", "Implantar e auditar processos e controles financeiros com uso de tecnologia", "Identificar as necessidades de treinamento e desenvolvimento organizacional", "Elaborar de programa de T&D interno", "Elaborar de avaliação de desempenho do T&D"] ,
         investimento: [],
         matriz: [],
-        professores: []
+        professores: [],
+        diferenciais: [
+            {
+                "descricao": "",
+                "titulo": "Videoaulas modernas e exclusivas",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "",
+                "titulo": "Textos produzidos por especialistas em modelos inovadores",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "",
+                "titulo": "Quiz interativo",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "",
+                "titulo": "Acompanhamento e feedback  personalizado com especialistas",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "",
+                "titulo": "Suporte de tutor para organização e assessoramento nos processos do curso",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "",
+                "titulo": "Momentos de interação e orientação ao vivo com docente especializado",
+                "icon": "lightbulb"
+            },
+            {
+                "descricao": "",
+                "titulo": "Aulas ao vivo com pessoas que são autoridades em inovação em educação",
+                "icon": "lightbulb"
+            }
+        ]
     },
     {
         slug: 'mba-em-gestao-universitaria',

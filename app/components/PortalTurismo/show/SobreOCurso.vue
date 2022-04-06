@@ -3,9 +3,12 @@
     <div class="flex-wrap">
       <!-- <v-flex class="xs12 md7 lg8 spt-24"> -->
       <div class="smb-10 subtitulo c-secondary--text spt-18 hidden-md-and-up">
-        <span>SOBRE O CURSO</span>
+        <span class="main-title">SOBRE O CURSO</span>
       </div>
-      <p class="c-info-darken-2--text hidden-md-and-up" v-html="descricao"></p>
+      <p
+        class="c-info-darken-2--text hidden-md-and-up smb-10"
+        v-html="descricao"
+      ></p>
       <!-- </v-flex> -->
       <!-- <v-flex class="xs12 md4 lg3 offset-md1 xs12 smy-xs-10 smy-sm-10 smy-md-0"> -->
       <div
@@ -29,14 +32,16 @@
             <p class="c-info-darken-2--text mb-0 mt-3">
               <clr-icon shape="hourglass" class="c-primary--text"></clr-icon>
               Duração:
-              <span class="c-info-darken-2--text font-500">{{ duracao }}</span>
+              <span class="c-info-darken-2--text font-500"
+                >{{ duracao }} <span v-if="type === 'mbas'">meses</span></span
+              >
             </p>
             <p class="c-info-darken-2--text mb-0">
               <clr-icon shape="clock" class="c-primary--text"></clr-icon> Carga
               Horária:
-              <span class="c-info-darken-2--text font-500">{{
-                carga_horaria
-              }}</span>
+              <span class="c-info-darken-2--text font-500"
+                >{{ carga_horaria }} horas</span
+              >
             </p>
             <p class="c-info-darken-2--text mb-3">
               <clr-icon shape="calendar" class="c-primary--text"></clr-icon>
@@ -82,10 +87,10 @@
         </v-layout>
       </div>
       <div class="smb-10 subtitulo c-secondary--text spt-18 hidden-sm-and-down">
-        <span>SOBRE O CURSO</span>
+        <span class="main-title">SOBRE O CURSO</span>
       </div>
       <p
-        class="c-info-darken-2--text hidden-sm-and-down"
+        class="c-info-darken-2--text hidden-sm-and-down smb-20"
         v-html="descricao"
       ></p>
       <!-- </v-flex> -->
@@ -155,6 +160,7 @@ export default {
     'inscricao',
     'titulo',
     'slug',
+    'type',
   ],
   methods: {
     fazerPonto(valor) {

@@ -147,8 +147,8 @@ export default {
 }
 
 .curso-flickity {
-  margin-left: calc(-20px - 1vw) !important;
-  margin-right: calc(-20px - 1vw) !important;
+  margin-left: calc(-10px - 0.5vw) !important;
+  margin-right: calc(-10px - 0.5vw) !important;
   .flickity-viewport {
     width: 100%;
   }

@@ -1,75 +1,17 @@
 <template>
   <div class="white">
-    <div class="fill-width">
-      <v-toolbar class="d-flex justify-space-between info-lighten-3" fixed>
-        <v-toolbar-title class="spx-24">
-          <router-link
-            :to="{ name: 'home' }"
-            class="
-              special-font
-              reset-flex
-              d-flex
-              align-center
-              justify-center
-              font-600
-            "
-          >
-            <div class="d-flex align-center">
-              <object
-                type="image/svg+xml"
-                data="/portal-turismo/logo-portal-turismo-03.svg"
-                class="logo-menu"
-              ></object>
-            </div>
-          </router-link>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down spx-24">
-          <PortalTurismoMenuItems
-            classes="d-flex fill-height"
-          ></PortalTurismoMenuItems>
-        </v-toolbar-items>
-        <v-toolbar-items class="hidden-md-and-up spx-24">
-          <v-btn icon @click="menuMobile = !menuMobile">
-            <v-icon>fas fa-bars</v-icon></v-btn
-          >
-        </v-toolbar-items>
-      </v-toolbar>
-      <v-navigation-drawer temporary fixed v-model="menuMobile" right>
-        <v-layout justify-space-between pt-4 pl-4 pb-3>
-          <router-link
-            :to="{ name: 'home' }"
-            class="
-              special-font
-              reset-flex
-              d-flex
-              align-center
-              justify-center
-              font-600
-            "
-          >
-            <div class="d-flex align-center">
-              <object
-                type="image/svg+xml"
-                data="/portal-turismo/logo-portal-turismo-03.svg"
-                class="logo-menu"
-              ></object>
-            </div>
-          </router-link>
-          <v-btn icon @click="menuMobile = false">
-            <v-icon>fas fa-times</v-icon>
-          </v-btn>
-        </v-layout>
-        <PortalTurismoMenuItems classes="menu-mobile"></PortalTurismoMenuItems>
-      </v-navigation-drawer>
+    <div slot="submenu" class="fill-with">
+      <FaculdadeSubmenu
+        :isup="isup"
+        :onFooter="onFooter"
+        :banner="banner"
+        class="hidden-md-and-down"
+      ></FaculdadeSubmenu>
     </div>
-    <banner></banner>
-    <!-- <mba-banner
-      :curso="mbas[0]"
-      classe="mbas"
-      v-show="mbas.length"
-    ></mba-banner> -->
-    <cursos-online
+    <banner ref="banner"></banner>
+    <diferenciais></diferenciais>
+
+    <PortalTurismoIndexCursosOnline
       id="mbas"
       titulo="MBAS"
       subtitulo="Cursos de Pós-graduação para profissionais que desejam aprofundar conhecimentos na área de administração em Turismo e Hotelaria."
@@ -77,21 +19,18 @@
       classe="mbas"
       v-show="posTurismo.length"
       class="spt-20"
-    ></cursos-online>
+    ></PortalTurismoIndexCursosOnline>
     <masterclass class="spb-20"></masterclass>
-    <cursos-online
+    <PortalTurismoIndexCursosOnline
       id="cursos-de-desenvolvimento"
-      titulo="CURSOS ONLINE"
+      titulo="Cursos Online"
       subtitulo="Cursos de Atualização e de Aperfeiçoamento para seu desenvolvimento profissional."
       :cursos="cursos"
       classe="cursos-online"
-    ></cursos-online>
-    <diferenciais></diferenciais>
+    ></PortalTurismoIndexCursosOnline>
 
-    <v-layout
-      class="flex-wrap align-center justify-space-between smb-9 smt-24 spx-24"
-    >
-      <h1 class="font-500 smy-0 main-title">NOVIDADES E INOVAÇÕES</h1>
+    <v-layout class="flex-wrap align-center justify-space-between smb-9 spx-24">
+      <h1 class="font-500 smy-0 main-title subtitulo">Novidades e Inovações</h1>
       <v-btn
         to="/blog-multiversa/categoria/turismo-e-hotelaria"
         outlined
@@ -142,6 +81,7 @@ export default {
     return {
       menuMobile: false,
       cursos,
+      banner: {},
     }
   },
   components: {
@@ -169,6 +109,10 @@ export default {
     },
   },
   mounted() {
+    setTimeout(() => {
+      this.banner = this.$refs.banner
+      console.log(this.$refs.banner)
+    }, 500)
     setTimeout(() => {
       if (location.hash) {
         let element = document.querySelector(location.hash)
@@ -235,9 +179,7 @@ a {
 
 .subtitulo span {
   padding: 6px 10px;
-  background-color: #ececec;
   color: $c-secondary;
-  font-weight: 600;
 }
 
 .bg-portal-turismo {

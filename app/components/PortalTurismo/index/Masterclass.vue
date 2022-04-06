@@ -2,22 +2,15 @@
   <div class="spx-24" id="masterclass">
     <v-layout align-center justify-space-between>
       <div class="mb-5 subtitulo c-secondary--text text-left">
-        <span class="subtitulo c-secondary--text">MASTERCLASS</span>
+        <span class="subtitulo c-secondary--text main-title">Masterclass</span>
       </div>
-      <v-btn
-        small
-        class="mb-5 mr-0 btn-padrao c-secondary--text hidden-sm-and-down"
-        href="/boulevard/eventos?categoria=turismo-e-hotelaria"
-      >
-        ver todos</v-btn
-      >
     </v-layout>
 
     <!-- <v-layout
       class="flex-wrap masterclass-flickity"
       style="
-        margin-left: calc(-20px - 1vw) !important;
-        margin-right: calc(-20px - 1vw) !important;
+        margin-left: calc(-10px - 0.5vw) !important;
+        margin-right: calc(-10px - 0.5vw) !important;
       "
     >
       <v-flex
@@ -107,11 +100,11 @@
     <v-layout
       class="flex-wrap masterclass-flickity"
       style="
-        margin-left: calc(-20px - 1vw) !important;
-        margin-right: calc(-20px - 1vw) !important;
+        margin-left: calc(-10px - 0.5vw) !important;
+        margin-right: calc(-10px - 0.5vw) !important;
       "
     >
-      <v-flex xs12 class="spx-10 spb-xs-10 spb-sm-10 spb-md-0 relative">
+      <v-flex xs12 class="spx-5 spb-xs-10 spb-sm-10 spb-md-0 relative">
         <!-- v-for="(masterclass, i) in masterclasses"
         :key="i" -->
         <div class="elevation-0 transparent noticia-cell">
@@ -207,8 +200,8 @@ export default {
 
 <style lang="scss">
 .masterclass-flickity {
-  margin-left: calc(-20px - 1vw) !important;
-  margin-right: calc(-20px - 1vw) !important;
+  margin-left: calc(-10px - 0.5vw) !important;
+  margin-right: calc(-10px - 0.5vw) !important;
   .flickity-viewport {
     width: 100%;
   }

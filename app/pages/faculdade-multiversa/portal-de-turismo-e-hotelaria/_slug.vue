@@ -1,50 +1,66 @@
 <template>
   <div class="white">
+    <div slot="submenu" class="fill-with">
+      <FaculdadeSubmenu
+        :isup="isup"
+        :onFooter="onFooter"
+        :banner="banner"
+        class="hidden-md-and-down"
+      ></FaculdadeSubmenu>
+    </div>
     <PortalTurismoShowBanner
       :titulo="curso.name"
       :duracao="curso.duracao"
       :inscricao="curso.inscricao"
       :imagem="curso.img"
       :categoria="curso.categoria ? curso.categoria : 'Pós-graduação'"
+      :inicio="setInicio"
+      ref="banner"
     ></PortalTurismoShowBanner>
 
     <PortalTurismoShowSobreOCurso
+      class="smx-24 smx-xs-0"
       :inscricao="curso.inscricao"
       :titulo="curso.name"
       :descricao="curso.descricao"
       :duracao="curso.duracao"
       :slug="curso.slug"
-      :inicio="curso.data_inicio"
+      :inicio="setInicio"
       :carga_horaria="curso.carga_horaria"
       :investimento="decodedPrecos"
+      :type="checkClass"
     ></PortalTurismoShowSobreOCurso>
-    <!-- <PortalTurismoShowDiferenciaisCurso
+    <PortalTurismoShowDiferenciaisCurso
       :diferenciais="curso.diferenciais"
     ></PortalTurismoShowDiferenciaisCurso>
     <PortalTurismoShowCompetencias
       :competencias="curso.competencias"
       :titulo="curso.name"
       :slug="curso.slug"
+      class="smx-24 smx-xs-0"
     ></PortalTurismoShowCompetencias>
     <PortalTurismoShowEquipe
-      :equipe="curso.equipe"
-      v-show="curso.equipe && curso.equipe.length"
-      class="spb-20"
+      :equipe="curso.professores"
+      v-show="curso.professores && curso.professores.length"
+      class="spb-20 smx-24 smx-xs-0"
     ></PortalTurismoShowEquipe>
-    <PortalTurismoShowCursosOnline
-      class="smb-24 smt-10"
+    <PortalTurismoBannerFaleConosco
+      :curso="curso.name"
+    ></PortalTurismoBannerFaleConosco>
+    <PortalTurismoIndexCursosOnline
+      class="smx-24 smx-xs-0 smt-10"
       titulo="OUTROS CURSOS"
       :except="curso.slug"
       :cursos="cursosArr"
       :classe="checkClass"
       v-if="cursosArr.length > 1"
-    ></PortalTurismoShowCursosOnline>
-    <PortalTurismoBannerFaleConosco
-      :curso="curso.slug"
-    ></PortalTurismoBannerFaleConosco>
-    <PortalTurismoShowParceiros></PortalTurismoShowParceiros>
-    <PortalTurismoShowSobreAUniamerica></PortalTurismoShowSobreAUniamerica>
-    <PortalTurismoShowFormSaibaMais></PortalTurismoShowFormSaibaMais> -->
+    ></PortalTurismoIndexCursosOnline>
+
+    <PortalTurismoParceiros></PortalTurismoParceiros>
+
+    <PortalTurismoFormSaibaMais></PortalTurismoFormSaibaMais>
+    <br />
+    <br />
   </div>
 </template>
 <script>
@@ -56,6 +72,7 @@ export default {
     return {
       curso: {},
       banner: {},
+      cursosArr: [],
     }
   },
 
@@ -71,14 +88,34 @@ export default {
   },
   methods: {
     setCurso(to) {
-      let source = this.checkClass === 'mbas' ? pos : cursos
-      console.log(`setcursoto`, to)
+      let source =
+        this.checkClass === 'mbas'
+          ? pos.filter((a) => a.area === 'Turismo e Hotelaria')
+          : cursos
+
+      this.cursosArr = source
+
       this.curso = source.find((c) => c.slug === to)
         ? source.find((c) => c.slug === to)
-        : console.log('deu erro', to)
+        : console.log('404')
     },
   },
   computed: {
+    setInicio() {
+      let inicio
+      if (this.checkClass === 'mbas') {
+        inicio = this.curso.data_inicio
+          ? this.curso.data_inicio +
+            ' de ' +
+            this.curso.mes_inicio +
+            ' de ' +
+            this.curso.ano_inicio
+          : '' + this.curso.mes_inicio + ' de ' + this.curso.ano_inicio
+      } else {
+        inicio = this.curso.inicio
+      }
+      return inicio
+    },
     loaded() {
       return !!Object.values(this.curso).length
     },
@@ -103,17 +140,14 @@ export default {
       v.$route.query.type === 'mba' ? 'mbas' : 'cursos-online',
   },
   mounted() {
-    let path = location.pathname.split('/')[3]
-
     setTimeout(() => {
       this.banner = this.$refs.banner
-      // this.setCurso(path)
     }, 500)
   },
   beforeRouteUpdate(to, from, next) {
     this.$el.style.opacity = 0
 
-    // this.setCurso(to)
+    this.setCurso(to.query.curso)
 
     next()
   },
@@ -125,4 +159,10 @@ export default {
 }
 </script>
 <style lang='scss'>
+.border-padrao {
+  border: 1px solid currentColor;
+}
+.border-padrao-2 {
+  border: 2px solid currentColor;
+}
 </style>

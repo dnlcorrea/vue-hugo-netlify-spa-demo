@@ -1,10 +1,10 @@
 <template>
   <div class="spx-24 grey lighten-3 spt-14 smb-10 smt-10">
-    <div class="mb-5 subtitulo c-secondary--text text">
+    <div class="mb-8 smx-24 subtitulo c-secondary--text text main-title">
       <span>DIFERENCIAIS DO CURSO</span>
     </div>
 
-    <v-layout class="flex-wrap">
+    <v-layout class="flex-wrap smx-24 smx-xs-0">
       <v-flex
         v-for="({ titulo, descricao }, i) in diferenciais"
         :key="i"
@@ -15,7 +15,7 @@
         sm6
         md6
         xl4
-        class="text-center c-secondary--text subtitulo2 d-flex smb-10 spr-10"
+        class="text-center c-secondary--text subtitulo2 d-flex smb-5 spr-10"
       >
         <div style="flex: 0 !important">
           <div
@@ -29,7 +29,7 @@
               spa-4
             "
           >
-            <clr-icon shape="bolt"></clr-icon>
+            <clr-icon shape="check"></clr-icon>
           </div>
         </div>
 
@@ -42,7 +42,7 @@
               smt-1
               text-left
               spl-5
-              font-500
+              font-600
             "
           >
             {{ titulo }}
@@ -71,11 +71,12 @@ export default {
 }
 </script>
 <style lang='scss'>
-.icon-diferencial-curso {
+.icon-diferencial-curso.white {
   width: calc(45px + 1vw);
   height: calc(45px + 1vw);
   border-radius: 80px 80px;
-  border: 2px solid #f87400 !important;
+  border: 2px solid !important;
+  border-color: #f9d428 !important;
 
   clr-icon {
     width: calc(35px + 1vw);

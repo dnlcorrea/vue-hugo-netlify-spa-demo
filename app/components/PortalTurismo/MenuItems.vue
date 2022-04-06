@@ -4,14 +4,8 @@
       to="/turismo-e-hotelaria#mbas"
       class="fill-height v-btn v-btn--flat c-secondary--text"
     >
-      MBA
+      MBAs
     </router-link>
-    <!-- <router-link
-      to="/turismo-e-hotelaria#masterclass"
-      class="fill-height v-btn v-btn--flat c-secondary--text"
-    >
-      Masterclass
-    </router-link> -->
 
     <router-link
       to="/turismo-e-hotelaria#cursos-de-desenvolvimento"

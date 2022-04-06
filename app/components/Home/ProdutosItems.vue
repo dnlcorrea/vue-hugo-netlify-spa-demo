@@ -49,6 +49,11 @@ export default {
           url: '/faculdade-multiversa',
         },
         {
+          nome: 'Portal de Turismo e Hotelaria',
+          img: '/produtos/t-01.png',
+          url: '/faculdade-multiversa/portal-de-turismo-e-hotelaria',
+        },
+        {
           nome: 'Colégio Multiversa',
           img: '/produtos/t-03.png',
           url: '/colegio-multiversa',
@@ -78,11 +83,11 @@ export default {
           img: '/produtos/t-08.png',
           url: '/hub-de-inovacao',
         },
-        {
-          nome: 'Gestão Interina de IES',
-          img: '/produtos/t-01.png',
-          url: '/gestao-interina-de-ies',
-        },
+        // {
+        //   nome: 'Gestão Interina de IES',
+        //   img: '/produtos/t-01.png',
+        //   url: '/gestao-interina-de-ies',
+        // },
       ],
     }
   },

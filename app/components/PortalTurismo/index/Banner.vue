@@ -1,7 +1,7 @@
 <template>
   <div style="overflow: hidden">
     <v-layout
-      class="banner-portal-turismo align-center flex-wrap justify-center"
+      class="banner-portal-turismo align-center flex-wrap"
       :style="`background:linear-gradient(334deg,#2d386deb, #010208cf), url(${imagine(
         '/portal-turismo/banner.jpg'
       )}) center center / cover`"
@@ -130,7 +130,7 @@ export default {
 </script>
 <style lang="scss">
 .banner-portal-turismo {
-  height: 70vh;
+  height: 100vh;
   min-height: 500px;
   position: relative;
   overflow: hidden;
@@ -142,7 +142,7 @@ export default {
     background: #2d386dbf;
     border-radius: 100%;
     position: absolute;
-    top: -25vw;
+    top: -18vw;
     left: -30vw;
     animation: left 1.5s;
   }

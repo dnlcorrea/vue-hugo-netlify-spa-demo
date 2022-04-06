@@ -1,23 +1,27 @@
 <template>
-  <div class="spx-24">
-    <div class="mb-5 subtitulo c-secondary--text text-left">
-      <span>{{ titulo }}</span>
+  <div>
+    <div class="spx-24">
+      <div class="mb-5 subtitulo c-secondary--text text-left">
+        <span class="main-title">{{ titulo }}</span>
+      </div>
+      <p class="c-info-darken-2--text text-left mb-4">
+        {{ subtitulo }}
+      </p>
     </div>
-    <p class="c-info-darken-2--text text-left mb-4">
-      {{ subtitulo }}
-    </p>
 
     <v-layout
-      class="flex-wrap curso-flickity smb-xs-10 smb-sm-10 smb-md-0"
+      class="flex-wrap curso-flickity smb-xs-10 smb-sm-10 smb-md-0 spx-24"
       :class="classe"
     >
       <v-flex
         xs12
         :md4="classe !== 'mbas'"
         :md6="classe === 'mbas'"
+        :xl3="classe !== 'mbas'"
+        :xl4="classe === 'mbas'"
         class="
           text-center
-          spx-10
+          spx-5
           text-left
           smb-xs-20 smb-sm-20 smb-md-20
           relative
@@ -38,7 +42,7 @@
               ? 'white--text text-center'
               : 'c-secondary--text text-left'
           "
-          style="position: relative"
+          style="position: relative; text-decoration: none"
         >
           <v-img
             cover
@@ -86,11 +90,7 @@
                 </h3>
                 <p class="white--text mb-2">
                   Início:
-                  <span class="font-600"
-                    >{{ curso.data_inicio
-                    }}<span v-if="curso.data_inicio && curso.mes_inicio">/</span
-                    >{{ curso.mes_inicio }}/{{ curso.ano_inicio }}</span
-                  >
+                  <span class="font-600">{{ setInicio(curso) }}</span>
                   | Duração:
                   <span class="font-600">{{ curso.duracao }} meses</span>
                 </p>
@@ -120,7 +120,7 @@
             </div>
           </div>
           <h3
-            class="line-height-1-5 my-1 subtitulo2 semibold mb-2 mt-4"
+            class="line-height-1-5 my-1 subtitulo2 font-600 mb-2 mt-4"
             v-if="classe !== 'mbas'"
             :class="
               curso.categoria === 'Curso de Atualização'
@@ -131,9 +131,9 @@
             {{ curso.name }}
           </h3>
           <p class="c-info-darken-2--text p2 mb-2" v-if="classe !== 'mbas'">
-            <span v-if="curso.inicio">Início:</span>
-            <span class="font-600" v-if="curso.inicio"
-              >{{ setInicio(curso.inicio) }} | </span
+            <span v-if="setInicio(curso)">Início:</span>
+            <span class="font-600" v-if="setInicio(curso)"
+              >{{ setInicio(curso) }} | </span
             ><span v-else> Assíncrono | </span>Duração:
             <span class="font-600">{{ curso.duracao }}</span>
           </p>
@@ -145,8 +145,8 @@
         <v-layout
           v-if="classe !== 'mbas'"
           align-center
-          class="absolute fill-width spr-20"
-          style="bottom: 0"
+          class="absolute fill-width spr-20 spt-10"
+          style="bottom: -15px"
         >
           <div style="width: calc(100% - 100px)">
             <v-divider class="mr-3"></v-divider>
@@ -197,18 +197,33 @@ export default {
       v.except ? v.cursos.filter((c) => c.slug !== v.except) : v.cursos,
   },
   methods: {
+    setInicio(curso) {
+      let inicio
+      if (this.classe === 'mbas') {
+        console.log('ismba')
+        inicio = curso.data_inicio
+          ? curso.data_inicio +
+            ' de ' +
+            curso.mes_inicio +
+            ' de ' +
+            curso.ano_inicio
+          : '' + curso.mes_inicio + ' de ' + curso.ano_inicio
+      } else {
+        inicio = curso.inicio
+      }
+      console.log(inicio)
+      return inicio
+    },
     cursoPath(slug) {
       let type = this.classe === 'mbas' ? '&type=mba' : ''
-      return '/portal-de-turismo-e-hotelaria/cursos?curso=' + slug + type
+      return (
+        '/faculdade-multiversa/portal-de-turismo-e-hotelaria/cursos?curso=' +
+        slug +
+        type
+      )
     },
     strip: (text) => striptags(text),
-    setInicio(inicio) {
-      if (typeof inicio === Array) {
-        return inicio[0]
-      } else {
-        return inicio
-      }
-    },
+
     makeFlick() {
       let el = document.getElementsByClassName(this.classe)[0]
       let options = {
@@ -247,8 +262,8 @@ export default {
 }
 
 .curso-flickity {
-  margin-left: calc(-20px - 1vw) !important;
-  margin-right: calc(-20px - 1vw) !important;
+  margin-left: calc(-10px - 0.5vw) !important;
+  margin-right: calc(-10px - 0.5vw) !important;
   .flickity-viewport {
     width: 100%;
   }

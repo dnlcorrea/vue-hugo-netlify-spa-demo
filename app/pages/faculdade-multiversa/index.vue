@@ -19,8 +19,15 @@
       <PosCarousel></PosCarousel>
       <FaculdadeCarouselPresencial></FaculdadeCarouselPresencial>
       <CarouselEmBreve titulo="Graduação Digital"></CarouselEmBreve>
-      <CarouselEmBreve titulo="Extensão Digital"></CarouselEmBreve>
     </div>
+    <div class="spx-sm-24">
+      <h1 class="font-500 smt-20 main-title">Extensão Digital</h1>
+    </div>
+    <PortalTurismoIndexCursosOnline
+      id="cursos-de-desenvolvimento"
+      :cursos="cursos"
+      classe="cursos-online"
+    ></PortalTurismoIndexCursosOnline>
 
     <BlogSectionBlogNoticia></BlogSectionBlogNoticia>
 
@@ -29,10 +36,13 @@
 </template>
 
 <script>
+import cursos from '@/data/cursos-turismo.js'
+
 export default {
   data() {
     return {
       banner: {},
+      cursos,
     }
   },
   computed: {

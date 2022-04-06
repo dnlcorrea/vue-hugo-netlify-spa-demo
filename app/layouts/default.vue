@@ -7,13 +7,13 @@
       class="c-secondary"
       :class="isup ? 'elevation-0' : 'elevation-2'"
     >
-      <v-flex xs10 sm11 lg3 class="fill-height">
+      <v-flex xs10 sm11 lg2 class="fill-height">
         <router-link to="/">
           <v-img
             @load="contentLoaded"
             contain
-            class="fill-height flex-0 sml-22 sml-xs-12"
-            style="width: 180px"
+            class="fill-height flex-0 sml-10 sml-xs-12"
+            style="width: calc(150px + 1vw)"
             src="/logo-s-n.png"
           ></v-img>
         </router-link>
@@ -22,7 +22,7 @@
       <v-flex
         xs2
         sm1
-        lg9
+        lg10
         class="
           fill-height
           hidden-lg-and-up
@@ -40,7 +40,7 @@
           <v-icon class="fas fa-bars"></v-icon>
         </v-btn>
       </v-flex>
-      <v-flex xs4 sm1 lg9 class="fill-height hidden-md-and-down">
+      <v-flex xs4 sm1 lg10 class="fill-height hidden-md-and-down">
         <div
           class="
             c-primary
@@ -360,7 +360,7 @@ export default {
       pathname: '',
       items: [
         {
-          name: 'HOME',
+          name: 'Home',
           path: '/home',
         },
         {
@@ -368,11 +368,11 @@ export default {
           path: '/faculdade-multiversa',
         },
         {
-          name: 'QUEM SOMOS',
+          name: 'Quem Somos',
           path: '/quem-somos',
         },
         {
-          name: 'ACONTECE NA Multiversa',
+          name: 'Acontece na Multiversa',
           path: '/acontece-na-multiversa',
         },
         {
@@ -380,7 +380,7 @@ export default {
           path: '/blog-multiversa',
         },
         {
-          name: 'CONTATO',
+          name: 'Contato',
           path: '/#contato',
         },
       ],
@@ -395,6 +395,10 @@ export default {
           path: '/faculdade-multiversa/graduacao-digital',
         },
         { name: 'Pós-Graduação', path: '/faculdade-multiversa/pos-graduacao' },
+        {
+          name: 'Turismo e Hotelaria',
+          path: '/faculdade-multiversa/portal-de-turismo-e-hotelaria',
+        },
         {
           name: 'Extensão Digital',
           path: '/faculdade-multiversa/extensao-digital',

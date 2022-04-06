@@ -1,9 +1,5 @@
 <template>
   <div class="spy-24 grey lighten-3">
-    <div class="mb-5 subtitulo c-secondary--text text-center">
-      <span>CURSOS E DESENVOLVIMENTO</span>
-    </div>
-
     <v-layout class="justify-center flex-wrap diferenciais-flickity">
       <v-flex
         data-aos="flip-left"
@@ -31,8 +27,8 @@
           ></object>
         </div>
 
-        <h5 class="line-height-1 font-300 smt-xs-10 smb-xs-20">
-          <big>100%</big><br />ONLINE
+        <h5 class="line-height-1-2 font-300 smt-xs-10 smb-xs-20">
+          <big>100%</big><br />online
         </h5>
       </v-flex>
       <v-flex
@@ -61,8 +57,8 @@
           ></object>
         </div>
 
-        <h5 class="line-height-1 font-300 smt-xs-10 smb-xs-20">
-          CURSOS FOCADOS<br />NA PRÁTICA
+        <h5 class="line-height-1-2 font-300 smt-xs-10 smb-xs-20">
+          Cursos focados<br />na prática
         </h5>
       </v-flex>
       <v-flex
@@ -90,8 +86,8 @@
             data="/portal-turismo/diferenciais/icones-02.svg"
           ></object>
         </div>
-        <h5 class="line-height-1 font-300 smt-xs-10 smb-xs-20">
-          EXPERIÊNCIA PROFISSIONAL<br />DE SUCESSO
+        <h5 class="line-height-1-2 font-300 smt-xs-10 smb-xs-20">
+          Experiência profissional<br />de sucesso
         </h5>
       </v-flex>
     </v-layout>

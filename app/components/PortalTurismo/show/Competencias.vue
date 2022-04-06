@@ -1,7 +1,7 @@
 <template>
-  <v-layout class="smt-24 spx-24 align-center flex-wrap">
-    <v-flex xs12 :sm10="hasPrograma" :md8="hasPrograma">
-      <div class="mb-5 subtitulo c-secondary--text">
+  <v-layout class="smt-24 spx-24 flex-wrap">
+    <v-flex xs12 :sm10="hasPrograma" :md8="hasPrograma" :lg7="hasPrograma">
+      <div class="mb-5 subtitulo c-secondary--text main-title">
         <span>O QUE VOCÊ SERÁ CAPAZ DE FAZER?</span>
       </div>
       <ul
@@ -22,7 +22,8 @@
       sm7
       md3
       offset-md1
-      class="smy-xs-12 spl-sm-10 spl-md-0"
+      offset-lg0
+      class="smy-xs-12 spl-sm-10 spl-md-0 spb-15"
       v-show="hasPrograma"
     >
       <div
@@ -42,7 +43,7 @@
             justify-center
           "
           :src="imagine('/portal-turismo/matriz-bg.jpg')"
-          aspect-ratio="0.76"
+          aspect-ratio="0.8"
         >
           <div>
             <div class="subtitulo mb-3 font-600 c-secondary--text">
@@ -81,7 +82,8 @@ export default {
 
   watch: {
     slug(newVal, oldVal) {
-      axios
+      console.log(this)
+      this.$axios
         .head(`/docs/turismo-e-hotelaria/${newVal}.pdf`)
         .then(() => {
           this.hasPrograma = true
@@ -93,7 +95,7 @@ export default {
   },
 
   computed: {
-    setCompetencias: (v) => (v.competencias ? JSON.parse(v.competencias) : []),
+    setCompetencias: (v) => (v.competencias ? v.competencias : []),
   },
 }
 </script>
