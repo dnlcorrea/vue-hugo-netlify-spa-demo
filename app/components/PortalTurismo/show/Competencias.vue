@@ -82,7 +82,6 @@ export default {
 
   watch: {
     slug(newVal, oldVal) {
-      console.log(this)
       this.$axios
         .head(`/docs/turismo-e-hotelaria/${newVal}.pdf`)
         .then(() => {

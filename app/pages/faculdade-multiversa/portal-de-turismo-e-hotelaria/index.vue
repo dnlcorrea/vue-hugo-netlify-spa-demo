@@ -111,7 +111,6 @@ export default {
   mounted() {
     setTimeout(() => {
       this.banner = this.$refs.banner
-      console.log(this.$refs.banner)
     }, 500)
     setTimeout(() => {
       if (location.hash) {

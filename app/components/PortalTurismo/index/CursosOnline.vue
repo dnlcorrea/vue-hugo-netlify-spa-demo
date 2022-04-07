@@ -200,7 +200,6 @@ export default {
     setInicio(curso) {
       let inicio
       if (this.classe === 'mbas') {
-        console.log('ismba')
         inicio = curso.data_inicio
           ? curso.data_inicio +
             ' de ' +
@@ -211,7 +210,6 @@ export default {
       } else {
         inicio = curso.inicio
       }
-      console.log(inicio)
       return inicio
     },
     cursoPath(slug) {
