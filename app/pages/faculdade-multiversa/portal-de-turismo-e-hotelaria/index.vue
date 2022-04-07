@@ -20,7 +20,7 @@
       v-show="posTurismo.length"
       class="spt-20"
     ></PortalTurismoIndexCursosOnline>
-    <masterclass class="spb-20"></masterclass>
+    <!-- <masterclass class="spb-20"></masterclass> -->
     <PortalTurismoIndexCursosOnline
       id="cursos-de-desenvolvimento"
       titulo="Cursos Online"

@@ -97,7 +97,7 @@
                 <v-btn
                   class="c-primary ml-0 c-secondary--text"
                   :to="
-                    '/portal-de-turismo-e-hotelaria/cursos?curso=' +
+                    '/faculdade-multiversa/portal-de-turismo-e-hotelaria/cursos?curso=' +
                     curso.slug +
                     '&type=mba'
                   "
