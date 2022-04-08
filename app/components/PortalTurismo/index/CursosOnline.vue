@@ -221,8 +221,7 @@ export default {
     cursoPath(slug) {
       let link =
         this.classe === 'pos-graduacao' ? 'pos-graduacao' : 'extensao-digital'
-      let query = this.classe === 'pos-graduacao' ? '/' : '/cursos?curso='
-      return '/faculdade-multiversa/' + link + query + slug
+      return '/faculdade-multiversa/' + link + '/' + slug
     },
     strip: (text) => striptags(text),
 
