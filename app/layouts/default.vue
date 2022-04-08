@@ -403,7 +403,7 @@ export default {
           name: 'Extensão Digital',
           path: '/faculdade-multiversa/extensao-digital',
         },
-        { name: 'Metodologia', path: '#metodologia' },
+        { name: 'Metodologia', path: '/faculdade-multiversa/metodologia' },
       ],
 
       rightDrawer: false,

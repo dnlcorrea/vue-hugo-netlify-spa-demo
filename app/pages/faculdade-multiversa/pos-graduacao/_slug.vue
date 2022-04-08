@@ -1,33 +1,13 @@
 <template>
-  <div class="white">
-    <div slot="submenu" class="fill-with">
-      <FaculdadeSubmenu
-        :isup="isup"
-        :onFooter="onFooter"
-        :banner="banner"
-        class="hidden-md-and-down"
-      ></FaculdadeSubmenu>
-    </div>
-    <PosShowBanner :curso="curso" ref="banner"></PosShowBanner>
-    <div class="white relative spx-xl-24" style="z-index: 1">
-      <PosShowSobre :curso="curso"></PosShowSobre>
-    </div>
-    <div class="white relative" style="z-index: 1">
-      <PosShowFormSaibaMais :curso="curso"></PosShowFormSaibaMais>
-      <div class="spx-sm-24 spx-xs-15">
-        <PosShowComponenteCurricular
-          v-if="curso.matriz && curso.matriz.length"
-          :curso="curso"
-        ></PosShowComponenteCurricular>
-        <PosCarousel></PosCarousel>
-      </div>
-      <PosFluxograma
-        style="margin-bottom: calc(-48px - 2.4vw); z-index: 3"
-      ></PosFluxograma>
-
-      <FaculdadeMetodologia></FaculdadeMetodologia>
-    </div>
-  </div>
+  <TemplateCurso
+    :curso="curso"
+    :cursos="cursos"
+    :style="isLoaded ? 'opacity:1' : 'opacity:0'"
+    :check-class="checkClass"
+    :isup="isup"
+    :on-footer="onFooter"
+  >
+  </TemplateCurso>
 </template>
 <script>
 import pos from '@/data/pos.js'
@@ -35,9 +15,19 @@ import pos from '@/data/pos.js'
 export default {
   data() {
     return {
+      cursos: [],
       curso: {},
-      banner: {},
+      isLoaded: false,
+      checkClass: 'pos-graduacao',
     }
+  },
+  computed: {
+    isup() {
+      return this.$attrs.isup
+    },
+    onFooter() {
+      return this.$attrs.onFooter
+    },
   },
   beforeRouteEnter(to, from, next) {
     next((vm) => {
@@ -53,21 +43,22 @@ export default {
       this.curso = pos.find((c) => c.slug === to)
         ? pos.find((c) => c.slug === to)
         : open('/404', '_self')
+
+      this.cursos = pos.filter((c) => c.slug !== to)
+        ? pos.find((c) => c.slug !== to)
+        : open('/404', '_self')
+
+      this.isLoaded = true
     },
   },
-  computed: {
-    isup() {
-      return this.$attrs.isup
-    },
-    onFooter() {
-      return this.$attrs.onFooter
-    },
-  },
+  // computed: {
+  //   checkClass: (v) =>
+  //     v.$route.query.type === 'pos' ? 'pos' : 'cursos-online',
+  // },
   mounted() {
     let path = location.pathname.split('/')[3]
 
     setTimeout(() => {
-      this.banner = this.$refs.banner
       this.setPos(path)
     }, 500)
   },

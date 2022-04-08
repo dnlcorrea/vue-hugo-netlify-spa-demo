@@ -12,15 +12,14 @@
     <diferenciais></diferenciais>
 
     <PortalTurismoIndexCursosOnline
-      id="mbas"
+      id="pos"
       titulo="MBAS"
       subtitulo="Cursos de Pós-graduação para profissionais que desejam aprofundar conhecimentos na área de administração em Turismo e Hotelaria."
       :cursos="posTurismo"
-      classe="mbas"
+      classe="pos"
       v-show="posTurismo.length"
       class="spt-20"
     ></PortalTurismoIndexCursosOnline>
-    <!-- <masterclass class="spb-20"></masterclass> -->
     <PortalTurismoIndexCursosOnline
       id="cursos-de-desenvolvimento"
       titulo="Cursos Online"
@@ -70,11 +69,9 @@ import cursos from '@/data/cursos-turismo.js'
 import Banner from '@/components/PortalTurismo/index/Banner.vue'
 import Diferenciais from '@/components/PortalTurismo/index/Diferenciais.vue'
 import CursosOnline from '@/components/PortalTurismo/index/CursosOnline.vue'
-import Masterclass from '@/components/PortalTurismo/index/Masterclass.vue'
 import FormSaibaMais from '@/components/PortalTurismo/FormSaibaMais.vue'
 import BannerFaleConosco from '@/components/PortalTurismo/BannerFaleConosco.vue'
 import Parceiros from '@/components/PortalTurismo/Parceiros.vue'
-import MbaBanner from '@/components/PortalTurismo/index/MbaBanner.vue'
 
 export default {
   data() {
@@ -86,14 +83,10 @@ export default {
   },
   components: {
     Banner,
-    // ultimasNoticias,
     Diferenciais,
     CursosOnline,
-    Masterclass,
     FormSaibaMais,
     BannerFaleConosco,
-    // Newsletter,
-    MbaBanner,
     Parceiros,
   },
   computed: {
@@ -103,6 +96,12 @@ export default {
           a.categoria.find((c) => c.slug === 'turismo-e-hotelaria')
         )
         .slice(0, 4)
+    },
+    isup() {
+      return this.$attrs.isup
+    },
+    onFooter() {
+      return this.$attrs.onFooter
     },
     posTurismo() {
       return pos.filter((a) => a.area === 'Turismo e Hotelaria').slice(0, 2)

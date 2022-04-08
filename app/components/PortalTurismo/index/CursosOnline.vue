@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="spx-24">
-      <div class="mb-5 subtitulo c-secondary--text text-left">
+      <div class="mb-5 subtitulo c-secondary--text text-left" v-if="titulo">
         <span class="main-title">{{ titulo }}</span>
       </div>
       <p class="c-info-darken-2--text text-left mb-4">
@@ -15,10 +15,10 @@
     >
       <v-flex
         xs12
-        :md4="classe !== 'mbas'"
-        :md6="classe === 'mbas'"
-        :xl3="classe !== 'mbas'"
-        :xl4="classe === 'mbas'"
+        :md4="classe !== 'pos-graduacao'"
+        :md6="classe === 'pos-graduacao'"
+        :xl3="classe !== 'pos-graduacao'"
+        :xl4="classe === 'pos-graduacao'"
         class="
           text-center
           spx-5
@@ -45,6 +45,9 @@
           style="position: relative; text-decoration: none"
         >
           <v-img
+            :gradient="
+              curso.categoria === 'Pós-graduação' ? '#01092ed9, #171c5cf2' : ''
+            "
             cover
             v-if="curso.img"
             :src="imagine(curso.img)"
@@ -71,7 +74,7 @@
               <small>{{ curso.categoria }} &nbsp; </small>
             </span>
             <div
-              v-if="classe === 'mbas'"
+              v-if="classe === 'pos-graduacao'"
               class="d-flex align-center justify-center spa-10 fill-height"
             >
               <div>
@@ -99,7 +102,7 @@
                   :to="
                     '/faculdade-multiversa/portal-de-turismo-e-hotelaria/cursos?curso=' +
                     curso.slug +
-                    '&type=mba'
+                    '&type=pos'
                   "
                   >SAIBA MAIS
                   <v-icon class="ml-2" small>fas fa-arrow-right</v-icon></v-btn
@@ -121,7 +124,7 @@
           </div>
           <h3
             class="line-height-1-5 my-1 subtitulo2 font-600 mb-2 mt-4"
-            v-if="classe !== 'mbas'"
+            v-if="classe !== 'pos-graduacao'"
             :class="
               curso.categoria === 'Curso de Atualização'
                 ? 'c-primary-darken-1--text'
@@ -130,20 +133,26 @@
           >
             {{ curso.name }}
           </h3>
-          <p class="c-info-darken-2--text p2 mb-2" v-if="classe !== 'mbas'">
+          <p
+            class="c-info-darken-2--text p2 mb-2"
+            v-if="classe !== 'pos-graduacao'"
+          >
             <span v-if="setInicio(curso)">Início:</span>
             <span class="font-600" v-if="setInicio(curso)"
               >{{ setInicio(curso) }} | </span
             ><span v-else> Assíncrono | </span>Duração:
             <span class="font-600">{{ curso.duracao }}</span>
           </p>
-          <p class="c-info-darken-2--text p2 mb-5" v-if="classe !== 'mbas'">
+          <p
+            class="c-info-darken-2--text p2 mb-5"
+            v-if="classe !== 'pos-graduacao'"
+          >
             {{ strip(curso.descricao) | truncate(95) }}
           </p>
         </router-link>
 
         <v-layout
-          v-if="classe !== 'mbas'"
+          v-if="classe !== 'pos-graduacao'"
           align-center
           class="absolute fill-width spr-20 spt-10"
           style="bottom: -15px"
@@ -199,26 +208,21 @@ export default {
   methods: {
     setInicio(curso) {
       let inicio
-      if (this.classe === 'mbas') {
-        inicio = curso.data_inicio
-          ? curso.data_inicio +
-            ' de ' +
-            curso.mes_inicio +
-            ' de ' +
-            curso.ano_inicio
-          : '' + curso.mes_inicio + ' de ' + curso.ano_inicio
-      } else {
-        inicio = curso.inicio
-      }
+      inicio = curso.data_inicio
+        ? curso.data_inicio +
+          ' de ' +
+          curso.mes_inicio +
+          ' de ' +
+          curso.ano_inicio
+        : '' + curso.mes_inicio + ' de ' + curso.ano_inicio
+
       return inicio
     },
     cursoPath(slug) {
-      let type = this.classe === 'mbas' ? '&type=mba' : ''
-      return (
-        '/faculdade-multiversa/portal-de-turismo-e-hotelaria/cursos?curso=' +
-        slug +
-        type
-      )
+      let link =
+        this.classe === 'pos-graduacao' ? 'pos-graduacao' : 'extensao-digital'
+      let query = this.classe === 'pos-graduacao' ? '/' : '/cursos?curso='
+      return '/faculdade-multiversa/' + link + query + slug
     },
     strip: (text) => striptags(text),
 

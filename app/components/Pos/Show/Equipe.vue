@@ -1,29 +1,29 @@
 <template>
-  <div class="spb-10 spt-20">
-    <h1 class="ead titulo spl-0"><big>EQUIPE</big></h1>
+  <div class="spb-24 smx-24 spx-24">
+    <div class="smb-12 subtitulo c-secondary--text">
+      <span class="main-title">Equipe</span>
+    </div>
+
     <v-layout wrap>
       <v-flex
-        class="d-flex spy-15"
+        class="d-flex spb-15"
         md6
         v-for="(professor, i) in professores"
         :key="i"
       >
         <div>
-          <v-img
-            :src="imagine(professor.foto)"
-            class="professor-image-pos"
-            :style="{
-              borderBottomColor: $root.primary,
-              borderTopColor: $root.secondary,
-            }"
-          ></v-img>
+          <div class="border-prof-img c-primary--text">
+            <v-img :src="professor.image" class="professor-image-pos"></v-img>
+          </div>
         </div>
         <div>
-          <div class="titulo regular secondary--text light spl-6">
-            {{ professor.nome_curto || professor.nome }}
-          </div>
-          <p class="light curriculo-professor spl-6 spr-10 spt-2">
-            {{ professor.curriculo }}
+          <h4 class="font-600 c-secondary--text spl-6">
+            <big>{{ professor.nome_curto || professor.nome }}</big>
+          </h4>
+          <p
+            class="light curriculo-professor line-height-1-2 spl-6 spr-10 spt-2"
+          >
+            <small>{{ professor.curriculo }}</small>
           </p>
         </div>
       </v-flex>
@@ -39,15 +39,15 @@ export default {
 
 <style lang="scss">
 .professor-image-pos {
+  width: calc(90px + 1vw);
+  height: calc(90px + 1vw);
+  border-radius: 100%;
+}
+.border-prof-img {
   width: calc(100px + 1vw);
   height: calc(100px + 1vw);
   border-radius: 100%;
-  border-top: 3px solid;
-  border-bottom: 3px solid;
-  border-left: 1px solid #e4e4e4;
-  border-right: 1px solid #e4e4e4;
-}
-.curriculo-professor {
-  font-size: calc(10px + 0.25vw);
+  border: 1px solid currentColor;
+  padding: 4px;
 }
 </style>

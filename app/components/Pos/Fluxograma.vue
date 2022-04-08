@@ -1,6 +1,6 @@
 <template>
   <div
-    class="spx-14 grey lighten-3 spy-20 smt-24"
+    class="spx-14 grey lighten-3 spy-20"
     style="
       background: linear-gradient(45deg, #3a3200 30%, #151b36 30%);
       background-attachment: fixed;
@@ -10,7 +10,9 @@
       class="relative spb-10 spt-6 spx-10 white"
       style="border: 1px solid #dfdfdf"
     >
-      <h1 class="font-500 main-title">Como funciona sua Pós-Graduação</h1>
+      <h1 class="font-500 main-title subtitulo">
+        Como funciona sua Pós-Graduação
+      </h1>
       <v-layout wrap class="justify-space-evenly ml-3">
         <v-flex
           :md3="i <= 3"

@@ -2,7 +2,7 @@
   <div style="overflow: hidden">
     <v-layout
       class="banner-portal-turismo align-center flex-wrap"
-      :style="`background:linear-gradient(334deg,#2d386deb, #010208cf), url(${imagine(
+      :style="`background:linear-gradient(334deg, #01092ed9,#01092ed9), url(${imagine(
         '/portal-turismo/banner.jpg'
       )}) center center / cover`"
     >
@@ -139,12 +139,13 @@ export default {
     content: '';
     width: 82vw;
     height: 82vw;
-    background: #2d386dbf;
+    background: linear-gradient(-190deg, #1c244ac3, #2c3c8b99);
     border-radius: 100%;
     position: absolute;
     top: -18vw;
     left: -30vw;
     animation: left 1.5s;
+    backdrop-filter: blur(5px);
   }
   clr-icon {
     width: 26px;

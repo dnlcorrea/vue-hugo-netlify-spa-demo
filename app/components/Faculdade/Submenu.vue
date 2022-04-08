@@ -1,11 +1,10 @@
 <template>
   <v-layout
     class="fill-width fixed"
-    :class="isup ? 'elevation-0' : 'elevation-0'"
-    style="z-index: 6; top: 64px"
+    :class="passoudobanner ? 'elevation-2' : 'elevation-0'"
+    style="z-index: 6; top: 64px; transition: all 0.3s"
     :style="{
       marginTop: onFooter ? '-100px' : '0',
-      transition: 'all 0.2s',
     }"
   >
     <v-flex xs12 md4 lg2 :class="passoudobanner ? 'white' : 'transparent'">
@@ -60,7 +59,7 @@ export default {
           name: 'Extensão Digital',
           path: '/faculdade-multiversa/extensao-digital',
         },
-        { name: 'Metodologia', path: '#metodologia' },
+        { name: 'Metodologia', path: '/faculdade-multiversa/metodologia' },
       ],
     }
   },
@@ -78,7 +77,7 @@ export default {
       //     : '/faculdade-22#metodologia'
       // item.path = path
       setTimeout(() => {
-        let bh = this.banner.$el.offsetHeight - 76
+        let bh = this.banner.$el.offsetHeight - 76 - 48
         this.passoudobanner = bh < scrollY
         addEventListener('scroll', () => {
           this.passoudobanner = bh < scrollY

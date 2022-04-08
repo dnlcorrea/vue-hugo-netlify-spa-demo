@@ -1,34 +1,33 @@
 <template>
-  <div class="spy-15">
-    <h1 class="font-500 smt-20 main-title">Componentes Curriculares</h1>
+  <div class="spb-24 spx-24">
+    <h1 class="font-500 main-title subtitulo">Componentes Curriculares</h1>
 
-    <p class="secondary--text light mt-3" v-if="curso.carga_horaria">
-      {{ curso.carga_horaria }} horas/aulas
+    <p class="secondary--text light mt-3" v-if="cargaHoraria">
+      {{ cargaHoraria }} horas/aulas
     </p>
 
-    <v-layout class="justify-space-between flex-wrap">
+    <v-layout class="justify-space-between flex-wrap componentes-curriculares">
       <v-flex xs12 md6 class="spr-md-8">
         <v-expansion-panels v-model="panel" class="smt-4 expansion-panel-ead">
           <v-expansion-panel
             class="smb-3"
-            v-for="(matrizes, index) in curso.matriz.slice(
+            v-for="(itens, index) in matrizes.slice(
               0,
-              Math.ceil(curso.matriz.length / 2)
+              Math.ceil(matrizes.length / 2)
             )"
             :key="index"
+            :disabled="disabled"
           >
             <v-expansion-panel-header>
               <div>
-                <h2 class="semilightc-secondary--text mb-0">
+                <h2 class="font-600 c-secondary--text mb-0">
                   <i class="fas fa-caret-right c-primary--text mr-2"></i>
-                  {{ matrizes.titulo }}
+                  {{ itens.titulo }}
                 </h2>
               </div>
             </v-expansion-panel-header>
-            <v-expansion-panel-content
-              v-if="matrizes.itens && matrizes.itens.length"
-            >
-              <div v-for="(matriz, j) in matrizes.itens" :key="j">
+            <v-expansion-panel-content v-if="itens.itens && itens.itens.length">
+              <div v-for="(matrizes, j) in itens.itens" :key="j">
                 <v-card flat class="spl-12 spx-xs-2">
                   <p class="regular titulo-cardc-secondary--text spr-6">
                     <span class="primary--text">
@@ -36,7 +35,7 @@
                         class="fas fa-arrow-right c-primary--text mr-2 mt-1"
                       ></i>
                     </span>
-                    <big>{{ matriz }}</big>
+                    <big>{{ matrizes }}</big>
                   </p>
                 </v-card>
               </div>
@@ -45,27 +44,29 @@
         </v-expansion-panels>
       </v-flex>
       <v-flex xs12 md6>
-        <v-expansion-panels v-model="panel2" class="smt-4 expansion-panel-ead">
+        <v-expansion-panels
+          :disabled="disabled"
+          v-model="panel2"
+          class="smt-4 expansion-panel-ead"
+        >
           <v-expansion-panel
             class="smb-3"
-            v-for="(matrizes, index) in curso.matriz.slice(
-              Math.ceil(curso.matriz.length / 2),
-              curso.matriz.length
+            v-for="(itens, index) in matrizes.slice(
+              Math.ceil(matrizes.length / 2),
+              matrizes.length
             )"
             :key="index"
           >
             <v-expansion-panel-header>
               <div>
-                <h2 class="semilightc-secondary--text mb-0">
+                <h2 class="font-600 c-secondary--text mb-0">
                   <i class="fas fa-caret-right c-primary--text mr-2"></i>
-                  {{ matrizes.titulo }}
+                  {{ itens.titulo }}
                 </h2>
               </div>
             </v-expansion-panel-header>
-            <v-expansion-panel-content
-              v-if="matrizes.itens && matrizes.itens.length"
-            >
-              <div v-for="(matriz, j) in matrizes.itens" :key="j">
+            <v-expansion-panel-content v-if="itens.itens && itens.itens.length">
+              <div v-for="(matrizes, j) in itens.itens" :key="j">
                 <v-card flat class="spl-12">
                   <p class="regular titulo-cardc-secondary--text spr-6">
                     <span class="primary--text">
@@ -73,7 +74,7 @@
                         class="fas fa-arrow-right c-primary--text mr-2 mt-1"
                       ></i>
                     </span>
-                    <big>{{ matriz }}</big>
+                    <big>{{ matrizes }}</big>
                   </p>
                 </v-card>
               </div>
@@ -88,7 +89,8 @@
 <script>
 export default {
   props: {
-    curso: Object,
+    matrizes: Array,
+    cargaHoraria: Number,
   },
 
   data() {
@@ -97,8 +99,33 @@ export default {
       panel2: null,
     }
   },
+  computed: {
+    disabled() {
+      let hasItems = this.matrizes.map((el) => {
+        return el.itens ? !!el.itens.length : false
+      })
+      return !hasItems.find((a) => a === true)
+    },
+  },
 }
 </script>
 
 <style lang="scss">
+.componentes-curriculares {
+  .v-item-group {
+    transition: 0s cubic-bezier(0.25, 0.8, 0.5, 1) !important;
+  }
+  .v-expansion-panel {
+    transition: 0s cubic-bezier(0.25, 0.8, 0.5, 1) !important;
+  }
+  .v-expansion-panel::before {
+    transition: box-shadow 0ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  .v-expansion-panel-header {
+    transition: 0s min-height cubic-bezier(0.25, 0.8, 0.5, 1) !important;
+  }
+  .v-expansion-panel-header:before {
+    transition: 0s opacity cubic-bezier(0.25, 0.8, 0.5, 1) !important;
+  }
+}
 </style>

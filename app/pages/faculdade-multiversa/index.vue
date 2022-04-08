@@ -28,10 +28,10 @@
       :cursos="cursos"
       classe="cursos-online"
     ></PortalTurismoIndexCursosOnline>
-
-    <BlogSectionBlogNoticia></BlogSectionBlogNoticia>
-
-    <FaculdadeMetodologia></FaculdadeMetodologia>
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 

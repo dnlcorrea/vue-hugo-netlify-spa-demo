@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="font-500 smt-20 main-title">Pós-Graduação</h1>
+    <h1 class="font-500 smb-8 main-title subtitulo">Pós-Graduação</h1>
 
     <v-layout
       class="flex-wrap"
@@ -10,9 +10,9 @@
         margin-right: calc(-8px - 0.4vw) !important;
       "
     >
-      <v-flex xs12 md6 lg3 class="spx-4 pb-2" v-for="(p, i) in pos" :key="i">
+      <v-flex xs12 md6 lg3 class="spx-4 spb-10" v-for="(p, i) in pos" :key="i">
         <router-link
-          :to="`/faculdade-multiversa/pos-graduacao/${p.slug}`"
+          :to="`/faculdade-multiversa/pos-graduacao/${p.slug}?type=pos`"
           class="no-underline fill-height"
         >
           <v-card class="fill-height mb-2">

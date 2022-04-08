@@ -23,7 +23,6 @@
         classe="cursos-online"
       ></PortalTurismoIndexCursosOnline>
     </div>
-    <FaculdadeMetodologia></FaculdadeMetodologia>
   </div>
 </template>
 
