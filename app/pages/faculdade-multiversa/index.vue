@@ -15,13 +15,13 @@
       height="calc(60vh + 50px)"
       ref="banner"
     ></Banner>
-    <div class="spx-sm-24 spx-xs-15">
-      <PosCarousel></PosCarousel>
+    <div class="spx-sm-24 spt-24 spx-xs-15">
+      <PosCarousel :cursos="pos" titulo="Pós-graduação" doFlick></PosCarousel>
       <FaculdadeCarouselPresencial></FaculdadeCarouselPresencial>
       <CarouselEmBreve titulo="Graduação Digital"></CarouselEmBreve>
     </div>
     <div class="spx-sm-24">
-      <h1 class="font-500 smt-20 main-title">Extensão Digital</h1>
+      <h1 class="font-500 smt-20 main-title subtitulo">Extensão Digital</h1>
     </div>
     <PortalTurismoIndexCursosOnline
       id="cursos-de-desenvolvimento"
@@ -37,12 +37,14 @@
 
 <script>
 import cursos from '@/data/cursos-turismo.js'
+import pos from '@/data/pos.js'
 
 export default {
   data() {
     return {
       banner: {},
       cursos,
+      pos,
     }
   },
   computed: {

@@ -6,6 +6,7 @@
     :check-class="checkClass"
     :isup="isup"
     :on-footer="onFooter"
+    class="start"
   >
   </TemplateCurso>
 </template>
@@ -40,21 +41,24 @@ export default {
   },
   methods: {
     setPos(to) {
+      this.isLoaded = false
+      this.curso = {}
+      this.cursos = []
+
+      scrollTo(0, 0)
+
       this.curso = pos.find((c) => c.slug === to)
         ? pos.find((c) => c.slug === to)
         : open('/404', '_self')
 
       this.cursos = pos.filter((c) => c.slug !== to)
-        ? pos.find((c) => c.slug !== to)
+        ? pos.filter((c) => c.slug !== to)
         : open('/404', '_self')
 
       this.isLoaded = true
     },
   },
-  // computed: {
-  //   checkClass: (v) =>
-  //     v.$route.query.type === 'pos' ? 'pos' : 'cursos-online',
-  // },
+
   mounted() {
     let path = location.pathname.split('/')[3]
 
@@ -65,4 +69,7 @@ export default {
 }
 </script>
 <style lang='scss'>
+.start {
+  transition: opacity 0.5s;
+}
 </style>

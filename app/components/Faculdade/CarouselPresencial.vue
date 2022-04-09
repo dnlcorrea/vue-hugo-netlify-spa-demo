@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="font-500 smt-20 main-title">Graduação Presencial</h1>
+    <h1 class="font-500 main-title subtitulo mt-0">Graduação Presencial</h1>
 
     <v-layout
       class="flex-wrap align-center"

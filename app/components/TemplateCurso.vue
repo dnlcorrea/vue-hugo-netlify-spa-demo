@@ -70,7 +70,11 @@
       <PosShowBannerSaibaMais></PosShowBannerSaibaMais>
 
       <div class="spx-sm-24 spx-xs-15 spb-24">
-        <PosCarousel titulo="Outros cursos" :cursos="cursos"></PosCarousel>
+        <PosCarousel
+          titulo="Outros cursos"
+          :cursos="cursos"
+          doFlick
+        ></PosCarousel>
       </div>
       <br />
       <br />

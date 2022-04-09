@@ -15,18 +15,20 @@
       height="calc(60vh + 50px)"
       ref="banner"
     ></Banner>
-    <div class="spx-sm-24 spx-xs-15">
-      <PosCarousel></PosCarousel>
+    <div class="spx-sm-24 spx-xs-15 spt-24 spb-20">
+      <PosCarousel :cursos="pos"></PosCarousel>
     </div>
-    <PosFluxograma style="margin-bottom: calc(-48px - 2.4vw)"></PosFluxograma>
   </div>
 </template>
 
 <script>
+import pos from '@/data/pos.js'
+
 export default {
   data() {
     return {
       banner: {},
+      pos,
     }
   },
   computed: {

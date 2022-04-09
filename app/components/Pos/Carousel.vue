@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h1 class="font-500 smb-8 main-title subtitulo">Pós-Graduação</h1>
+  <div class="spb-24" v-if="itemsCount > 1">
+    <h1 class="font-500 smb-8 main-title subtitulo" v-if="titulo">
+      {{ titulo }}
+    </h1>
 
     <v-layout
       class="flex-wrap"
@@ -10,9 +12,18 @@
         margin-right: calc(-8px - 0.4vw) !important;
       "
     >
-      <v-flex xs12 md6 lg3 class="spx-4 spb-10" v-for="(p, i) in pos" :key="i">
+      <v-flex
+        xs12
+        md6
+        lg4
+        xl3
+        class="spx-4 spb-10"
+        v-for="(p, i) in cursos"
+        :key="i"
+        :class="{ 'carousel-cell': doFlick }"
+      >
         <router-link
-          :to="`/faculdade-multiversa/pos-graduacao/${p.slug}?type=pos`"
+          :to="`/faculdade-multiversa/pos-graduacao/${p.slug}`"
           class="no-underline fill-height"
         >
           <v-card class="fill-height mb-2">
@@ -94,18 +105,25 @@
 </template>
 
 <script>
-import pos from '@/data/pos.js'
 import flick from '@/mixins/Flickity.js'
 
 export default {
+  props: { cursos: Array, titulo: String, doFlick: Boolean },
   mixins: [flick],
-  data() {
-    return {
-      pos,
-    }
+
+  computed: {
+    itemsCount() {
+      return this.cursos.length
+    },
   },
 }
 </script>
 
-<style>
+<style lang="scss">
+.carousel-cell:not(.is-selected) {
+  opacity: 0.3;
+}
+.carousel-cell {
+  transition: opacity 0.5s;
+}
 </style>

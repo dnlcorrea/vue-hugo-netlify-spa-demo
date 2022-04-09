@@ -81,7 +81,6 @@ export default {
 
   watch: {
     slug(newVal, oldVal) {
-      console.log(newVal)
       this.$axios
         .head(`/docs/${this.checkClass}/${newVal}.pdf`)
         .then(() => {
