@@ -424,6 +424,7 @@ export default {
       this.pathname = to.fullPath
     },
   },
+
   mounted() {
     this.pathname = location.pathname
 

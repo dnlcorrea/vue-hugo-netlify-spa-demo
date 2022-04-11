@@ -1,16 +1,18 @@
 export default async ({ app }) => {
 
   app.router.afterEach((to, from) => {
+    console.log(AOS)
       AOS.init();
       setTimeout(() => {
           AOS.refreshHard();
-      }, 1000);
+      }, 2000);
   });
 
 
-//   app.router.beforeEach((to, from) => {
-//       AOS.init();
-//       AOS.refresh();
-//   });
+  // app.router.beforeEach((to, from) => {
+  //   console.log('befores')
+  //     AOS.init();
+  //     AOS.refresh();
+  // });
 
 }
