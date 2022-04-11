@@ -77,19 +77,19 @@ export default {
     inicializarPorCategoria(to) {
       this.categoria = to.params.slug
       this.blogs = []
-      this.blogs = blog.filter(
-        (a) =>
-          !a.categoria.find((c) => c.slug === 'noticia') &&
-          a.categoria.find((c) => c.slug === this.categoria)
+      this.blogs = blog.filter((a) =>
+        // !a.categoria.find((c) => c.slug === 'noticia') &&
+        a.categoria.find((c) => c.slug === this.categoria)
       )
     },
   },
 
   computed: {
     categoriasBlog() {
-      let blogs = blog.filter(
-        (a) => !a.categoria.find((c) => c.slug === 'noticia')
-      )
+      let blogs = blog
+      // .filter(
+      //   (a) => !a.categoria.find((c) => c.slug === 'noticia')
+      // )
       let categorias = blogs.map((n) => n.categoria).flat()
       let flated = [...new Set(categorias.map((c) => c.nome))]
       let final = []

@@ -372,11 +372,7 @@ export default {
           path: '/quem-somos',
         },
         {
-          name: 'Acontece na Multiversa',
-          path: '/acontece-na-multiversa',
-        },
-        {
-          name: 'Blog Multiversa',
+          name: 'Blog',
           path: '/blog-multiversa',
         },
         {

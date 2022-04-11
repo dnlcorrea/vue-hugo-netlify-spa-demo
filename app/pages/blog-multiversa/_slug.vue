@@ -109,12 +109,7 @@ export default {
     getBlogs(to) {
       let slug = to.params.slug
 
-      this.blogs = blog
-        .filter(
-          (a) =>
-            a.slug !== slug && !a.categoria.find((c) => c.slug === 'noticia')
-        )
-        .slice(0, 3)
+      this.blogs = blog.filter((a) => a.slug !== slug).slice(0, 3)
     },
   },
 }

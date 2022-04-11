@@ -82,9 +82,9 @@ export default {
       let blogs = []
 
       blog.forEach((element) => {
-        if (!element.categoria.find((c) => c.slug === 'noticia')) {
-          blogs.push(element)
-        }
+        // if (!element.categoria.find((c) => c.slug === 'noticia')) {
+        blogs.push(element)
+        // }
       })
       return blogs
     },

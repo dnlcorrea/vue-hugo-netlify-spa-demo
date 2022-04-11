@@ -11,7 +11,7 @@
       :class="`flickity-mobile-${id}`"
       class="flex-wrap"
     >
-      <v-flex xs12 md6 class="spx-4" v-for="(blog, i) in blogs" :key="i">
+      <v-flex xs12 sm6 lg3 class="spx-4" v-for="(blog, i) in blogs" :key="i">
         <BlogCard :blog="blog" contexto="blog-multiversa"></BlogCard>
       </v-flex>
     </v-layout>
