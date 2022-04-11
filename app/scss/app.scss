@@ -19,13 +19,34 @@ $scroll-color: #a5a5a5;
 .theme--light.v-application {
     background: #212121 !important;
 }
-.layout-enter-active,
-	.layout-leave-active {
-		transition: opacity .3s;
-        opacity: 0;
+// .layout-enter-active,
+// 	.layout-leave-active {
+// 		transition: opacity .3s;
+//         opacity: 0;
+// }
+// .layout-enter, .layout-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+//     opacity: 0;
+// }
+
+
+.layout-enter-active{
+
+    backface-visibility: hidden;
+    will-change: opacity;
+    opacity: 1;
+    transition: opacity 250ms linear;
 }
-.layout-enter, .layout-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+
+.layout-leave-active{
+
+    backface-visibility: hidden;
+    will-change: opacity;
     opacity: 0;
+    transition: opacity 250ms linear;
+}
+
+.layout-enter{
+    opacity: 0
 }
 
 .flickity-viewport {
