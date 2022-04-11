@@ -74,6 +74,7 @@
           titulo="Outros cursos"
           :cursos="cursos"
           doFlick
+          :tipo="tipo"
         ></PosCarousel>
       </div>
       <br />
@@ -85,7 +86,7 @@
 </template>
 <script>
 export default {
-  props: ['cursos', 'curso', 'check-class', 'isup', 'onFooter'],
+  props: ['cursos', 'curso', 'check-class', 'isup', 'onFooter', 'tipo'],
   data() {
     return {
       banner: {},

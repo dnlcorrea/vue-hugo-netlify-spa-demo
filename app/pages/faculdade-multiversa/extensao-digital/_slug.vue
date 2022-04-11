@@ -6,6 +6,7 @@
     :check-class="checkClass"
     :isup="isup"
     :on-footer="onFooter"
+    tipo="extensao-digital"
   >
   </TemplateCurso>
 </template>

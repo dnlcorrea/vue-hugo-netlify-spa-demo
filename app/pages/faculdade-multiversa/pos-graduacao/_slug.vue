@@ -7,6 +7,7 @@
     :isup="isup"
     :on-footer="onFooter"
     class="start"
+    tipo="pos-graduacao"
   >
   </TemplateCurso>
 </template>
