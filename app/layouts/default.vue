@@ -426,7 +426,7 @@ export default {
   },
 
   mounted() {
-    console.log('teste3')
+    console.log('teste4')
     this.pathname = location.pathname
 
     let txtbanner = document.querySelector('.txt-banner')
