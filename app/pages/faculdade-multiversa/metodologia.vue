@@ -1,17 +1,17 @@
 <template>
   <div id="metodologia">
+    <FaculdadeSubmenu
+      :isup="isup"
+      :onFooter="onFooter"
+      :banner="banner"
+      class="hidden-md-and-down"
+    ></FaculdadeSubmenu>
+    <Banner txt1="METODOLOGIA" txt2="EDUCACIONAL" ref="banner"></Banner>
     <div
       class="spx-sm-24 spx-xs-15 grey lighten-3"
       style="padding-bottom: calc(45px + 3vw)"
     >
       <div class="ead-padding spb-10 spt-15">
-        <!-- <h1
-          class="font-500 smb-15 titulo-metodologia d-flex relative main-title"
-          style="margin-top: -18px !important; position: absolute"
-        >
-          <span class="c-primary spx-5 c-secondary--text">Metodologia Educacional</span>
-        </h1> -->
-        <h1 class="font-500 main-title">Metodologia Educacional</h1>
         <v-layout wrap class="spt-2">
           <v-flex
             xs12
@@ -73,8 +73,23 @@
 
 <script>
 export default {
+  computed: {
+    isup() {
+      return this.$attrs.isup
+    },
+    onFooter() {
+      return this.$attrs.onFooter
+    },
+  },
+  mounted() {
+    setTimeout(() => {
+      this.banner = this.$refs.banner
+    }, 900)
+  },
   data() {
     return {
+      banner: {},
+
       diferenciais: [
         {
           icon: 'plus',

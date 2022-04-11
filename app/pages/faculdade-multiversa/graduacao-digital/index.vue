@@ -15,9 +15,12 @@
       height="calc(60vh + 50px)"
       ref="banner"
     ></Banner>
-    <div class="spx-sm-24 spx-xs-15">
+    <div class="spx-sm-24 spx-xs-15 spb-24">
       <CarouselEmBreve titulo="Graduação Digital"></CarouselEmBreve>
     </div>
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 

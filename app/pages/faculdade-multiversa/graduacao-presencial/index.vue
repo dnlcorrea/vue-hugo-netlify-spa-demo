@@ -15,9 +15,12 @@
       height="calc(60vh + 50px)"
       ref="banner"
     ></Banner>
-    <div class="spx-sm-24 spx-xs-15">
+    <div class="spx-sm-24 spx-xs-15 spy-24">
       <FaculdadeCarouselPresencial></FaculdadeCarouselPresencial>
     </div>
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
