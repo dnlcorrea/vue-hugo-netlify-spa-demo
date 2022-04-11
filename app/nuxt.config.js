@@ -108,7 +108,7 @@ export default {
   
   pageTransition: {
     name: 'layout',
-    mode: 'out-in',
+    mode: '',
   },
   
 }
