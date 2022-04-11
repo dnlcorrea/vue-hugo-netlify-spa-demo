@@ -1,9 +1,9 @@
 export default async ({ app }) => {
 
   app.router.afterEach((to, from) => {
+    setTimeout(() => {
+      AOS.refreshHard();
       AOS.init();
-      setTimeout(() => {
-          AOS.refreshHard();
       }, 2000);
   });
 
