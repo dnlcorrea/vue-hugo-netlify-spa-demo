@@ -3,8 +3,7 @@
     <v-layout class="justify-center flex-wrap diferenciais-flickity">
       <v-flex
         data-aos="flip-left"
-        data-aos-offset="100"
-        data-aos-delay="200"
+        data-aos-delay="100"
         xs12
         md3
         xl2
@@ -33,8 +32,7 @@
       </v-flex>
       <v-flex
         data-aos="flip-left"
-        data-aos-offset="100"
-        data-aos-delay="400"
+        data-aos-delay="200"
         xs12
         md3
         xl2
@@ -63,8 +61,7 @@
       </v-flex>
       <v-flex
         data-aos="flip-left"
-        data-aos-offset="100"
-        data-aos-delay="600"
+        data-aos-delay="300"
         xs12
         md3
         xl2

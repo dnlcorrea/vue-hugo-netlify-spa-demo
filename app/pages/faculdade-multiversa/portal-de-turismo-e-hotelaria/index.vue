@@ -8,27 +8,31 @@
         class="hidden-md-and-down"
       ></FaculdadeSubmenu>
     </div>
-    <banner ref="banner"></banner>
-    <diferenciais></diferenciais>
+    <PortalTurismoIndexBanner ref="banner"></PortalTurismoIndexBanner>
+    <div class="spx-24">
+      <PosCarousel
+        id="pos"
+        :cursos="posTurismo"
+        tipo="pos-graduacao"
+        titulo="Mbas"
+        subtitulo="Cursos de Pós-graduação para profissionais que desejam aprofundar conhecimentos na área de administração em Turismo e Hotelaria."
+        doFlick
+        class="spt-20"
+      ></PosCarousel>
+      <PosCarousel
+        id="pos"
+        :cursos="cursos"
+        titulo="Cursos Online"
+        tipo="extensao-digital"
+        subtitulo="Cursos de Atualização e de Aperfeiçoamento para seu desenvolvimento profissional."
+        doFlick
+      ></PosCarousel>
+    </div>
+    <PortalTurismoIndexDiferenciais></PortalTurismoIndexDiferenciais>
 
-    <PortalTurismoIndexCursosOnline
-      id="pos"
-      titulo="MBAS"
-      subtitulo="Cursos de Pós-graduação para profissionais que desejam aprofundar conhecimentos na área de administração em Turismo e Hotelaria."
-      :cursos="posTurismo"
-      classe="pos"
-      v-show="posTurismo.length"
-      class="spt-20"
-    ></PortalTurismoIndexCursosOnline>
-    <PortalTurismoIndexCursosOnline
-      id="cursos-de-desenvolvimento"
-      titulo="Cursos Online"
-      subtitulo="Cursos de Atualização e de Aperfeiçoamento para seu desenvolvimento profissional."
-      :cursos="cursos"
-      classe="cursos-online"
-    ></PortalTurismoIndexCursosOnline>
-
-    <v-layout class="flex-wrap align-center justify-space-between smb-9 spx-24">
+    <v-layout
+      class="flex-wrap align-center justify-space-between smb-9 spx-24 spt-24"
+    >
       <h1 class="font-500 smy-0 main-title subtitulo">Novidades e Inovações</h1>
       <v-btn
         to="/blog-multiversa/categoria/turismo-e-hotelaria"
@@ -54,10 +58,11 @@
       </v-flex>
     </v-layout>
 
-    <banner-fale-conosco></banner-fale-conosco>
-    <parceiros></parceiros>
-
-    <form-saiba-mais></form-saiba-mais>
+    <PosShowBannerSaibaMais></PosShowBannerSaibaMais>
+    <PortalTurismoParceiros></PortalTurismoParceiros>
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
@@ -66,13 +71,6 @@ import pos from '@/data/pos.js'
 import blog from '@/data/blog.js'
 import cursos from '@/data/cursos-turismo.js'
 
-import Banner from '@/components/PortalTurismo/index/Banner.vue'
-import Diferenciais from '@/components/PortalTurismo/index/Diferenciais.vue'
-import CursosOnline from '@/components/PortalTurismo/index/CursosOnline.vue'
-import FormSaibaMais from '@/components/PortalTurismo/FormSaibaMais.vue'
-import BannerFaleConosco from '@/components/PortalTurismo/BannerFaleConosco.vue'
-import Parceiros from '@/components/PortalTurismo/Parceiros.vue'
-
 export default {
   data() {
     return {
@@ -80,14 +78,6 @@ export default {
       cursos,
       banner: {},
     }
-  },
-  components: {
-    Banner,
-    Diferenciais,
-    CursosOnline,
-    FormSaibaMais,
-    BannerFaleConosco,
-    Parceiros,
   },
   computed: {
     blogs() {
@@ -130,25 +120,6 @@ export default {
 
 #app {
   // font-family: 'Prompt', sans-serif;
-}
-.loading-padrao {
-  content: url('/imgs/uad.png');
-  position: absolute;
-  left: 50%;
-  margin-left: -25px;
-  top: 20%;
-  z-index: 10;
-  animation: rotate 1s;
-  animation-iteration-count: infinite;
-
-  @keyframes rotate {
-    0% {
-      transform: rotatey(0deg) scale(0.5);
-    }
-    100% {
-      transform: rotatey(360deg) scale(0.5);
-    }
-  }
 }
 
 a {

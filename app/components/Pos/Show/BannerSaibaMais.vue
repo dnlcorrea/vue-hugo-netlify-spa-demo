@@ -22,8 +22,7 @@
           <h2 class="c-secondary--text mb-5 font-400 titulo">
             <big>
               FICOU INTERESSADO <br />
-              OU TEM DÚVIDAS <br />
-              SOBRE ESSE CURSO?
+              OU TEM DÚVIDAS?
             </big>
           </h2>
           <v-btn

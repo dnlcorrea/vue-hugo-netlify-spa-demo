@@ -15,13 +15,8 @@
       height="calc(60vh + 50px)"
       ref="banner"
     ></Banner>
-    <div class="spt-24 spx-xs-15">
-      <PortalTurismoIndexCursosOnline
-        id="cursos-de-desenvolvimento"
-        titulo=""
-        :cursos="cursos"
-        classe="cursos-online"
-      ></PortalTurismoIndexCursosOnline>
+    <div class="spt-24 spx-24">
+      <PosCarousel :cursos="cursos" tipo="extensao-digital"></PosCarousel>
     </div>
   </div>
 </template>

@@ -1,12 +1,23 @@
 <template>
-  <div class="spb-24" v-if="itemsCount > 1">
-    <h1 class="font-500 smb-8 main-title subtitulo" v-if="titulo">
+  <div
+    class="spb-24 flick relative"
+    v-if="itemsCount > 1"
+    :class="{ 'loading-padrao': !loaded }"
+  >
+    <h1
+      class="font-500 main-title subtitulo"
+      :class="subtitulo ? 'smb-4' : 'smb-8'"
+      v-if="titulo"
+    >
       {{ titulo }}
     </h1>
-
+    <p class="c-info-darken-2--text text-left mb-8" v-if="subtitulo">
+      {{ subtitulo }}
+    </p>
     <v-layout
       class="flex-wrap"
       :class="`flickity-mobile-${id}`"
+      :style="{ opacity: loaded ? 1 : 0 }"
       style="
         margin-left: calc(-8px - 0.4vw) !important;
         margin-right: calc(-8px - 0.4vw) !important;
@@ -17,13 +28,14 @@
         md6
         lg4
         xl3
-        class="spx-4 spb-10"
+        class="spx-4 spb-5"
+        :class="{ 'spb-10': !doFlick && ableToFlick }"
         v-for="(p, i) in cursos"
         :key="i"
-        :class="{ 'carousel-cell': doFlick }"
       >
+        <!-- :class="{ 'carousel-cell': doFlick && ableToFlick }" -->
         <router-link
-          :to="`/faculdade-multiversa/pos-graduacao/${p.slug}`"
+          :to="`/faculdade-multiversa/${tipo}/${p.slug}`"
           class="no-underline fill-height"
         >
           <v-card class="fill-height mb-2">
@@ -67,31 +79,30 @@
               >
                 <big class="font-900" v-if="p.mes_inicio">{{
                   p.mes_inicio.slice(0, 3)
-                }}</big>
-                <big class="font-900" v-else>a definir</big>
-                <big class="font-900" v-if="p.ano_inicio"
+                }}</big
+                ><big class="font-900" v-else>a definir</big
+                ><big class="font-900" v-if="p.ano_inicio"
                   >/{{ p.ano_inicio.slice(2, 4) }}</big
                 >
               </p>
             </div>
             <v-card-text class="spl-3 spy-5">
               <!-- <div class="c-primary" style="height: 5px"></div> -->
-              <h2 class="pt-1 c-secondary--text line-height-1-2 font-600">
+              <h2 class="pt-1 mb-2 c-secondary--text line-height-1-2 font-600">
                 {{ p.name }}
               </h2>
-              <div class="spt-2" v-if="p.duracao">
-                <i class="fas fa-clock mr-2 c-info-darken-1--text"></i>Duração:
-                {{ p.duracao }} meses
-              </div>
-              <div v-else>
-                <i class="fas fa-clock mr-2 c-info-darken-1--text"></i>Duração:
-                a definir
-              </div>
-              <v-layout class="justify-end">
-                <v-btn
-                  depressed
-                  small
-                  class="smr-3 smt-3 c-primary c-secondary--text"
+
+              <p>{{ strip(p.descricao) | truncate(115) }}</p>
+              <v-layout class="justify-space-between">
+                <div v-if="p.duracao">
+                  <i class="fas fa-clock mr-2 c-info-darken-1--text"></i
+                  >Duração: {{ p.duracao }} meses
+                </div>
+                <div v-else>
+                  <i class="fas fa-clock mr-2 c-info-darken-1--text"></i
+                  >Duração: a definir
+                </div>
+                <v-btn depressed small class="smr-3 c-primary c-secondary--text"
                   ><span class="font-600">SAIBA MAIS</span
                   ><i class="fas fa-arrow-right ml-2"></i
                 ></v-btn>
@@ -106,9 +117,16 @@
 
 <script>
 import flick from '@/mixins/Flickity.js'
+var striptags = require('striptags')
 
 export default {
-  props: { cursos: Array, titulo: String, doFlick: Boolean },
+  props: {
+    cursos: Array,
+    titulo: String,
+    doFlick: Boolean,
+    tipo: String,
+    subtitulo: String,
+  },
   mixins: [flick],
 
   computed: {
@@ -116,14 +134,17 @@ export default {
       return this.cursos.length
     },
   },
+  methods: {
+    strip: (text) => striptags(text),
+  },
 }
 </script>
 
 <style lang="scss">
-.carousel-cell:not(.is-selected) {
-  opacity: 0.3;
-}
-.carousel-cell {
-  transition: opacity 0.5s;
-}
+// .carousel-cell:not(.is-selected) {
+//   opacity: 0.3;
+// }
+// .carousel-cell {
+//   transition: opacity 0.5s;
+// }
 </style>

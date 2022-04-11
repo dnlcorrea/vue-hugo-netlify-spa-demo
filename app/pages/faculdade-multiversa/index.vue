@@ -16,18 +16,24 @@
       ref="banner"
     ></Banner>
     <div class="spx-sm-24 spt-24 spx-xs-15">
-      <PosCarousel :cursos="pos" titulo="Pós-graduação" doFlick></PosCarousel>
+      <PosCarousel
+        :cursos="pos"
+        titulo="Pós-graduação"
+        tipo="pos-graduacao"
+        doFlick
+      ></PosCarousel>
       <FaculdadeCarouselPresencial></FaculdadeCarouselPresencial>
       <CarouselEmBreve titulo="Graduação Digital"></CarouselEmBreve>
     </div>
-    <div class="spx-sm-24">
+
+    <div class="spx-24">
       <h1 class="font-500 smt-20 main-title subtitulo">Extensão Digital</h1>
+      <PosCarousel
+        :cursos="cursos"
+        tipo="extensao-digital"
+        doFlick
+      ></PosCarousel>
     </div>
-    <PortalTurismoIndexCursosOnline
-      id="cursos-de-desenvolvimento"
-      :cursos="cursos"
-      classe="cursos-online"
-    ></PortalTurismoIndexCursosOnline>
     <br />
     <br />
     <br />

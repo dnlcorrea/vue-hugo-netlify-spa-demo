@@ -2,7 +2,9 @@
 const flick = {
   data() {
     return {
-      id: 0
+      id: 0,
+      loaded: false,
+      ableToFlick: false
     }
   },
   methods: {
@@ -14,35 +16,51 @@ const flick = {
         groupCells: true
         
       })
+    },
+    setHeight() {
+      document.querySelectorAll('.flickity-slider .flex').forEach(element => {
+        element.style.height = '100%'
+      })
+    },
+    start(){
+      this.makeFlickity()
+      setTimeout(() => {
+        this.setHeight()
+      }, 800);
+      this.loaded = true
+      
     }
   },
   mounted() {
     this.id = this._uid;
     
     setTimeout(() => {
-      let ableToFlick;
       
       if (innerWidth > 1904) {
-        ableToFlick = this.itemsCount > 4
+        this.ableToFlick = this.itemsCount > 4
       }else if (innerWidth > 1264) {
-        ableToFlick = this.itemsCount > 3
+        this.ableToFlick = this.itemsCount > 3
       } else if (innerWidth > 960) {
-        ableToFlick = this.itemsCount > 2
+        this.ableToFlick = this.itemsCount > 2
       } else {
-        ableToFlick = this.itemsCount > 1
+        this.ableToFlick = this.itemsCount > 1
       }
-      console.log(this.doFlick, this.cursos, this.itemsCount)
       
-      if (ableToFlick && this.doFlick) {
-        this.makeFlickity();
+      if (this.ableToFlick && this.doFlick) {
+        
+        this.makeFlickity()
+        this.start()
+        
         
         setTimeout(() => {
-          document.querySelectorAll('.flickity-slider .flex').forEach(element => {
-            element.style.height = '100%'
-          })
-        }, 800);
+          this.start()
+        }, 2000);
         
-        addEventListener('resize', this.makeFlickity)
+        addEventListener('resize', () => {
+          this.start()
+        })
+      } else {
+        this.loaded = true
       }
     }, 1000);
     

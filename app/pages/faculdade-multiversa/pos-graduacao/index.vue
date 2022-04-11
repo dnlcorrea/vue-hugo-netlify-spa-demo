@@ -16,7 +16,7 @@
       ref="banner"
     ></Banner>
     <div class="spx-sm-24 spx-xs-15 spt-24 spb-20">
-      <PosCarousel :cursos="pos"></PosCarousel>
+      <PosCarousel :cursos="pos" tipo="pos-graduacao"></PosCarousel>
     </div>
   </div>
 </template>

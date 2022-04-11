@@ -1,5 +1,5 @@
 <template>
-  <div class="spy-24 spx-24">
+  <div class="spb-24 spx-24">
     <div class="mb-5 subtitulo c-secondary--text spx-24">
       <span class="main-title">PARCEIROS</span>
     </div>

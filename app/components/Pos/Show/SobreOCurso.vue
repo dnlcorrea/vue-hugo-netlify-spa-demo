@@ -28,9 +28,9 @@
       >
         <v-layout class="white spa-10 flex-wrap">
           <v-flex xs12 sm6 md12>
-            <p class="c-info-darken-2--text">Curso Online</p>
+            <p class="c-info-darken-2--text"><big>Curso Online</big></p>
             <v-divider></v-divider>
-            <p class="c-info-darken-2--text mb-0 mt-3">
+            <p class="c-info-darken-2--text mb-2 mt-3 font-600">
               <clr-icon shape="hourglass" class="c-primary--text"></clr-icon>
               Duração:
               <span class="c-info-darken-2--text font-500"
@@ -38,14 +38,14 @@
                 <span v-if="type === 'pos-graduacao'">meses</span></span
               >
             </p>
-            <p class="c-info-darken-2--text mb-0">
+            <p class="c-info-darken-2--text mb-2 font-600">
               <clr-icon shape="clock" class="c-primary--text"></clr-icon> Carga
               Horária:
               <span class="c-info-darken-2--text font-500"
                 >{{ carga_horaria }} horas</span
               >
             </p>
-            <p class="c-info-darken-2--text mb-3">
+            <p class="c-info-darken-2--text mb-3 font-600">
               <clr-icon shape="calendar" class="c-primary--text"></clr-icon>
               <span v-if="inicio">Início:</span>
               <span v-if="inicio" class="c-info-darken-2--text font-500">{{
@@ -66,7 +66,7 @@
               :class="{ 'mb-4': !investimento.length }"
             ></v-divider>
             <p
-              class="c-info-darken-2--text mb-0 mt-4"
+              class="c-info-darken-2--text mb-0 mt-7"
               v-if="investimento.length"
             >
               {{ menorPrecoLabel }}
@@ -75,7 +75,8 @@
               class="titulo-banner c-secondary--text"
               v-if="investimento.length"
             >
-              <small>R$</small><big class="bold">{{ menorPrecoValor }}</big
+              <small>R$</small
+              ><span class="font-800"> {{ menorPrecoValor }}</span
               ><small>,00</small>
               <v-btn icon class="mx-0" @click="dialoginvestimento = true">
                 <clr-icon shape="info-standard" size="22"></clr-icon>
@@ -104,7 +105,7 @@
     <v-dialog v-model="dialoginvestimento" width="90vw" max-width="600px">
       <v-card>
         <v-card-title class="grey lighten-3 justify-space-between"
-          ><h3 class="secondary--text font-600">FORMAS DE PAGAMENTO</h3>
+          ><h3 class="c-secondary--text font-600">FORMAS DE PAGAMENTO</h3>
           <v-btn icon class="mx-0" @click="dialoginvestimento = false">
             <v-icon small class="c-info-darken-2--text"
               >fas fa-times</v-icon
@@ -114,18 +115,20 @@
         <v-card-text class="spy-10 spx-10">
           <div v-if="investimento">
             <v-layout
-              class="align-center"
+              class="align-center mb-2"
               v-for="({ label, valor }, i) in investimento"
               :key="i"
             >
-              <p class="mb-0 c-info-darken-2--text">{{ label }}</p>
+              <p class="mb-0 c-info-darken-2--text">
+                <big>{{ label }}</big>
+              </p>
               <div class="dots smx-5"></div>
               <p class="mb-0 c-secondary--text font-500">
                 <big>
-                  <small>
-                    R$<big class="font-700">{{ fazerPonto(valor) }}</big
+                  <big>
+                    R$<big class="font-700"> {{ fazerPonto(valor) }}</big
                     ><span>,00</span>
-                  </small>
+                  </big>
                 </big>
               </p>
             </v-layout>
