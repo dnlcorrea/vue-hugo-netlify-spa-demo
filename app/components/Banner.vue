@@ -11,15 +11,22 @@
       >
         <div
           class="font-400 txt1 line-height-1-2"
+          style="text-shadow: #00000061 1px 1px 5px"
           :class="txt1Color ? txt1Color + '--text' : ''"
+          :style="fontSize ? { 'font-size': fontSize } : ''"
         >
           {{ txt1 }}
         </div>
         <div
           class="font-800 txt2 line-height-1-2"
+          style="text-shadow: #00000061 1px 1px 5px"
           :class="txt2Color ? txt2Color + '--text' : ''"
+          :style="fontSize ? { 'font-size': fontSize } : ''"
         >
           {{ txt2 }}
+        </div>
+        <div class="slot">
+          <slot></slot>
         </div>
       </div>
     </v-flex>
@@ -35,6 +42,7 @@ export default {
     'txt1Color',
     'txt2Color',
     'marginTop',
+    'fontSize',
   ],
   data() {
     return {
@@ -90,6 +98,26 @@ export default {
           classList2.add('estadescendo')
         }
       }
+
+      let slot = document.querySelector('.slot')
+
+      if (slot) {
+        let classListSlot = slot.classList
+
+        if (this.estasubindo) {
+          Array.from(classListSlot).includes('estadescendo')
+            ? classListSlot.remove('estadescendo')
+            : ''
+
+          classListSlot.add('estasubindo')
+        } else {
+          Array.from(classListSlot).includes('estasubindo')
+            ? classListSlot.remove('estasubindo')
+            : ''
+
+          classListSlot.add('estadescendo')
+        }
+      }
     })
   },
 }
@@ -125,6 +153,16 @@ export default {
 }
 .txt1.estadescendo {
   animation: estadescendo 0.9s;
+  margin-left: 100vw;
+}
+.slot {
+  animation: estasubindo 1.1s;
+}
+.slot.estasubindo {
+  animation: estasubindo 1.1s;
+}
+.slot.estadescendo {
+  animation: estadescendo 0.5s;
   margin-left: 100vw;
 }
 
