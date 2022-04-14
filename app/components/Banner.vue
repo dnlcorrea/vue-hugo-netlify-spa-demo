@@ -3,20 +3,43 @@
     class="c-secondary fill-width banner-principal d-flex align-center"
     :style="computedStyle"
   >
-    <v-flex offset-lg3 offset-md2 offset-xs1>
+    <v-flex
+      offset-md2
+      offset-xs1
+      class="spl-10"
+      :style="marginTop ? { 'margin-top': marginTop } : ''"
+    >
       <div
         class="white--text font-100 mt-10 txt-banner"
         style="text-shadow: 0 0 10px c-secondary"
       >
-        <div class="font-200 txt1">{{ txt1 }}</div>
-        <div class="font-800 txt2">{{ txt2 }}</div>
+        <div
+          class="font-200 txt1"
+          :class="txt1Color ? txt1Color + '--text' : ''"
+        >
+          {{ txt1 }}
+        </div>
+        <div
+          class="font-800 txt2"
+          :class="txt2Color ? txt2Color + '--text' : ''"
+        >
+          {{ txt2 }}
+        </div>
       </div>
     </v-flex>
   </div>
 </template>
 <script>
 export default {
-  props: ['img', 'txt1', 'txt2', 'height'],
+  props: [
+    'img',
+    'txt1',
+    'txt2',
+    'height',
+    'txt1Color',
+    'txt2Color',
+    'marginTop',
+  ],
   data() {
     return {
       estasubindo: false,

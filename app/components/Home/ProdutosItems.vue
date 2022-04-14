@@ -17,7 +17,7 @@
       v-for="({ nome, img, url }, i) in produtos"
       :key="i"
       data-aos="fade-right"
-      :data-aos-delay="i * 30"
+      :data-aos-delay="i * 100"
       class="smy-10"
     >
       <router-link
@@ -69,14 +69,14 @@ export default {
           url: '/escola-de-saude',
         },
         {
-          nome: 'Hospital Veterinário',
-          img: '/produtos/t-07.png',
-          url: '/hospital-veterinario',
-        },
-        {
           nome: 'Centro Integrado de Saúde',
           img: 'produtos/t-05.png',
           url: '/centro-integrado-de-saude',
+        },
+        {
+          nome: 'Hospital Veterinário',
+          img: '/produtos/t-07.png',
+          url: '/hospital-veterinario',
         },
         {
           nome: 'Hub de Inovação',

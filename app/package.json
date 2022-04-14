@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@luaguillande/screen-checker": "^1.2.0",
     "@luaguillande/scss_helpers": "^1.5.5",
     "@nuxt/content": "^1.14.0",
     "@nuxt/http": "^0.6.4",

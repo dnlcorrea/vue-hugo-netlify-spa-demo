@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/slathrop/vue-hugo-netlify-spa-demo#readme",
   "dependencies": {
+    "@luaguillande/screen-checker": "^1.1.1",
     "@luaguillande/scss_helpers": "^1.5.5",
     "luxon": "^2.3.0",
     "striptags": "^3.2.0",

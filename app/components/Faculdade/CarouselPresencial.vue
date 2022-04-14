@@ -14,7 +14,7 @@
         xs12
         md6
         lg3
-        class="spx-4"
+        class="spx-4 pb-4"
         v-for="({ name, slug, icon }, i) in cursos"
         :key="i"
       >

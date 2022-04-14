@@ -135,7 +135,7 @@
       "
       v-view="changeOnFooter"
     >
-      <v-flex xs12 md4 lg3 class="spl-24 fill-height spt-20 c-secondary">
+      <v-flex xs12 md4 lg3 class="spl-24 spt-20 c-secondary">
         <v-img
           contain
           class=""
@@ -160,16 +160,25 @@
           >
           Foz do Iguaçu / Paraná
         </p>
+        <br />
+        <br />
+        <br />
+        <br />
       </v-flex>
       <v-flex xs12 md8 lg9 class="c-secondary-darken-1 fill-height">
         <div
-          class="c-primary sml-20 px-10 pt-4 pb-3"
+          class="c-primary sml-20 sml-xs-0 px-10 pt-4 pb-4"
           style="margin-top: calc(-35px - 2vw) !important"
         >
           <h1 class="mt-0 font-300">Cadastre-se na nossa newsletter</h1>
 
-          <v-layout>
-            <v-text-field solo class="smr-10" label="E-mail"></v-text-field>
+          <v-layout class="flex-wrap">
+            <v-flex xs12 md3>
+              <v-text-field solo class="smr-3" label="Nome"></v-text-field>
+            </v-flex>
+            <v-flex xs12 md8>
+              <v-text-field solo class="smr-5" label="E-mail"></v-text-field>
+            </v-flex>
             <v-btn height="46px">Enviar</v-btn>
           </v-layout>
         </div>
@@ -177,166 +186,46 @@
         <br />
         <br />
 
-        <v-layout class="white--text">
-          <v-flex class="spl-24">
-            <a class="white--text no-underline" to="/quem-somos">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
+        <v-layout class="white--text flex-wrap">
+          <v-flex xs12 class="spl-24 d-flex flex-wrap">
+            <div v-for="(menu, i) in items" :key="i">
+              <router-link
+                class="white--text no-underline d-flex align-center mr-6 mb-5"
+                :to="menu.path"
               >
-              <p>Quem Somos</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
+                <v-icon
+                  class="mr-2 pt-1 c-primary--text"
+                  small
+                  style="float: left"
+                  >fas fa-caret-right</v-icon
+                >
+                <p class="mb-0">{{ menu.name }}</p>
+              </router-link>
+              <v-flex
+                style="min-width: 80vw"
+                class="sml-7 d-flex flex-wrap"
+                v-if="menu.name === 'Faculdade Multiversa'"
               >
-              <p>Acontece na Multiversa</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Blog Multiversa</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Contato</p>
-            </a>
+                <router-link
+                  class="white--text no-underline d-flex align-center mr-6 mb-5"
+                  :to="submenu.path"
+                  v-for="(submenu, a) in submenus.filter(
+                    (f) => f.name !== 'Início'
+                  )"
+                  :key="a"
+                >
+                  <v-icon
+                    class="mr-2 pt-1 c-primary--text"
+                    small
+                    style="float: left"
+                    >fas fa-caret-right</v-icon
+                  >
+                  <p class="mb-0">{{ submenu.name }}</p>
+                </router-link>
+              </v-flex>
+            </div>
           </v-flex>
-          <v-flex>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Faculdade Multiversa</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Graduação Presencial</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Graduação Digital</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Pós-Graduação Digital</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Curso de Extensão Digital</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Metodologia Educacional</p>
-            </a>
-          </v-flex>
-          <v-flex>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Colégio Multiversa</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Portal de Cursos Digitais</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Escola de Saúde</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Centro Integrado de Saúde</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Hospital Veterinário</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Hub de Inovação</p>
-            </a>
-            <a class="white--text no-underline" to="">
-              <v-icon
-                class="mr-2 pt-1 c-primary--text"
-                small
-                style="float: left"
-                >fas fa-caret-right</v-icon
-              >
-              <p>Gestão Interina de IES</p>
-            </a>
-          </v-flex>
+          <v-flex xs12 sm4 lg3 class="spl-24"> </v-flex>
         </v-layout>
       </v-flex>
     </v-footer>
@@ -362,22 +251,27 @@ export default {
         {
           name: 'Home',
           path: '/home',
+          width: 57,
         },
         {
           name: 'Faculdade Multiversa',
           path: '/faculdade-multiversa',
+          width: 160,
         },
         {
           name: 'Quem Somos',
           path: '/quem-somos',
+          width: 120,
         },
         {
           name: 'Blog',
           path: '/blog-multiversa',
+          width: 56,
         },
         {
           name: 'Contato',
           path: '/#contato',
+          width: 100,
         },
       ],
       submenus: [
@@ -385,21 +279,33 @@ export default {
         {
           name: 'Graduação Presencial',
           path: '/faculdade-multiversa/graduacao-presencial',
+          width: 162,
         },
         {
           name: 'Graduação Digital',
           path: '/faculdade-multiversa/graduacao-digital',
+          width: 150,
         },
-        { name: 'Pós-Graduação', path: '/faculdade-multiversa/pos-graduacao' },
+        {
+          name: 'Pós-Graduação',
+          path: '/faculdade-multiversa/pos-graduacao',
+          width: 150,
+        },
         {
           name: 'Turismo e Hotelaria',
           path: '/faculdade-multiversa/portal-de-turismo-e-hotelaria',
+          width: 160,
         },
         {
           name: 'Extensão Digital',
           path: '/faculdade-multiversa/extensao-digital',
+          width: 150,
         },
-        { name: 'Metodologia', path: '/faculdade-multiversa/metodologia' },
+        {
+          name: 'Metodologia',
+          path: '/faculdade-multiversa/metodologia',
+          width: 110,
+        },
       ],
 
       rightDrawer: false,
@@ -426,7 +332,6 @@ export default {
   },
 
   mounted() {
-    console.log('teste4')
     this.pathname = location.pathname
 
     let txtbanner = document.querySelector('.txt-banner')
@@ -465,8 +370,8 @@ export default {
   padding: 0;
 }
 
-.sidebar .v-list .v-list-item--active,
-.sidebar .v-list .v-list-item--active .v-icon {
+.sidebar.v-list .v-list-item--active,
+.sidebar.v-list .v-list-item--active .v-icon {
   color: #2d386d !important;
 }
 

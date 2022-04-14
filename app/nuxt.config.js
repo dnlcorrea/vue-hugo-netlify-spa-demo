@@ -54,6 +54,7 @@ export default {
     { src: '~/plugins/truncate.js' },
     { src: '~/plugins/vue-check-view.js', mode: 'client' },
     { src: '~/plugins/imagine.js'},
+    { src: '~/node_modules/@luaguillande/screen-checker/checkScreenPlugin.js'},
     { src: '~/plugins/event.js'},
     { src: '~/plugins/mask.js'},
     { src: '~/plugins/axios.js'}
