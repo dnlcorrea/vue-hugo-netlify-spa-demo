@@ -15,10 +15,55 @@ $scroll-color: #a5a5a5;
     // ...
 );
 
+
+.theme--light.v-application {
+    background: #e3e3e3 !important;
+}
+// .layout-enter-active,
+// 	.layout-leave-active {
+// 		transition: opacity .3s;
+//         opacity: 0;
+// }
+// .layout-enter, .layout-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+//     opacity: 0;
+// }
+
+
+
+.flickity-viewport {
+    width: 100%;
+    .flickity-slider{
+        display: flex;
+    }
+
+    .flex {
+        width: inherit;
+    }
+}
+
+.flickity-prev-next-button {
+    width: 31px;
+    height: 31px;
+}
+.flickity-prev-next-button.previous {
+    left: -26px;
+}
+
+.flickity-prev-next-button.next {
+    right: -26px;
+}
 .flex-0{
     flex: 0 !important;
 }
-
+.line-height-1{
+    line-height: 1;
+}
+.line-height-1-2{
+    line-height: 1.2;
+}
+.fill-width{
+    width: 100%;
+}
 .no-underline{
     text-decoration: unset;
 }
@@ -35,14 +80,21 @@ $scroll-color: #a5a5a5;
 .relative{
     position: relative;
 }
+.fixed{
+    position: fixed;
+}
 
 .v-application{
         font-family: "Source Sans 3", sans-serif !important;
     }
     
-    
+.main-title{
+    border-left: 2px solid #F9D428;
+    padding-left: 10px;
+    color: $c-secondary;
+}
 .titulo-banner {
-    font-size: calc(60px + 0.6vw);
+    font-size: calc(40px + 1vw);
     line-height: 1.2;
 }
 
@@ -56,4 +108,72 @@ $scroll-color: #a5a5a5;
 }
 .subtitulo2 {
     font-size: calc(15px + 0.15vw);
+}
+
+
+
+.border-padrao {
+    border: 1px solid currentColor;
+}
+
+.loading-padrao {
+  perspective: 1500px;
+  perspective-origin: top;
+  &:before {
+    backface-visibility: hidden;
+    content: '';
+    background: url('/favicon.png');
+    background-size: 46px;
+    background-repeat: no-repeat;
+    background-position: 8px;
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    // border-radius: 100%;
+    animation: scaleload 2s infinite cubic-bezier(0.6, 0.2, 0.34, 0.72);
+    z-index: 2;
+  }
+  &:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid $c-primary;
+    border-color: $c-secondary transparent $c-primary transparent;
+    animation: loading-padrao 1.2s linear infinite;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@keyframes scaleload {
+  0% {
+    transform: scale(0.7) rotateZ(-10deg);
+  }
+  50% {
+    transform: scale(0.9) rotateZ(0deg);
+  }
+  100% {
+    transform: scale(0.7) rotateZ(-10deg);
+  }
+}
+
+
+@keyframes loading-padrao {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
