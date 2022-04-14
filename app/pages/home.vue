@@ -6,7 +6,7 @@
       txt2="EVOLUTIVA"
       txt2-color="c-secondary"
       margin-top="calc(-5vh - 50px)"
-      img="/banners/home.jpg"
+      img="/banners/banner-home.jpg"
       height="calc(100vh + 50px)"
     ></Banner>
 

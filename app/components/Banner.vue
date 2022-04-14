@@ -3,24 +3,20 @@
     class="c-secondary fill-width banner-principal d-flex align-center"
     :style="computedStyle"
   >
-    <v-flex
-      offset-md2
-      offset-xs1
-      class="spl-10"
-      :style="marginTop ? { 'margin-top': marginTop } : ''"
-    >
+    <v-flex offset-md2 offset-xs1 class="spl-10">
       <div
-        class="white--text font-100 mt-10 txt-banner"
+        :style="marginTop ? { 'margin-top': marginTop } : ''"
+        class="white--text font-100 txt-banner"
         style="text-shadow: 0 0 10px c-secondary"
       >
         <div
-          class="font-200 txt1"
+          class="font-400 txt1 line-height-1-2"
           :class="txt1Color ? txt1Color + '--text' : ''"
         >
           {{ txt1 }}
         </div>
         <div
-          class="font-800 txt2"
+          class="font-800 txt2 line-height-1-2"
           :class="txt2Color ? txt2Color + '--text' : ''"
         >
           {{ txt2 }}
