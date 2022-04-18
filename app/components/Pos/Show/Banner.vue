@@ -20,6 +20,7 @@
         </div>
 
         <v-btn
+          v-if="inscricao"
           class="c-primary c-secondary--text mx-auto"
           :href="inscricao"
           target="_blank"

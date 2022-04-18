@@ -5,14 +5,19 @@
       txt1-color="c-secondary"
       txt2="EVOLUTIVA"
       txt2-color="c-primary"
-      margin-top="calc(-7vw - 120px)"
-      img="/banners/banner-home.jpg"
+      margin-top="calc(-5vw - 180px)"
+      :img="
+        sc.tabletAndDown
+          ? '/banners/banner-home-mobile.jpg'
+          : '/banners/banner-home.jpg'
+      "
       height="calc(100vh + 50px)"
-      font-size="calc(60px + 3vw)"
+      :font-size="sc.tabletAndDown ? 'calc(18px + 7vw)' : 'calc(23px + 4vw)'"
+      class="full-banner"
     >
       <v-img
         src="/logo-s-g.png"
-        class="mt-5 ml-3"
+        class="smt-5 ml-3"
         width="calc(50px + 10vw)"
       ></v-img>
     </Banner>
@@ -25,7 +30,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      sc: this.$sc,
+    }
+  },
+}
 </script>
 
 <style lang="scss">

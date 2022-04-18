@@ -8,8 +8,9 @@
       xs12
       md4
       lg3
-      offset-lg1
-      offset-xl2
+      xl2
+      offset-lg2
+      offset-xl3
       class="spx-10 titulo c-secondary--text spb-24"
     >
       <div
@@ -63,7 +64,7 @@
       class="spx-sm-24 spx-xs-15 spb-24"
     >
       <h1 class="font-500 main-title">Entre em contato</h1>
-      <v-form>
+      <!-- <v-form>
         <v-text-field color="c-secondary" label="Nome"></v-text-field>
         <v-text-field color="c-secondary" label="E-mail"></v-text-field>
         <v-text-field color="c-secondary" label="Telefone"></v-text-field>
@@ -78,7 +79,34 @@
             <b>Enviar</b></v-btn
           >
         </v-layout>
-      </v-form>
+      </v-form> -->
+
+      <a
+        class="c-secondary--text no-underline"
+        target="_blank"
+        href="https://wa.me/+554531981100"
+      >
+        <p>
+          <v-icon small class="c-primary--text mr-2">fab fa-whatsapp</v-icon>
+          (45) 3198-1100
+        </p>
+      </a>
+
+      <a
+        class="c-secondary--text no-underline"
+        href="mailto:contato@multiversa.com"
+      >
+        <p>
+          <v-icon small class="c-primary--text mr-2">fas fa-envelope</v-icon>
+          contato@multiversa.com
+        </p>
+      </a>
+      <p class="c-secondary--text">
+        &nbsp;<v-icon small class="c-primary--text mr-2"
+          >fas fa-map-marker-alt</v-icon
+        >
+        Foz do Iguaçu / Paraná
+      </p>
     </v-flex>
   </v-layout>
 </template>
@@ -89,7 +117,7 @@ export default {}
 
 <style>
 .contato-svg-wrap {
-  width: calc(300px + 6vw);
-  height: calc(300px + 6vw);
+  width: calc(200px + 6vw);
+  height: calc(200px + 6vw);
 }
 </style>

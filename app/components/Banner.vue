@@ -3,7 +3,7 @@
     class="c-secondary fill-width banner-principal d-flex align-center"
     :style="computedStyle"
   >
-    <v-flex offset-md2 offset-xs1 class="spl-10">
+    <v-flex offset-md2 class="spl-10">
       <div
         :style="marginTop ? { 'margin-top': marginTop } : ''"
         class="white--text font-100 txt-banner"
@@ -127,8 +127,13 @@ export default {
 .banner-principal {
   overflow-x: hidden;
   min-height: 500px;
-  @media (max-width: 1024px) {
-    max-height: 50vh;
+  &:not(.full-banner) {
+    @media (max-width: 1024px) {
+      max-height: 50vh;
+    }
+  }
+  &.full-banner {
+    max-height: 100vh;
   }
 }
 .banner-principal .txt-banner {

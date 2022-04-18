@@ -64,12 +64,16 @@
         :parceiros="curso.parceiros"
       ></PosShowParceiros>
 
-      <PosFluxograma style="z-index: 3"></PosFluxograma>
+      <PosFluxograma
+        v-if="tipo === 'pos-graduacao'"
+        style="z-index: 3"
+      ></PosFluxograma>
       <div></div>
 
       <PosShowBannerSaibaMais></PosShowBannerSaibaMais>
 
       <div class="spx-sm-24 spx-xs-15 spb-24">
+        {{ cursos }}
         <PosCarousel
           titulo="Outros cursos"
           :cursos="cursos"

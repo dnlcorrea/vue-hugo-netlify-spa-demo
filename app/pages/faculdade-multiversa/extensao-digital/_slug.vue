@@ -46,7 +46,7 @@ export default {
         : open('/404', '_self')
 
       this.cursos = cursos.filter((c) => c.slug !== to)
-        ? cursos.find((c) => c.slug !== to)
+        ? cursos.filter((c) => c.slug !== to)
         : open('/404', '_self')
 
       this.isLoaded = true

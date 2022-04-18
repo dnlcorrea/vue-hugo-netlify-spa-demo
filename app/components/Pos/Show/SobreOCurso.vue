@@ -83,6 +83,7 @@
               </v-btn>
             </p>
             <v-btn
+              v-if="inscricao"
               class="c-primary c-secondary--text mx-auto"
               :href="inscricao"
               target="_blank"
@@ -135,6 +136,7 @@
           </div>
           <v-layout class="spt-10 spb-3 justify-center">
             <v-btn
+              v-if="inscricao"
               class="c-primary c-secondary--text mx-auto"
               :href="inscricao"
               target="_blank"

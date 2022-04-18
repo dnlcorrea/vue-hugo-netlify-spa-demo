@@ -26,7 +26,8 @@
             </big>
           </h2>
           <v-btn
-            @click="dialog = true"
+            target="_blank"
+            href="https://wa.me/+554531981100"
             class="c-primary mx-auto c-secondary--text"
           >
             <v-icon class="mr-2">fab fa-whatsapp</v-icon>

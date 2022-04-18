@@ -147,11 +147,22 @@
 
         <a
           class="white--text no-underline"
-          href="mailto:contato@multiversa.edu.br"
+          target="_blank"
+          href="https://wa.me/+554531981100"
+        >
+          <p>
+            <v-icon small class="c-primary--text mr-2">fab fa-whatsapp</v-icon>
+            (45) 3198-1100
+          </p>
+        </a>
+
+        <a
+          class="white--text no-underline"
+          href="mailto:contato@multiversa.com"
         >
           <p>
             <v-icon small class="c-primary--text mr-2">fas fa-envelope</v-icon>
-            contato@multiversa.edu.br
+            contato@multiversa.com
           </p>
         </a>
         <p class="white--text">
