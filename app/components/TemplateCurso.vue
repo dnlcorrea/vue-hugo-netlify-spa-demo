@@ -73,7 +73,6 @@
       <PosShowBannerSaibaMais></PosShowBannerSaibaMais>
 
       <div class="spx-sm-24 spx-xs-15 spb-24">
-        {{ cursos }}
         <PosCarousel
           titulo="Outros cursos"
           :cursos="cursos"
