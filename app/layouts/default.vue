@@ -128,11 +128,7 @@
     <br />
     <v-footer
       class="c-secondary spy-15 align-start relative pa-0"
-      style="
-        min-height: calc(100vh - 10px - 80px - 32px);
-        z-index: 6;
-        margin-top: calc(-35px - 2vw);
-      "
+      style="z-index: 6; margin-top: calc(-35px - 2vw)"
       v-view="changeOnFooter"
     >
       <v-flex xs12 md4 lg3 class="spl-24 spt-20 c-secondary">
