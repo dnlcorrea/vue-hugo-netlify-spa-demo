@@ -170,7 +170,7 @@
             >fas fa-map-marker-alt</v-icon
           >
           Av. Felipe Wanscheer 2435 <br />
-          Foz do Iguaçu / Paraná
+          <span style="margin-left: 24px"> </span>Foz do Iguaçu / Paraná
         </p>
         <br />
         <br />
