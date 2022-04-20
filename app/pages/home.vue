@@ -5,7 +5,7 @@
       txt1-color="c-secondary"
       txt2="EVOLUTIVA"
       txt2-color="c-primary"
-      margin-top="calc(-5vw - 180px)"
+      margin-top="-18vh"
       :img="
         sc.tabletAndDown
           ? '/banners/banner-home-mobile.jpg'
