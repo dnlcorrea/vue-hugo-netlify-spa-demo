@@ -105,8 +105,13 @@
         &nbsp;<v-icon small class="c-primary--text mr-2"
           >fas fa-map-marker-alt</v-icon
         >
-        Av. Felipe Wandscheer, 2435 2435 - Foz do Iguaçu / Paraná
+        Av. Felipe Wandscheer, 2435 - Foz do Iguaçu / Paraná
       </p>
+      <p class="c-secondary--text smt-10">
+        &nbsp;<v-icon small class="c-primary--text mr-2">fas fa-qrcode</v-icon
+        >Você também pode acessar o WhatsApp utilizando o QR Code abaixo
+      </p>
+      <v-img width="250px" src="/qr-code.png" contain></v-img>
     </v-flex>
   </v-layout>
 </template>
