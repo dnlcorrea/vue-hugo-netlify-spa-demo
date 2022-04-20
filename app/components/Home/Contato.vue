@@ -109,9 +109,15 @@
       </p>
       <p class="c-secondary--text smt-10">
         &nbsp;<v-icon small class="c-primary--text mr-2">fas fa-qrcode</v-icon
-        >Você também pode acessar o WhatsApp utilizando o QR Code abaixo
+        >Você também pode acessar nosso WhatsApp utilizando o QR Code abaixo
       </p>
-      <v-img width="250px" src="/qr-code.png" contain></v-img>
+      <a
+        class="c-secondary--text no-underline"
+        target="_blank"
+        href="https://wa.me/+554531981100"
+      >
+        <v-img width="250px" src="/qr-code.png" contain></v-img>
+      </a>
     </v-flex>
   </v-layout>
 </template>
