@@ -12,7 +12,7 @@
       txt1="EXTENSÃO"
       txt2="DIGITAL"
       img="/extensao-digital.jpg"
-      height="calc(60vh + 50px)"
+      height="50vh"
       ref="banner"
     ></Banner>
     <div class="spt-24 spx-24">

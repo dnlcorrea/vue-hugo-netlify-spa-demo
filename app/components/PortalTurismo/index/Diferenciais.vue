@@ -1,5 +1,19 @@
 <template>
   <div class="spy-24 grey lighten-3">
+    <v-layout class="justify-center text-center smb-15">
+      <v-flex xs11 sm10 md8 lg6 xl6>
+        <p class="c-secondary--text">
+          <big>
+            O Portal de Turismo e Hotelaria e um espaço destinado a preparar,
+            incentivar e desenvolver hubs e ecossistemas de inovação para o
+            turismo em todo o país, por meio da promoção de conteúdo
+            especializado, estímulo do mindset empreendedor, expansão da
+            educação para a inovação, incentivo à transformação digital e do
+            fortalecimento do mercado turístico.
+          </big>
+        </p>
+      </v-flex>
+    </v-layout>
     <v-layout class="justify-center flex-wrap diferenciais-flickity">
       <v-flex
         data-aos="flip-left"

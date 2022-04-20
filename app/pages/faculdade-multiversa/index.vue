@@ -12,7 +12,7 @@
       txt1="FACULDADE"
       txt2="MULTIVERSA"
       img="/faculdade.jpg"
-      height="calc(60vh + 50px)"
+      height="50vh"
       ref="banner"
     ></Banner>
     <div class="spx-sm-24 spt-24 spx-xs-15">

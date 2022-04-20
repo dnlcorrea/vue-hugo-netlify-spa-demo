@@ -25,6 +25,15 @@
         >
           {{ txt2 }}
         </div>
+        <div
+          v-if="txt3"
+          class="font-800 txt3 line-height-1-2"
+          style="text-shadow: #00000061 1px 1px 5px"
+          :class="txt2Color ? txt2Color + '--text' : ''"
+          :style="fontSize ? { 'font-size': fontSize } : ''"
+        >
+          {{ txt3 }}
+        </div>
         <div class="slot">
           <slot></slot>
         </div>
@@ -38,6 +47,7 @@ export default {
     'img',
     'txt1',
     'txt2',
+    'txt3',
     'height',
     'txt1Color',
     'txt2Color',
@@ -118,6 +128,25 @@ export default {
           classListSlot.add('estadescendo')
         }
       }
+      let txt3 = document.querySelector('.txt3')
+
+      if (txt3) {
+        let classListtxt3 = txt3.classList
+
+        if (this.estasubindo) {
+          Array.from(classListtxt3).includes('estadescendo')
+            ? classListtxt3.remove('estadescendo')
+            : ''
+
+          classListtxt3.add('estasubindo')
+        } else {
+          Array.from(classListtxt3).includes('estasubindo')
+            ? classListtxt3.remove('estasubindo')
+            : ''
+
+          classListtxt3.add('estadescendo')
+        }
+      }
     })
   },
 }
@@ -127,6 +156,7 @@ export default {
 .banner-principal {
   overflow-x: hidden;
   min-height: 500px;
+  padding-top: 40px;
   &:not(.full-banner) {
     @media (max-width: 1024px) {
       max-height: 50vh;
@@ -160,13 +190,16 @@ export default {
   animation: estadescendo 0.9s;
   margin-left: 100vw;
 }
-.slot {
+.slot,
+.txt3 {
   animation: estasubindo 1.1s;
 }
-.slot.estasubindo {
+.slot.estasubindo,
+.txt3.estasubindo {
   animation: estasubindo 1.1s;
 }
-.slot.estadescendo {
+.slot.estadescendo,
+.txt3.estadescendo {
   animation: estadescendo 0.5s;
   margin-left: 100vw;
 }

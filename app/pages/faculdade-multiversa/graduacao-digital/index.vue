@@ -12,7 +12,7 @@
       txt1="GRADUAÇÃO"
       txt2="DIGITAL"
       img="/pos-graduacao.jpg"
-      height="calc(60vh + 50px)"
+      height="50vh"
       ref="banner"
     ></Banner>
     <div class="spx-sm-24 spx-xs-15 spb-24">

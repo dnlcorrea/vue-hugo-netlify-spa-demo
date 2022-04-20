@@ -8,7 +8,14 @@
         class="hidden-md-and-down"
       ></FaculdadeSubmenu>
     </div>
-    <PortalTurismoIndexBanner ref="banner"></PortalTurismoIndexBanner>
+    <Banner
+      txt1="PORTAL DE"
+      txt2="TURISMO & "
+      txt3="HOTELARIA"
+      img="/portal-turismo/banner-bg.jpg"
+      height="50vh"
+      ref="banner"
+    ></Banner>
     <div class="spx-24">
       <PosCarousel
         id="pos"

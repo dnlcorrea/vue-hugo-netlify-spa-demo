@@ -18,14 +18,14 @@
         <div>
           <div class="d-flex align-center relative">
             <div
-              class="fill-height"
+              class="fill-height white"
               style="
                 margin-right: 20px;
                 left: -30px;
                 flex: 0;
                 max-height: 100%;
                 position: absolute;
-                width: 14px;
+                width: 5px;
               "
             >
               <object
@@ -34,7 +34,7 @@
                 class="logo-0 fill-height"
               ></object>
             </div>
-            <div class="fill-width">
+            <div style="width: 80%">
               <object
                 type="image/svg+xml"
                 data="/portal-turismo/banner/logo-slice-03.svg"
@@ -56,14 +56,6 @@
               >
                 HOTELARIA
               </object>
-              <v-img
-                style="margin-left: 5px; max-width: 250px"
-                contain
-                src="/logo-s-n.png"
-                class="logo-4 smt-3"
-                alt="Multiversa"
-              >
-              </v-img>
             </div>
           </div>
         </div>
@@ -101,7 +93,6 @@ export default {
         document.getElementsByClassName(element)[0].style[prop] = value
       }
 
-      style('opacity', 'logo-4', 0)
       logos.forEach((element) => {
         style('opacity', element, 0)
       })
@@ -116,11 +107,6 @@ export default {
           }, i * 300)
         })
         setTimeout(() => {
-          style('animation', 'logo-4', 'opacity .7s')
-          style('opacity', 'logo-4', 1)
-        }, 2000)
-        setTimeout(() => {
-          // style("animation", "logo-4", "opacity .7s");
           style('opacity', 'texto', 1)
         }, 2000)
       }, 1000)
@@ -130,20 +116,20 @@ export default {
 </script>
 <style lang="scss">
 .banner-portal-turismo {
-  height: 100vh;
+  height: 50vh;
   min-height: 500px;
   position: relative;
   overflow: hidden;
 
   &:before {
     content: '';
-    width: 82vw;
-    height: 82vw;
+    width: 62vw;
+    height: 62vw;
     background: linear-gradient(-190deg, #1c244ac3, #2c3c8b99);
     border-radius: 100%;
     position: absolute;
     top: -18vw;
-    left: -30vw;
+    left: -10vw;
     animation: left 1.5s;
     backdrop-filter: blur(5px);
   }
@@ -187,7 +173,7 @@ export default {
 }
 @keyframes left {
   from {
-    transform: translateX(-100%) translateY(-100%);
+    transform: translateX(-50%) translateY(-10%);
   }
   to {
     transform: translateX(0) translateY(0);
