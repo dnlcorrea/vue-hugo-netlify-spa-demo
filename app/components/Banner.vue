@@ -73,7 +73,7 @@ export default {
         i = this.img ? this.img : '/quem-somos.jpg'
       }
 
-      let img = `background: url(${imagine(i)}) center / cover`
+      let img = `background: url(${this.imagine(i)}) center / cover`
 
       let h = this.height ? this.height : 'calc(50vh + 50px)'
       let height = `height: ${h}`

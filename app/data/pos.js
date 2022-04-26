@@ -225,8 +225,8 @@ let pos = [
         data_inicio: "02",
         mes_inicio: "abril",
         ano_inicio: "2022",
-        carga_horaria: 360,
-        duracao: 9,
+        carga_horaria: '<p>460 horas<p><p>10 módulos de 40 horas cada, sendo 5 horas síncronas e 35 horas assíncronas.</p><p></p>60 horas do projeto de curso e preceptoria síncrona.</p>',
+        duracao: 15,
         descricao: '<p>O MBA em Gestão Universitária da Faculdade Multiversa em parceria com a Neoperspectiva Consultoria Educacional é o mais completo programa de formação de gestores de instituições de ensino superio do Brasil. Ele está estruturado à partir dos seguintes elementos:</p><ul><li><v-icon>fas fa-check</v-icon> <p>Visão sistêmica de todas as principais áreas da gestão universitária.</p></li><li><v-icon>fas fa-check</v-icon> <p>Conteúdo pragmático baseado no dia-a-dia da gestão de uma IES.</p></li><li><v-icon>fas fa-check</v-icon> <p>Professores com larga experiência de sucesso na gestão universitária.</p></li><li><v-icon>fas fa-check</v-icon> <p>Aplicabilidade prática imediata dos temas estudados no curso.</p></li><li><v-icon>fas fa-check</v-icon> <p>Conexão com as mais atualizadas ferramentas e modelos de gestão da era da Tecnologia Cognitiva Digital.</p></li></ul><p>O curso é coordenado pelo Professor Ryon Braga, um dos mais experientes gestor universitário do Brasil, tendo coordenado a formação de mais de 1.200 gestores em aproximadamente 38 programas educacionais nos últimos 22 anos.</p>',
         investimento: [
             {
@@ -237,85 +237,105 @@ let pos = [
         ],
         matrizes: [
             {
-                titulo: 'Visão Sistêmica da Gestão Universitária',
+                titulo:'Mercado e Competitividade',
                 itens:[
-                    "Conhecimento sistêmico do negócio educação",
-                    "Integração entre a visão de, gestor e a visão de educador",
-                    "Modelo analítico de gestão"
-                ]
-            },
-            {
-                titulo: 'Mercado e Competitividade',
-                itens:[
-                    "Participação no mercado (market share e sales share)",
-                    "Análise da Concorrência",
-                    "Estratégia e Posicionamento"
-                ]
-            },
-            {
-                titulo: 'Marketing e vendas',
-                itens:[
-                    "Estratégias de captação",
-                    "Elasticidade de preços",
-                    "Marketing digital aplicado a instituições de ensino"
-                ]
-            },
-            {
-                titulo: 'Gestão Acadêmica e do Processo Regulatória',
-                itens:[
-                    "Integração horizontal e vertical de currículos",
-                    "DCN’s, mercado e PPCs.",
-                    "Gestão do processo regulatório"
-                ]
-            },
-            {
-                titulo: 'Gestão do Projeto Pedagógico',
-                itens:[
-                    "Definição do modelo educacional a ser adotado",
-                    "Modelos educacionais inovadores",
-                    "Elaboração de matrizes curriculares inovadoras"
-                ]
+                    'Participação no mercado (market share e sales share)',
+                    'Análise da Concorrência',
+                    'Estratégia e Posicionamento',
+                    'Portfólio e precificação',
+                ],
             },
             
             {
-                titulo: "Gestão Financeira",
+                titulo:'Gestão Estratégica de Instituições de Ensino',
                 itens:[
-                    "Orçamento",
-                    "Gestão de custos e despesas",
-                    "Indicadores de Desempenho",
-                ]
+                    'O planejamento estratégico no contexto da era digital',
+                    'Ferramentas e modelos de gestão do século XXI',
+                    'Flexibilidade e dinamicidade no planejamento e na gestão (reinvenção permanente)',
+                    'Gestão baseada em evidências',
+                ],
             },
+            
             {
-                titulo: "Gestão Administrativa e de Processos",
+                titulo:'Marketing e Vendas',
                 itens:[
-                    "Gestão Ágil em instituições de ensino",
-                    "Processos motivacionais",
-                ]
+                    'As especificidades do marketing nas instituições de ensino',
+                    'Estratégias de captação',
+                    'Marketing digital aplicado a instituições de ensino',
+                    'Ações comerciais e promocionais',
+                ],
             },
+            
             {
-                titulo: "Gestão da Tecnologia, do EAD e dos Modelos Híbridos",
+                titulo:'Gestão Acadêmica',
                 itens:[
-                    "Tecnologia aplicada à gestão e ao ensino",
-                    "O EAD e seus diversos modelos",
-                    "O futuro da tecnologia na educação",
-                ]
+                    'Design da experiência acadêmica do aluno',
+                    'Canais de relacionamento e interfaces educacionais',
+                    'Gestão da permanência e da evasão',
+                    'Gestão do relacionamento com egressos',
+                ],
             },
+            
             {
-                titulo: "Planejamento Estratégico de instituições de ensino",
+                titulo:'Gestão do Processo Regulatório',
                 itens:[
-                    "Matriz SWOT",
-                    "Oportunidades e Ameaças no atual cenário educacional",
-                    "Estratégias de diferenciação",
-                ]
+                    'Gestão do processo regulatório',
+                    'DCNs, PDI, PPI, PPC, Estatuto, Regimento e demais documentos acadêmicos',
+                    'Aspectos jurídicos do processo regulatório e a LGPD',
+                    'Instrumentos de avaliação e comissões de visita in loco',
+                ],
             },
+            
             {
-                titulo: "Modelos Inovadores em Gestão de Pessoas",
+                titulo:'Gestão do Modelo Educacional (do Projeto Pedagógico Institucional)',
                 itens:[
-                    "Empreendedorismo e gestão de carreira docente na educação superior",
-                    "Cultura e clima organizacional em instituições de ensino",
-                    "Processos motivacionais e de engajamento",
-                ]
+                    'Modelos educacionais inovadores',
+                    'Tipos de modelos possíveis e a questão do modelo híbrido',
+                    'Elaboração de matrizes curriculares e integrações horizontais e verticais',
+                    'Processos motivacionais e de engajamento',
+                ],
             },
+            
+            {
+                titulo:'Gestão Financeira de IES',
+                itens:[
+                    'Orçamento',
+                    'Indicadores de Desempenho',
+                    'Financiamentos, descontos e bolsas',
+                    'Gestão de custos e despesas',
+                ],
+            },
+            
+            {
+                titulo:'Gestão da Operação e dos Processos',
+                itens:[
+                    'Gestão do atendimento ao cliente',
+                    'Processos motivacionais e comprometimento dos colaboradores',
+                    'Gestão dos processos operacionais',
+                    'Gestão da infraestrutura e tecnologia',
+                ],
+            },
+            
+            {
+                titulo:'Gestão da Tecnologia e do EAD',
+                itens:[
+                    'Tecnologia aplicada à gestão e ao ensino',
+                    'O EAD e seus diversos modelos',
+                    'Viabilizando o EAD em pequenas e médias IES',
+                    'Transformação Digital nas instituições de ensino',
+                ],
+            },
+            
+            {
+                titulo:'Visão Sistêmica e Gestão de Pessoas',
+                itens:[
+                    'Conhecimento sistêmico do negócio educação',
+                    'Gestão de pessoas e mudanças em instituições de ensino',
+                    'Governança corporativa em instituições de ensino',
+                    'Cultura e clima organizacional em instituições de ensino',
+                ],
+            },
+            
             
         ]
     },
