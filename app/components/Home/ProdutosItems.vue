@@ -28,7 +28,7 @@
           style="max-width: 100px"
           class="mx-auto produtos-items-img"
           contain
-          :src="img"
+          :src="$imagine(img)"
         ></v-img>
         <h1 class="subtitulo2 font-900 text-center text-uppercase">
           {{ nome }}
