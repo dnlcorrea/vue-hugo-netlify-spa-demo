@@ -3,7 +3,7 @@
     class="c-secondary fill-width banner-principal d-flex align-center"
     :style="computedStyle"
   >
-    <v-flex offset-md2 class="spl-10">
+    <v-flex offset-md2 class="spl-lg-10 spl-sm-16 spl-xs-9">
       <div
         :style="marginTop ? { 'margin-top': marginTop } : ''"
         class="white--text font-100 txt-banner"
@@ -43,17 +43,19 @@
 </template>
 <script>
 export default {
-  props: [
-    'img',
-    'txt1',
-    'txt2',
-    'txt3',
-    'height',
-    'txt1Color',
-    'txt2Color',
-    'marginTop',
-    'fontSize',
-  ],
+  props: {
+    hasMobileImg: Boolean,
+    hasTabletImg: Boolean,
+    img: String,
+    txt1: String,
+    txt2: String,
+    txt3: String,
+    height: String,
+    txt1Color: String,
+    txt2Color: String,
+    marginTop: String,
+    fontSize: String,
+  },
   data() {
     return {
       estasubindo: false,
@@ -62,8 +64,16 @@ export default {
   },
   computed: {
     computedStyle() {
-      let i = this.img ? this.img : '/quem-somos.jpg'
-      let img = `background: url(${i}) center / cover`
+      let i
+      if (this.hasMobileImg && this.$sc.isCell) {
+        i = this.img.split('.')[0] + '-mobile' + '.' + this.img.split('.')[1]
+      } else if (this.hasTabletImg && this.$sc.tabletAndDown) {
+        i = this.img.split('.')[0] + '-tablet' + '.' + this.img.split('.')[1]
+      } else {
+        i = this.img ? this.img : '/quem-somos.jpg'
+      }
+
+      let img = `background: url(${imagine(i)}) center / cover`
 
       let h = this.height ? this.height : 'calc(50vh + 50px)'
       let height = `height: ${h}`
@@ -155,11 +165,16 @@ export default {
 <style lang="scss">
 .banner-principal {
   overflow-x: hidden;
-  min-height: 500px;
-  padding-top: 40px;
+  padding-top: 65px;
   &:not(.full-banner) {
     @media (max-width: 1024px) {
-      max-height: 50vh;
+      padding-top: 0px;
+      height: 60vh !important;
+    }
+  }
+  &:not(.full-banner) {
+    @media (max-width: 600px) {
+      height: 65vh !important;
     }
   }
   &.full-banner {

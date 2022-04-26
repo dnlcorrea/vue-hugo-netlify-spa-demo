@@ -11,8 +11,7 @@
     <Banner
       txt1="FACULDADE"
       txt2="MULTIVERSA"
-      img="/faculdade.jpg"
-      height="50vh"
+      img="/banners/faculdade.jpg"
       ref="banner"
     ></Banner>
     <div class="spx-sm-24 spt-24 spx-xs-15">

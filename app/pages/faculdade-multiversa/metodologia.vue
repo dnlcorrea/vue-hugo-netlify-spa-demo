@@ -6,7 +6,14 @@
       :banner="banner"
       class="hidden-md-and-down"
     ></FaculdadeSubmenu>
-    <Banner txt1="METODOLOGIA" txt2="EDUCACIONAL" ref="banner"></Banner>
+    <Banner
+      img="/banners/metodologia.jpg"
+      hasMobileImg
+      hasTabletImg
+      txt1="METODOLOGIA"
+      txt2="EDUCACIONAL"
+      ref="banner"
+    ></Banner>
     <div
       class="spx-sm-24 spx-xs-15 grey lighten-3"
       style="padding-bottom: calc(45px + 3vw)"
@@ -138,7 +145,6 @@ export default {
 .borda-diferenciais-icone {
   width: calc(60px + 1vw);
   min-width: calc(60px + 1vw) !important;
-  height: calc(60px + 1vw);
   background: rgb(0, 0, 0);
   border-radius: 1000px;
 }

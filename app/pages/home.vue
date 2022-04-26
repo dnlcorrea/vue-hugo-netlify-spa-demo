@@ -5,12 +5,9 @@
       txt1-color="c-secondary"
       txt2="EVOLUTIVA"
       txt2-color="c-primary"
-      margin-top="-18vh"
-      :img="
-        sc.tabletAndDown
-          ? '/banners/banner-home-mobile.jpg'
-          : '/banners/banner-home.jpg'
-      "
+      :margin-top="$sc.isCell ? '-29vh' : '-19vh'"
+      hasMobileImg
+      img="/banners/home.jpg"
       height="calc(100vh + 50px)"
       :font-size="sc.tabletAndDown ? 'calc(18px + 7vw)' : 'calc(23px + 4vw)'"
       class="full-banner"

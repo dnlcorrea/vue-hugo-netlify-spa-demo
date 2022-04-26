@@ -14,7 +14,7 @@
       md8
       lg10
       class="text-right spr-24 submenu"
-      :class="passoudobanner ? 'white' : 'transparent'"
+      :class="passoudobanner ? 'white' : 'mycolor'"
     >
       <v-btn
         depressed
@@ -89,6 +89,16 @@ export default {
 </script>
 
 <style style="scss">
+.mycolor {
+  background: linear-gradient(
+    to left,
+    #1f294d,
+    #1f294d,
+    #1a2344,
+    transparent,
+    transparent
+  );
+}
 .theme--light.v-btn--active::before {
   opacity: 0 !important;
 }

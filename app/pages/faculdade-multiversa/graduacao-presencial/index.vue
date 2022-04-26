@@ -11,8 +11,9 @@
     <Banner
       txt1="GRADUAÇÃO"
       txt2="PRESENCIAL"
-      img="/graduacao-presencial.jpg"
-      height="50vh"
+      img="/banners/presencial.jpg"
+      hasMobileImg
+      hasTabletImg
       ref="banner"
     ></Banner>
     <div class="spx-sm-24 spx-xs-15 spy-24">

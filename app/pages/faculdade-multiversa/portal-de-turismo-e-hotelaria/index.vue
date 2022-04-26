@@ -12,8 +12,9 @@
       txt1="PORTAL DE"
       txt2="TURISMO & "
       txt3="HOTELARIA"
-      img="/portal-turismo/banner-bg.jpg"
-      height="50vh"
+      img="/banners/turismo-e-hotelaria.jpg"
+      hasMobileImg
+      hasTabletImg
       ref="banner"
     ></Banner>
     <div class="spx-24">

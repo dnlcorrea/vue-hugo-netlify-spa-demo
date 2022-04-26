@@ -11,8 +11,9 @@
     <Banner
       txt1="GRADUAÇÃO"
       txt2="DIGITAL"
-      img="/pos-graduacao.jpg"
-      height="50vh"
+      img="/banners/digital.jpg"
+      hasMobileImg
+      hasTabletImg
       ref="banner"
     ></Banner>
     <div class="spx-sm-24 spx-xs-15 spb-24">

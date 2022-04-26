@@ -11,8 +11,9 @@
     <Banner
       txt1="EXTENSÃO"
       txt2="DIGITAL"
-      img="/extensao-digital.jpg"
-      height="50vh"
+      img="/banners/extensao.jpg"
+      hasMobileImg
+      hasTabletImg
       ref="banner"
     ></Banner>
     <div class="spt-24 spx-24">

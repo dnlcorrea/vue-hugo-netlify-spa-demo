@@ -4,8 +4,7 @@
       fixed
       :style="{ marginTop: onFooter ? '-64px' : '0', transition: 'all 0.2s' }"
       app
-      class="c-secondary"
-      :class="isup ? 'elevation-0' : 'elevation-2'"
+      class="c-secondary elevation-2"
     >
       <v-flex xs10 sm11 lg2 class="fill-height">
         <router-link to="/">
