@@ -20,5 +20,5 @@ export default (_context, inject) => {
             return ''
         }
     }
-    inject('imagine', )
+    inject('imagine', imagine)
 }
