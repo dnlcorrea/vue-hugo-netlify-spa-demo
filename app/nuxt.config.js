@@ -77,14 +77,7 @@ export default {
     '@nuxtjs/dotenv'
   ],
   
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  // http: {
-  //   baseURL: process.env.API
-  // },
-  
-  // env: {
-  //   baseUrl: process.env.HTTP_BASE_URL
-  // },
+
   
   router: {
     extendRoutes(routes, resolve) {
