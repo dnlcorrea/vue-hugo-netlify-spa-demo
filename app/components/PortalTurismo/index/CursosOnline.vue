@@ -50,7 +50,7 @@
             "
             cover
             v-if="curso.img"
-            :src="imagine(curso.img)"
+            :src="$imagine(curso.img)"
             aspect-ratio="1.77"
             class="curso-img elevation-5"
             :class="

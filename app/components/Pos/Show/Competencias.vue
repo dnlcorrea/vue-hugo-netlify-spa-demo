@@ -45,7 +45,7 @@
             align-center
             justify-center
           "
-          :src="imagine('/portal-turismo/matriz-bg.jpg')"
+          :src="$imagine('/portal-turismo/matriz-bg.jpg')"
           aspect-ratio="0.8"
         >
           <div>

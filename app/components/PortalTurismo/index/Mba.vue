@@ -33,7 +33,7 @@
         >
           <v-img
             cover
-            :src="imagine(curso.imagem)"
+            :src="$imagine(curso.imagem)"
             aspect-ratio="1.77"
             class="curso-img elevation-5"
           >

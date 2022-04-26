@@ -64,25 +64,27 @@ export default {
   },
   computed: {
     computedStyle() {
-      let i
-      if (this.hasMobileImg && this.$sc.isCell) {
-        i = this.img.split('.')[0] + '-mobile' + '.' + this.img.split('.')[1]
-      } else if (this.hasTabletImg && this.$sc.tabletAndDown) {
-        i = this.img.split('.')[0] + '-tablet' + '.' + this.img.split('.')[1]
-      } else {
-        i = this.img ? this.img : '/quem-somos.jpg'
+      if (this.$imagine) {
+        let i
+        if (this.hasMobileImg && this.$sc.isCell) {
+          i = this.img.split('.')[0] + '-mobile' + '.' + this.img.split('.')[1]
+        } else if (this.hasTabletImg && this.$sc.tabletAndDown) {
+          i = this.img.split('.')[0] + '-tablet' + '.' + this.img.split('.')[1]
+        } else {
+          i = this.img ? this.img : '/quem-somos.jpg'
+        }
+
+        let img = `background: url(${this.$imagine(i)}) center / cover`
+
+        let h = this.height ? this.height : 'calc(50vh + 50px)'
+        let height = `height: ${h}`
+
+        let top = `top: 0`
+
+        let style = `${img}; ${top}; ${height}`
+
+        return style
       }
-
-      let img = `background: url(${this.imagine(i)}) center / cover`
-
-      let h = this.height ? this.height : 'calc(50vh + 50px)'
-      let height = `height: ${h}`
-
-      let top = `top: 0`
-
-      let style = `${img}; ${top}; ${height}`
-
-      return style
     },
   },
   mounted() {
