@@ -53,7 +53,7 @@ export default {
     { src: '~/plugins/after-each.js', mode: 'client' },
     { src: '~/plugins/truncate.js' },
     { src: '~/plugins/vue-check-view.js', mode: 'client' },
-    { src: '~/plugins/imagine.js'},
+    { src: '~/plugins/imagine.js', mode: 'client'},
     { src: '~/node_modules/@luaguillande/screen-checker/checkScreenPlugin.js'},
     { src: '~/plugins/event.js'},
     { src: '~/plugins/mask.js'},
@@ -78,13 +78,13 @@ export default {
   ],
   
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  http: {
-    baseURL: process.env.API
-  },
+  // http: {
+  //   baseURL: process.env.API
+  // },
   
-  env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
-  },
+  // env: {
+  //   baseUrl: process.env.HTTP_BASE_URL
+  // },
   
   router: {
     extendRoutes(routes, resolve) {

@@ -3,9 +3,7 @@ Vue.mixin({
     methods: {
 	imagine: image => {
             if (image == undefined) return '';
-            let barra = image.substring(0, 1) == '/' ? '' : '/';
-            let url = process.env.baseUrl === 'http://localhost:3000' ? 'http://localhost:3000' : 'https://ik.imagekit.io/cyrcl27sn/'
-console.log(process.env._HTTP_BASE_URL_)
+            let url = window.location.gost === 'localhost:3000' ? 'localhost:3000' : 'https://ik.imagekit.io/cyrcl27sn/'
             return url + image;
         }
     }
