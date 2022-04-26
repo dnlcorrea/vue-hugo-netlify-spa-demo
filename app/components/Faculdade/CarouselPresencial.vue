@@ -24,7 +24,7 @@
         >
           <v-card>
             <v-img
-              src="/blur-bg.jpg"
+              :src="$imagine('/blur-bg.jpg')"
               aspect-ratio="1.5"
               class="
                 grey

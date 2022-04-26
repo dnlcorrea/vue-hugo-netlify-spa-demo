@@ -3,9 +3,9 @@
     <v-card class="fill-height">
       <v-img
         v-if="!semFoto"
-        lazy-src="/placeholder-2.jpg"
+        :lazy-src="$imagine('/placeholder-2.jpg')"
         aspect-ratio="1.7"
-        :src="blog.imagem"
+        :src="$imagine(blog.imagem)"
         class="
           c-info-lighten-2
           d-flex

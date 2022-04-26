@@ -116,7 +116,7 @@
         target="_blank"
         href="https://wa.me/+554531981100"
       >
-        <v-img width="250px" src="/qr-code.png" contain></v-img>
+        <v-img width="250px" :src="$imagine('/qr-code.png')" contain></v-img>
       </a>
     </v-flex>
   </v-layout>

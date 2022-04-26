@@ -13,7 +13,7 @@
       <v-flex xs12 md6 lg3 class="spx-4 pb-5" v-for="i in 4" :key="i">
         <v-card>
           <v-img
-            lazy-src="/placeholder-2.jpg"
+            :lazy-src="$imagine('/placeholder-2.jpg')"
             aspect-ratio="1.5"
             class="
               c-info-lighten-2

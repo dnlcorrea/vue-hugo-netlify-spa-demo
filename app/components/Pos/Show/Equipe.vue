@@ -13,7 +13,10 @@
       >
         <div>
           <div class="border-prof-img c-primary--text">
-            <v-img :src="professor.image" class="professor-image-pos"></v-img>
+            <v-img
+              :src="$imagine(professor.image)"
+              class="professor-image-pos"
+            ></v-img>
           </div>
         </div>
         <div>

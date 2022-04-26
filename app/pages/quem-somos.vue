@@ -43,7 +43,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5"
-                  src="/staff/ryon.jpg"
+                  :src="$imagine('/staff/ryon.jpg')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -55,7 +55,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5 c-info"
-                  src="/staff/cristina.png"
+                  :src="$imagine('/staff/cristina.png')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -67,7 +67,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5 c-info"
-                  src="/staff/lucia.png"
+                  :src="$imagine('/staff/lucia.png')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -79,7 +79,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5 c-info"
-                  src="/staff/djalma.jpg"
+                  :src="$imagine('/staff/djalma.jpg')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -91,7 +91,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5 c-info"
-                  src="/staff/norma.png"
+                  :src="$imagine('/staff/norma.png')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -113,7 +113,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5 c-info"
-                  src="/staff/graca.jpg"
+                  :src="$imagine('/staff/graca.jpg')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -125,7 +125,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5 c-info"
-                  src="/staff/otavio.jpg"
+                  :src="$imagine('/staff/otavio.jpg')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -137,7 +137,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5 c-info"
-                  src="/staff/izabel.jpg"
+                  :src="$imagine('/staff/izabel.jpg')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -160,7 +160,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5"
-                  src="/staff/ryon.jpg"
+                  :src="$imagine('/staff/ryon.jpg')"
                 ></v-img>
               </v-flex>
               <v-flex>
@@ -172,7 +172,7 @@
                 <v-img
                   style="border-radius: 300px"
                   class="smr-5 c-info"
-                  src="/staff/djalma.jpg"
+                  :src="$imagine('/staff/djalma.jpg')"
                 ></v-img>
               </v-flex>
               <v-flex>

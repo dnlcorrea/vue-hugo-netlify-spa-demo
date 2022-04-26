@@ -21,7 +21,7 @@
             @load="imageLoaded = true"
             contain
             style="width: 230px"
-            src="/logo-s.png"
+            :src="$imagine('/logo-s.png')"
           ></v-img>
         </div>
       </v-layout>

@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-img
-      lazy-src="/placeholder-2.jpg"
+      :lazy-src="$imagine('/placeholder-2.jpg')"
       aspect-ratio="1.5"
       class="
         c-info-lighten-2

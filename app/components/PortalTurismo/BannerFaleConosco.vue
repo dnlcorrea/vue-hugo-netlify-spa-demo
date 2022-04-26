@@ -36,7 +36,7 @@
     </v-flex>
 
     <v-flex xs10 md3 xl2 class="spb-xs-15">
-      <v-img src="/portal-turismo/contato.png"></v-img>
+      <v-img :src="$imagine('/portal-turismo/contato.png')"></v-img>
     </v-flex>
   </v-layout>
 </template>

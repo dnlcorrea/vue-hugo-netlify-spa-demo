@@ -36,7 +36,7 @@
         </div>
       </v-flex>
       <v-flex xs10 sm6 md4 lg3 offset-lg1 class="spb-xs-15 spy-10">
-        <v-img src="/contato.png"></v-img>
+        <v-img :src="$imagine('/contato.png')"></v-img>
       </v-flex>
     </v-layout>
   </div>

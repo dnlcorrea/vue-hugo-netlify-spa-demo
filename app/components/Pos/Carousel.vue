@@ -45,7 +45,7 @@
               :src="p.img"
               aspect-ratio="1.5"
               class="grey lighten-2"
-              lazy-src="/placeholder-2.jpg"
+              :lazy-src="$imagine('/placeholder-2.jpg')"
             >
               <template v-slot:placeholder>
                 <v-row class="fill-height ma-0" align="center" justify="center">

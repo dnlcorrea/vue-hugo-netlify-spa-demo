@@ -19,7 +19,7 @@
             @load="imageLoaded = true"
             contain
             style="width: 230px"
-            src="/logo-s.png"
+            :src="$imagine('/logo-s.png')"
           ></v-img>
         </div>
       </v-layout>
@@ -44,7 +44,7 @@
           <i>{{ texto.subtitulo }}</i>
         </h3>
         <div class="pa-1 my-10" style="box-shadow: 0 0 4px rgba(0, 0, 0, 0.3)">
-          <v-img aspect-ratio="1.7" :src="texto.imagem"></v-img>
+          <v-img aspect-ratio="1.7" :src="$imagine(texto.imagem)"></v-img>
         </div>
         <div v-html="texto.texto"></div>
         <div class="mt-5 smb-24">

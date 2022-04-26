@@ -13,7 +13,7 @@
       class="full-banner"
     >
       <v-img
-        src="/logo-s-g.png"
+        :src="$imagine('/logo-s-g.png')"
         class="smt-5 ml-3"
         width="calc(50px + 10vw)"
       ></v-img>

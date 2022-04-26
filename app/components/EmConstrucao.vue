@@ -4,7 +4,7 @@
       contain
       style="width: 300px; margin-top: 64px"
       class="mx-auto spt-20"
-      src="/logo-s.png"
+      :src="$imagine('/logo-s.png')"
     ></v-img>
     <h1 class="font-500">PÁGINA EM CONSTRUÇÃO</h1>
     <v-img
@@ -12,7 +12,7 @@
       contain
       class="mx-auto"
       style="width: 50vw; max-width: 700px; min-width: 250px"
-      src="/em-construcao.png"
+      :src="$imagine('/em-construcao.png')"
     ></v-img>
     <br />
     <br />
