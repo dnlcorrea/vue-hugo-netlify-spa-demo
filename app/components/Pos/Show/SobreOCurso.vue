@@ -1,70 +1,82 @@
 <template>
-  <div class="spx-24 smb-24" style="z-index: 0; position: relative">
+  <div style="z-index: 0; position: relative">
     <div class="flex-wrap">
       <!-- <v-flex class="xs12 md7 lg8 spt-24"> -->
-      <div class="smb-5 subtitulo c-secondary--text spt-18 hidden-md-and-up">
+      <div class="smb-5 subtitulo c-secondary--text spt-18 hidden-lg-and-up">
         <span class="main-title">Sobre o curso</span>
       </div>
       <div
-        class="c-info-darken-2--text hidden-md-and-up smb-24"
+        class="c-info-darken-2--text hidden-lg-and-up smb-24"
         v-html="descricao"
       ></div>
-      <!-- </v-flex> -->
-      <!-- <v-flex class="xs12 md4 lg3 offset-md1 xs12 smy-xs-10 smy-sm-10 smy-md-0"> -->
+
       <div
         class="
           border-padrao
           c-primary--text
           spa-1
           elevation-5
-          sml-md-5
+          sml-lg-15
           card-float
-          smb-3
+          smb-lg-3 smb-xs-20 smb-sm-20
         "
-        style="background: #00000021"
-        data-aos="flip-left"
-        data-aos-offset="200"
-        data-aos-delay="300"
+        style="background: #00000021; max-width: "
+        :style="{
+          width: $sc.desktopAndUp ? 'calc(400px + 15vw)' : '100%',
+        }"
       >
+        <!-- data-aos="flip-left"
+        data-aos-offset="200"
+        data-aos-delay="300" -->
         <v-layout class="white spa-10 flex-wrap">
-          <v-flex xs12 sm6 md12>
-            <p class="c-info-darken-2--text"><big>Curso Online</big></p>
-            <v-divider></v-divider>
-            <p class="c-info-darken-2--text mb-2 mt-3 font-600">
-              <clr-icon shape="hourglass" class="c-primary--text"></clr-icon>
-              Duração:
-              <span class="c-info-darken-2--text font-500"
-                >{{ duracao }}
-                <span v-if="type === 'pos-graduacao'">meses</span></span
-              >
+          <div>
+            <p class="c-secondary--text subtitulo" v-if="modalidade">
+              <small>Curso {{ modalidade }}</small>
             </p>
-            <p class="c-info-darken-2--text mb-2 font-600">
-              <clr-icon shape="clock" class="c-primary--text"></clr-icon> Carga
-              Horária:
-              <span class="c-info-darken-2--text font-500"
-                >{{ carga_horaria }} horas</span
-              >
+            <v-divider v-if="modalidade"></v-divider>
+            <p class="c-secondary--text mb-0 mt-3" v-if="inicio">
+              <clr-icon
+                shape="calendar"
+                class="c-primary-darken-1--text mb-1 mr-1"
+              ></clr-icon>
+              <big>Início:</big>
             </p>
-            <p class="c-info-darken-2--text mb-3 font-600">
-              <clr-icon shape="calendar" class="c-primary--text"></clr-icon>
-              <span v-if="inicio">Início:</span>
-              <span v-if="inicio" class="c-info-darken-2--text font-500">{{
-                inicio
-              }}</span>
-              <span v-else>Assíncrono</span>
+            <div
+              v-if="inicio"
+              class="c-info-darken-2--text font-500 mb-2 ml-6 mt-0"
+              v-html="inicio"
+            ></div>
+
+            <p class="c-secondary--text mb-2 mt-3">
+              <clr-icon
+                shape="hourglass"
+                class="c-primary-darken-1--text mb-1 mr-1"
+              ></clr-icon>
+              <big>Duração:</big>
             </p>
+            <p class="c-info-darken-2--text font-500 ml-6 mt-0">
+              {{ duracao }} <span v-if="type === 'pos-graduacao'">meses</span>
+            </p>
+            <p class="c-secondary--text mb-2 mr-1">
+              <clr-icon
+                shape="clock"
+                class="c-primary-darken-1--text mb-1 mr-1"
+              ></clr-icon>
+              <big>Carga Horária:</big>
+            </p>
+            <p
+              class="c-info-darken-2--text font-500 ml-6 mt-0"
+              v-html="carga_horaria"
+            ></p>
+
             <p
               class="grey--text text--darken-2"
               v-if="titulo === 'MBA em Gestão e Inovação em Hotelaria'"
             >
               <small>Em breve mais informações</small>
             </p>
-          </v-flex>
-          <v-flex xs12 sm6 md12 class="spl-sm-20 spl-md-0">
-            <v-divider
-              class="hidden-sm-only"
-              :class="{ 'mb-4': !investimento.length }"
-            ></v-divider>
+
+            <v-divider :class="{ 'mb-4': !investimento.length }"></v-divider>
             <p
               class="c-info-darken-2--text mb-0 mt-7"
               v-if="investimento.length"
@@ -78,7 +90,12 @@
               <small>R$</small
               ><span class="font-800"> {{ menorPrecoValor }}</span
               ><small>,00</small>
-              <v-btn icon class="mx-0" @click="dialoginvestimento = true">
+              <v-btn
+                icon
+                class="mx-0"
+                v-if="investimento.length > 1"
+                @click="dialoginvestimento = true"
+              >
                 <clr-icon shape="info-standard" size="22"></clr-icon>
               </v-btn>
             </p>
@@ -90,14 +107,14 @@
               ><clr-icon shape="bolt" class="is-solid mr-1"></clr-icon>
               INSCREVA-SE JÁ
             </v-btn>
-          </v-flex>
+          </div>
         </v-layout>
       </div>
-      <div class="smb-5 subtitulo c-secondary--text spt-18 hidden-sm-and-down">
+      <div class="smb-5 subtitulo c-secondary--text spt-18 hidden-md-and-down">
         <span class="main-title">Sobre o curso</span>
       </div>
       <div
-        class="c-info-darken-2--text hidden-sm-and-down smb-24"
+        class="c-info-darken-2--text hidden-md-and-down smb-24"
         v-html="descricao"
       ></div>
       <!-- </v-flex> -->
@@ -160,6 +177,7 @@ export default {
     'descricao',
     'duracao',
     'inicio',
+    'modalidade',
     'carga_horaria',
     'investimento',
     'inscricao',
@@ -204,7 +222,7 @@ export default {
   flex: 1;
 }
 .card-float {
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     float: right;
     margin-top: calc(-48px - 2.4vw) !important;
   }

@@ -8,10 +8,10 @@
       sm10
       md8
       lg6
-      class="white--text spl-24 smx-xs-0"
+      class="white--text spl-xs-24 spl-sm-24 spl-md-0 spl-lg-24 smx-xs-0"
       style="z-index: 0"
     >
-      <div class="spx-24 sml-24 animate">
+      <div class="spx-24 sml-24 spx-xs-0 sml-xs-0 animate">
         <p class="mb-2">
           {{ categoria }}
         </p>
@@ -36,19 +36,16 @@ export default {
   props: ['inscricao', 'titulo', 'imagem', 'categoria'],
   methods: {
     setImage() {
-      // let lg = 'linear-gradient(-90deg, #01092e00,#01092e),'
-
       let img = this.imagem ? this.imagem : '/portal-turismo/banner.jpg'
 
-      return `#2d386d url(${img}) center right / 70% no-repeat`
+      let size = this.$sc.desktopAndUp ? '55%' : 'contain'
+      return `url(${img}) center right / ${size} no-repeat, #171f3a`
     },
   },
 }
 </script>
 <style lang="scss">
 .banner-portal-turismo-show {
-  height: 60vh;
-  min-height: 600px;
   position: relative;
   overflow: hidden;
   padding-top: 64px;
@@ -61,54 +58,50 @@ export default {
     content: '';
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      -90deg,
-      rgb(124 102 0 / 36%),
-      rgb(17 27 74 / 72%),
-      #2d386d
-    );
+    background: url('/grafismo3.png') center / cover no-repeat, #222b4a;
     z-index: -1;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0vw;
+    opacity: 0.9;
   }
-  &:before {
-    content: '';
-    width: 82vw;
-    height: 82vw;
-    background: linear-gradient(-190deg, #1c244ac3, #2c3c8b99);
-    border-radius: 100%;
-    position: absolute;
-    z-index: 0;
-    top: -25vw;
-    left: -25vw;
-    animation: left 1s;
-    backdrop-filter: blur(10px);
-  }
-  @media (max-width: 1024px) {
-    height: 50vh;
+  @media (min-width: 1024px) {
+    height: 35vh;
+    min-height: 450px;
 
+    &:after {
+      content: '';
+      background: url('/grafismo3.png') center / 30vw no-repeat;
+      left: 15vw;
+      opacity: 1;
+    }
     &:before {
-      width: 110vw;
-      height: 110vw;
+      content: '';
+      width: 51vw;
+      height: 100%;
+      background: #171f3a;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
     }
   }
+  @media (min-width: 1280px) {
+    height: 60vh;
+    min-height: 600px;
+    &:after {
+      background: url('/grafismo3.png') center / 26vw no-repeat;
+      left: 13vw;
+    }
+  }
+
   @media (max-width: 768px) {
     height: 50vh;
-
-    &:before {
-      width: 110vw;
-      height: 110vw;
-    }
   }
+
   @media (max-width: 500px) {
     height: 70vh;
     padding-top: 0px;
-
-    &:before {
-      width: 160vw;
-      height: 160vw;
-    }
   }
 
   clr-icon {

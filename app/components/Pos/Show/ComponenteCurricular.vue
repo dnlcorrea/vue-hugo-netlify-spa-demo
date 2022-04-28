@@ -1,11 +1,6 @@
 <template>
-  <div class="spb-24 spx-24">
+  <div class="spb-24">
     <h1 class="font-500 main-title subtitulo">Componentes Curriculares</h1>
-
-    <p class="secondary--text light mt-3" v-if="cargaHoraria">
-      {{ cargaHoraria }} horas/aulas
-    </p>
-
     <v-layout class="justify-space-between flex-wrap componentes-curriculares">
       <v-flex xs12 md6 class="spr-md-8">
         <v-expansion-panels v-model="panel" class="smt-4 expansion-panel-ead">
@@ -90,7 +85,6 @@
 export default {
   props: {
     matrizes: Array,
-    cargaHoraria: Number,
   },
 
   data() {

@@ -10,16 +10,14 @@
     </div>
     <PosShowBanner
       :titulo="curso.name"
-      :duracao="curso.duracao"
       :inscricao="curso.inscricao"
       :imagem="curso.img"
       :categoria="curso.categoria ? curso.categoria : 'Pós-graduação'"
-      :inicio="setInicio"
       ref="banner"
     ></PosShowBanner>
 
     <PosShowSobreOCurso
-      class="smx-24 smx-xs-0"
+      class="smx-sm-24 smx-xs-7 spx-xl-24"
       :inscricao="curso.inscricao"
       :titulo="curso.name"
       :descricao="curso.descricao"
@@ -29,6 +27,7 @@
       :carga_horaria="curso.carga_horaria"
       :investimento="decodedPrecos"
       :type="checkClass"
+      :modalidade="curso.modalidade"
     ></PosShowSobreOCurso>
     <div style="clear: both"></div>
 
@@ -45,8 +44,9 @@
     ></PosShowCompetencias>
 
     <div class="white relative" style="z-index: 1">
-      <div class="smx-sm-24 smx-xs-15">
+      <div class="smx-sm-24 smx-xs-0">
         <PosShowComponenteCurricular
+          class="spx-xs-7 spx-xs-7 spx-lg-24"
           v-if="curso.matrizes && curso.matrizes.length"
           :matrizes="curso.matrizes"
           :carga-horaria="curso.carga_horaria"
@@ -99,16 +99,36 @@ export default {
     setInicio() {
       let inicio
 
-      inicio = this.curso.data_inicio
-        ? this.curso.data_inicio +
-          ' de ' +
-          this.curso.mes_inicio +
-          ' de ' +
-          this.curso.ano_inicio
-        : '' + this.curso.mes_inicio + ' de ' + this.curso.ano_inicio
-
+      if (this.curso.turmas && this.curso.turmas.length) {
+        if (this.curso.turmas.map((t) => t.horario).length) {
+          inicio =
+            '<span class="font-600">Turma 01</span>: ' +
+            this.curso.turmas[0].inicio +
+            ' - ' +
+            this.curso.turmas[0].horario +
+            '<br><span class="font-600">Turma 02</span>: ' +
+            this.curso.turmas[1].inicio +
+            ' - ' +
+            this.curso.turmas[1].horario
+        } else {
+          inicio =
+            '<span class="font-600">Turma 01</span>: ' +
+            this.curso.turmas[0].inicio +
+            '<br><span class="font-600">Turma 02</span>: ' +
+            this.curso.turmas[1].inicio
+        }
+      } else {
+        inicio = this.curso.data_inicio
+          ? this.curso.data_inicio +
+            ' de ' +
+            this.curso.mes_inicio +
+            ' de ' +
+            this.curso.ano_inicio
+          : '' + this.curso.mes_inicio + ' de ' + this.curso.ano_inicio
+      }
       return inicio
     },
+
     decodedPrecos() {
       if (this.curso.investimento) {
         if (typeof this.curso.investimento === 'string') {

@@ -10,7 +10,7 @@ let pos = [
         data_inicio: "26",
         mes_inicio: "março",
         ano_inicio: "2022",
-        carga_horaria: 360,
+        carga_horaria:'360 horas/aulas',
         duracao: 8,
         competencias:["Desenvolver mindset empreendedor para o turismo","Desenvolver Pesquisa de Mercado no segmento de turismo e hospedagem","Identificar tendências, inovações e oportunidades no mercado turístico","Desenvolver e validar um Produto Mínimamente Viável (MVP)","Desenvolver um Diagnóstico do ecossistema empreendedor do turismo e hotelaria.","Desenvolver inovação e business intelligence","Elaborar o Plano de Negócios e formalizar a empresa","Apresentar um Pitch de 7 minutos para investidores"],
         investimento: [{"label": "12 Parcelas de","valor": 420},{"label": "18 Parcelas de","valor": 280}],
@@ -142,7 +142,7 @@ let pos = [
         mes_inicio: "abril",
         ano_inicio: "2022",
         duracao: 10,
-        carga_horaria: 360,
+        carga_horaria:'360 horas/aulas',
         competencias:["Identificar e descrever a estrutura organizacional de um hotel que atenda as expectativas do hóspede;", "Mapear as áreas demandas e sua interrelação;", "Elaborar uma proposição de integração entre as áreas interdependentes afins com uso de tecnologia.", "Identificar as necessidades do programa", "Analisar as possibilidades e alternativas para a multipropriedade / time-sharing", "Propor a otimização e associação de uso de tecnologias para apoiar o programa e o relacionamento com o cliente", "Elaborar uma proposta tarifária para horizonte de 6 meses (cenário futuro)", "Gerar cenários por meio da tecnologia de BI na plataforma Desbravador", "Realizar a previsão de ocupação, diária, média (BI e base de testes do Desbravador", "Realizar estudo considerando a expectativa dos clientes x A&B x áreas demandadas",  "Elaborar ficha técnica gerencial no Desbravador", "Análisar o rateio de custos, desperdícios e rentabilidade de A&B com uso de tecnologia", "Identificar indicadores de controles financeiros", "Mapear de processos financeiros", "Implantar e auditar processos e controles financeiros com uso de tecnologia", "Identificar as necessidades de treinamento e desenvolvimento organizacional", "Elaborar de programa de T&D interno", "Elaborar de avaliação de desempenho do T&D"] ,
         investimento: [],
         matrizes: [],
@@ -222,17 +222,27 @@ let pos = [
         img: '/mbas/mba-1.jpg',
         area: 'Educação',  
         competencias: [],
-        data_inicio: "02",
-        mes_inicio: "abril",
+        data_inicio: "06",
+        mes_inicio: "agosto",
         ano_inicio: "2022",
-        carga_horaria: '<p>460 horas<p><p>10 módulos de 40 horas cada, sendo 5 horas síncronas e 35 horas assíncronas.</p><p></p>60 horas do projeto de curso e preceptoria síncrona.</p>',
+        modalidade: 'Online',
+        turmas: [
+            { inicio: '06 de agosto de 2022', horario: 'quinzenal aos sábados das 8h às 11h'},
+            { inicio: '12 de agosto de 2022', horario: 'quinzenal às sextas feiras das 19h às 22h'}
+        ],
+        carga_horaria: '<p class="my-0">460 horas</p><p class="my-0">10 módulos de 40 horas cada, sendo 5 horas síncronas e 35 horas assíncronas.</p><p class="my-0">60 horas do projeto de curso e preceptoria síncrona.</p>', 
         duracao: 15,
-        descricao: '<p>O MBA em Gestão Universitária da Faculdade Multiversa em parceria com a Neoperspectiva Consultoria Educacional é o mais completo programa de formação de gestores de instituições de ensino superio do Brasil. Ele está estruturado à partir dos seguintes elementos:</p><ul><li><v-icon>fas fa-check</v-icon> <p>Visão sistêmica de todas as principais áreas da gestão universitária.</p></li><li><v-icon>fas fa-check</v-icon> <p>Conteúdo pragmático baseado no dia-a-dia da gestão de uma IES.</p></li><li><v-icon>fas fa-check</v-icon> <p>Professores com larga experiência de sucesso na gestão universitária.</p></li><li><v-icon>fas fa-check</v-icon> <p>Aplicabilidade prática imediata dos temas estudados no curso.</p></li><li><v-icon>fas fa-check</v-icon> <p>Conexão com as mais atualizadas ferramentas e modelos de gestão da era da Tecnologia Cognitiva Digital.</p></li></ul><p>O curso é coordenado pelo Professor Ryon Braga, um dos mais experientes gestor universitário do Brasil, tendo coordenado a formação de mais de 1.200 gestores em aproximadamente 38 programas educacionais nos últimos 22 anos.</p>',
+        descricao: '<p>O MBA em Gestão Universitária da Faculdade Multiversa em parceria com a Neoperspectiva Consultoria Educacional é o mais completo programa de formação de gestores de instituições de ensino superio do Brasil. Ele está estruturado à partir dos seguintes elementos:</p><ul style="list-style: none;"><li> <p><i class="fas fa-check mr-3"></i>Visão sistêmica de todas as principais áreas da gestão universitária.</p></li><li> <p><i class="fas fa-check mr-3"></i>Conteúdo pragmático baseado no dia-a-dia da gestão de uma IES.</p></li><li> <p><i class="fas fa-check mr-3"></i>Professores com larga experiência de sucesso na gestão universitária.</p></li><li> <p><i class="fas fa-check mr-3"></i>Aplicabilidade prática imediata dos temas estudados no curso.</p></li><li> <p><i class="fas fa-check mr-3"></i>Conexão com as mais atualizadas ferramentas e modelos de gestão da era da Tecnologia Cognitiva Digital.</p></li></ul><p>O curso é coordenado pelo Professor Ryon Braga, um dos mais experientes gestor universitário do Brasil, tendo coordenado a formação de mais de 1.200 gestores em aproximadamente 38 programas educacionais nos últimos 22 anos.</p>',
         investimento: [
             {
-                valor: 370,
+                valor: 450,
                 centavos: 0,
-                label: '12 parcelas de'
+                label: '18 parcelas de'
+            },
+            {
+                valor: 6480,
+                centavos: 0,
+                label: 'À vista (20% de desconto)'
             }
         ],
         matrizes: [
@@ -337,6 +347,58 @@ let pos = [
             },
             
             
+        ],
+        parceiros: [
+            {
+                url: 'https://maisaedu.com.br',
+                img: 'maisa.png',
+            },
+            {
+                url: 'https://workalove.com',
+                img: 'workalove.png',
+            },
+            {
+                url: 'https://swa.com.br',
+                img: 'swa.png',
+            },
+            {
+                url: '',
+                img: 'neo.png',
+            },
+        ],
+            diferenciais: [
+            {
+                titulo:'Programação Completa',
+                descricao:'Incluindo todas as áreas da gestão universitária.'
+            },
+            {
+                titulo:'Visão Sistêmica da Gestão Universitária',
+                descricao:'Não basta contemplar todas as áreas da gestão, é preciso integrá-las. Neste ponto este MBA é ímpar, pois consegue relacionar todas as áreas da gestão universitária, dentro de uma mesma linha estratégica.'
+            },
+            {
+                titulo:'Total Aplicabilidade Prática',
+                descricao:'O MBA não se limita a ensinar conteúdos, mas atua no desenvolvimento das competências essenciais à gestão de instituições de ensino.'
+            },
+            {
+                titulo:'Aprenda com Quem Faz',
+                descricao:'O curso é todo ministrado por professores gestores, de diversas regiões do país, com ampla experiência e sucesso profissional em suas atividades.'
+            },
+            {
+                titulo:'Inovação',
+                descricao:'O MBA apresenta as mais modernas ferramentas de gestão da era digital e sugere um novo e inédito modelo de se administrar instituições de ensino.'
+            },
+            {
+                titulo:'Flexibilidade',
+                descricao:'O curso é formato modular, permitindo a entrada do aluno em diferentes momentos e possibilitando a reposição posterior dos módulos perdidos.'
+            },
+            {
+                titulo:'Networking',
+                descricao:'O conjunto de aulas e atividades síncronas irão permitir a interação com gestores de diferentes IES das mais diversas regiões do país.'
+            },
+            {
+                titulo:'Metodologia',
+                descricao:'O curso utiliza metodologia ativa de aprendizagem diferenciada, com base na aplicabilidade prática do conteúdo em desafios reais.'
+            }
         ]
     },
     {
@@ -349,7 +411,7 @@ let pos = [
         data_inicio: "09",
         mes_inicio: "abril",
         ano_inicio: "2022",
-        carga_horaria: 360,
+        carga_horaria:'360 horas/aulas',
         duracao: 9,
         descricao: '<p>Commodo velit deserunt Lorem incididunt irure incididunt et nulla amet. Ex deserunt Lorem laborum enim nisi excepteur cupidatat excepteur commodo. Dolor elit ex laboris quis. Id ea mollit elit eiusmod occaecat exercitation laborum officia cupidatat reprehenderit adipisicing. Sint ipsum aute magna deserunt sint consectetur qui id reprehenderit ut. Ex eiusmod proident minim velit id irure.</p>',
         investimento: [
@@ -450,7 +512,7 @@ let pos = [
         area: 'Educação',  
         competencias: [],
         
-        carga_horaria: 360,
+        carga_horaria:'360 horas/aulas',
         
         descricao: '<p>Occaecat nulla commodo aute dolore enim ipsum enim aute fugiat cupidatat nulla est occaecat dolore. Sint do irure veniam Lorem aliquip cillum ut magna. In nisi minim enim irure et duis dolor qui eiusmod. Consectetur magna sunt nostrud velit. Laboris occaecat Lorem et aliqua dolore.</p>',
         investimento: [
@@ -472,7 +534,7 @@ let pos = [
         data_inicio: "26",
         mes_inicio: "março",
         ano_inicio: "2022",
-        carga_horaria: 360,
+        carga_horaria:'360 horas/aulas',
         duracao: 8,
         competencias:["Desenvolver mindset empreendedor para o turismo","Desenvolver Pesquisa de Mercado no segmento de turismo e hospedagem","Identificar tendências, inovações e oportunidades no mercado turístico","Desenvolver e validar um Produto Mínimamente Viável (MVP)","Desenvolver um Diagnóstico do ecossistema empreendedor do turismo e hotelaria.","Desenvolver inovação e business intelligence","Elaborar o Plano de Negócios e formalizar a empresa","Apresentar um Pitch de 7 minutos para investidores"],
         investimento: [{"label": "12 Parcelas de","valor": 420},{"label": "18 Parcelas de","valor": 280}],

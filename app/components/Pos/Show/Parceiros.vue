@@ -7,11 +7,10 @@
     <v-layout class="align-center flex-wrap spx-24">
       <v-flex xs6 sm4 md3 lg3 v-for="(parceiro, i) in parceiros" :key="i">
         <a :href="parceiro.url" target="_blank" style="display: block">
-          <object
-            style="pointer-events: none; max-width: 250px"
-            :data="'/portal-turismo/parceiros/' + parceiro.img"
-            type="image/svg+xml"
-          ></object>
+          <v-img
+            style="pointer-events: none; max-width: 200px"
+            :src="'/parceiros/' + parceiro.img"
+          ></v-img>
         </a>
       </v-flex>
     </v-layout>
