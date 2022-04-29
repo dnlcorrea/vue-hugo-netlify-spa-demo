@@ -100,23 +100,17 @@ export default {
       let inicio
 
       if (this.curso.turmas && this.curso.turmas.length) {
-        if (this.curso.turmas.map((t) => t.horario).length) {
-          inicio =
-            '<span class="font-600">Turma 01</span>: ' +
-            this.curso.turmas[0].inicio +
-            ' - ' +
-            this.curso.turmas[0].horario +
-            '<br><span class="font-600">Turma 02</span>: ' +
-            this.curso.turmas[1].inicio +
-            ' - ' +
-            this.curso.turmas[1].horario
-        } else {
-          inicio =
-            '<span class="font-600">Turma 01</span>: ' +
-            this.curso.turmas[0].inicio +
-            '<br><span class="font-600">Turma 02</span>: ' +
-            this.curso.turmas[1].inicio
+        let txt = (t, i) => {
+          return (
+            `<span class="font-600">Turma 0${i + 1}</span>: ` +
+            t.inicio +
+            (t.horario ? ' - ' + t.horario : '') +
+            '<br>'
+          )
         }
+        this.curso.turmas.forEach((t, i) => {
+          inicio = inicio ? inicio + txt(t, i) : txt(t, i)
+        })
       } else {
         inicio = this.curso.data_inicio
           ? this.curso.data_inicio +

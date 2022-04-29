@@ -1,7 +1,7 @@
 <template>
   <div
     class="spb-24 flick relative"
-    v-if="itemsCount > 1"
+    v-if="itemsCount >= 1"
     :class="{ 'loading-padrao': !loaded }"
   >
     <h1
@@ -11,6 +11,7 @@
     >
       {{ titulo }}
     </h1>
+
     <p class="c-info-darken-2--text text-left mb-8" v-if="subtitulo">
       {{ subtitulo }}
     </p>
